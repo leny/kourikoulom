@@ -15,10 +15,29 @@ module.exports = ( grunt ) ->
       page:
         files:
           "index.html": "src/jade/index.jade"
+    watch:
+      jade:
+        files: "src/jade/index.jade"
+        tasks: [ "jade" ]
+        options:
+          livereload: yes
+      styles:
+        files: "src/stylus/styles.styl"
+        tasks: [ "stylus" ]
+        options:
+          livereload: yes
 
   grunt.loadNpmTasks "grunt-ks-stylus"
   grunt.loadNpmTasks "grunt-contrib-jade"
+  grunt.loadNpmTasks "grunt-contrib-watch"
 
   grunt.registerTask "default", [
-    "jade", "stylus"
+    "jade"
+    "stylus"
+  ]
+
+  grunt.registerTask "work", [
+    "jade"
+    "stylus"
+    "watch"
   ]

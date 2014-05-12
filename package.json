@@ -15,6 +15,7 @@
   "devDependencies": {
     "grunt": "~0.4",
     "grunt-ks-stylus": "~0.0",
-    "grunt-contrib-jade": "~0.11"
+    "grunt-contrib-jade": "~0.11",
+    "grunt-contrib-watch": "~0.6"
   }
 }
