@@ -1,0 +1,20 @@
+{
+  "name": "kourikoulom",
+  "description": "My resume.",
+  "version": "2014.05.12",
+  "private": true,
+  "homepage": "http://pierre-antoine.delnatte.be",
+  "author": {
+    "name": "leny",
+    "email": "info@flatland.be"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leny/kourikoulom.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-ks-stylus": "~0.0",
+    "grunt-contrib-jade": "~0.11"
+  }
+}
