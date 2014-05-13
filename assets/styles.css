@@ -562,6 +562,8 @@ section dl dd {
 }
 @media screen and (min-width: 80rem) {
   article {
+    max-width: 115rem;
+    margin: 0 auto;
     -webkit-column-count: auto;
     -moz-column-count: auto;
     column-count: auto;
@@ -571,7 +573,6 @@ section dl dd {
     -webkit-column-width: auto;
     -moz-column-width: auto;
     column-width: auto;
-    margin: 0 auto;
     background: transparent;
     box-shadow: none;
   }
