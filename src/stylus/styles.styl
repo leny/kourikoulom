@@ -1,0 +1,665 @@
+/* DELNATTE Pierre-Antoine - Webdeveloper
+ *
+ * STYLUS/CSS Document - /assets/stylus/styles.styl
+ *
+ * coded by Pierre-Antoine Delnatte
+ *
+ * original styles in june 2012
+ * responsive styles in july 2012
+ * rewriten as mobile-first with sass/compass in march 2013
+ * updates & bugfix in november 2013
+ * new desktop styles in january 2014
+ * rewriten with stylus/kouto-swiss in may 2014
+ */
+
+// imports
+@import "kouto-swiss"
+
+// resets
+meyer-reset()
+
+// fonts
+font-face( "Entypo", "./fonts/entypo/entypo" )
+Entypo = "Entypo"
+font-face( "Lato", "./fonts/lato/LatoLatin-Regular", formats: eot woff truetype )
+font-face( "Lato", "./fonts/lato/LatoLatin-Bold", bold, formats: eot woff truetype )
+font-face( "Lato", "./fonts/lato/LatoLatinLight-Regular", 200, formats: eot woff truetype )
+light = 200
+Lato = "Lato", font-stack( "Helvetica" )
+
+// vars
+textColor = #333
+linkColor = #33a
+headingColorOne = #555
+headingColorTwo = #444
+headingColorThree = #666
+headingColorFour = #777
+
+// breakpoints
+bkHorizontalPhone = media-query( screen, min-width 30rem )
+bkVerticalSmallTablet = media-query( screen, min-width 40rem )
+bkVerticalTablet = media-query( screen, min-width 48rem )
+bkSmallScreen = media-query( screen, min-width 60rem )
+bkMediumScreen = media-query( screen, min-width 80rem )
+
+// ----- commons
+
+*
+    -webkit-font-smoothing antialiased
+    -webkit-text-size-adjust 100%
+
+a
+    color linkColor
+
+abbr
+    border-bottom 1px dotted gray
+    cursor help
+
+// ----- layout
+
+html
+    retina-image( "img/old_mathematics.png", 200px 200px, "_@2X" )
+    font normal 62.5%/1.5 Lato
+
+body
+    padding 1rem
+    color textColor
+
+article
+    position relative
+
+header
+    margin 0 auto 2rem
+    padding 0 0 .5rem
+    clear fix
+    border-bottom .1rem solid #999
+    box-shadow 0 .1rem .1rem white
+    h1
+        font bold 3rem Lato
+        color headingColorOne
+        text-align center
+    h2
+        font light 2rem Lato
+        color headingColorThree
+        text-align center
+
+figure
+    width 10rem
+    margin 1rem auto
+    padding .75rem .75rem .25rem
+    retina-image( "img/ricepaper2.png", 485px 485px, "_@2X" )
+    box-shadow 0 .5rem 1rem rgba( black, .33 )
+    img
+        display block
+        max-width 100%
+        margin 0 auto .25rem
+    figcaption
+        color headingColorTwo
+        text-align right
+
+section
+    margin 0 auto 3rem
+    h3
+        position relative
+        margin 0 auto .75rem
+        padding 0 0 .25rem
+        border-bottom 1px solid #999
+        box-shadow 0 1px 1px white
+        font light 2.5rem Lato
+        color headingColorThree
+        text-align right
+        &:before
+            position absolute
+            bottom -.6rem
+            left 0
+            margin 0
+            font normal 4rem Entypo
+            vertical-align middle
+    p
+        margin 0 auto 1.2rem
+        font normal 1.4rem/1.5 Lato
+    h4
+        margin 0 auto 1.5rem
+        padding 0 0 .25rem
+        border-bottom 1px dotted #999
+        box-shadow 0 1px 1px white
+        font light 1.6rem Lato
+        color headingColorThree
+        text-align right
+    dl
+        margin 0 auto 1rem
+        dt
+            margin 0 auto .25rem
+            font bold 1.3rem Lato
+            color headingColorOne
+        dd
+            margin 0 auto 1rem 2.6rem
+            font light 1.3rem/1.5 Lato
+            color $HeadingColorOne
+
+#identite
+    margin 2rem auto 3rem
+    p
+        margin 0 auto .75rem
+        font normal 1.5rem Lato
+    address ~ p
+        margin .5rem 0 1rem
+        strong
+            display none
+        a
+            text-decoration none
+            &:before
+                margin 0 .5rem 0 0
+                font normal 3rem/1.5rem Entypo
+                vertical-align middle
+            &[href^="mailto:"]:before
+                content "\2709"
+            &[href^="http:"]:before
+                content "\1F517"
+
+#parcours
+    h3:before
+        content "\E723"
+
+#formation
+    h3:first-of-type:before
+        content "\E728"
+    h3:last-of-type:before
+        content "\1F3C6"
+
+#parcours, #formation
+    ol
+        list-style inside none
+        li
+            margin 0 auto 2rem
+            padding 1rem
+            border 1px solid silver
+            border-radius .6rem
+            retina-image( "img/subtle_freckles.png", 198px 198px, "_@2X" )
+            h4:before, p:before
+                font normal 3rem Entypo
+                margin 0 .5rem 0 0
+                vertical-align middle
+            h4
+                font bold 1.4rem Lato
+                margin 0 auto .25rem
+                color headingColorTwo
+                text-align left
+                border-bottom 0
+                box-shadow none
+                a
+                    text-decoration none
+                &:before
+                    line-height 1.6rem
+                    vertical-align bottom
+            p
+                font normal 1.25rem/1.5 Lato
+                margin 0 auto .5rem
+                strong
+                    font-weight bold
+                &:before
+                    vertical-align -.1rem
+            time
+                display inline-block
+                margin 0 1rem 0 0
+                font normal 1.25rem/1.5 Lato
+                &:before
+                    font normal 3rem Entypo
+                    content "\1F4C5"
+                    vertical-align -.25rem
+                    margin 0 .25rem 0 0
+            time ~ p
+                display inline-block
+                font normal 1.25rem/1.5 Lato
+                margin 0 auto
+                &:before
+                    font normal 3rem Entypo
+                    content "\E728"
+                    vertical-align middle
+                    margin 0 .25rem 0 0
+        &:first-of-type li h4:before
+            content "\1F4D6"
+        &:last-of-type li h4:before
+            content "\1F4BC"
+        &:last-of-type li h4 + p:before
+            content "\1F464"
+
+#competences
+    h3:before
+        content "\26A1"
+
+#presentation
+    dl, p
+        margin 0 auto 3rem
+    h3:nth-of-type(1):before
+        content "\E720"
+    h3:nth-of-type(2):before
+        content "\1F342"
+    h3:nth-of-type(3):before
+        content "\1F50A"
+
+@media bkHorizontalPhone
+    header
+        h1
+            br
+                display none
+
+    figure
+        float left
+        margin 0 2rem .5rem 1.5rem
+        transform rotate( -2deg ) translate3d( 0, 0, 0 )
+
+    #identite
+        margin 3rem auto 3rem
+        clear fix
+    #parcours, #formation
+        ol li h4
+            margin 0 auto .05rem
+            font bold 1.6rem Lato
+
+@media bkVerticalSmallTablet
+    header
+        h1
+            float left
+        h2
+            float right
+            margin .25rem 0 0
+            font light 2.25rem Lato
+
+    figure
+        width 150px
+        margin -2.5rem 3rem .5rem 1.5rem
+        transform-style preserve-3d
+        transform rotate( -3deg ) translate3d( 0, 0, 0 )
+
+    section
+        h3
+            padding-left 2.75rem
+            text-align left
+            &:before
+                bottom -.35rem
+                font-size 4rem
+        h4
+            text-align left
+
+@media bkVerticalTablet
+    article
+        column-count 2
+        column-gap 3%
+        column-width 46%
+
+    header
+        column-span all
+
+    section
+        h4
+            text-align right
+    #identite
+        column-span all
+    #competences
+        -moz-break-before column
+        -webkit-column-break-before always
+
+@media bkSmallScreen
+    html
+        background #110416
+        retina-image( "img/dark_wood.png", 512px 512px, "_@2X" )
+
+    article
+        width 90%
+        margin 3rem auto
+        padding 2rem
+        background white
+        retina-image( "img/old_mathematics.png", 200px 200px, "_@2X" )
+        box-shadow 0 5px 20px rgba( black, .5 )
+
+    header
+        h2
+            margin-right 175px
+
+    figure
+        position absolute
+        width 200px
+        float none
+        top -5px
+        right -15px
+        margin 0
+        z-index 150
+        transform rotate( 5deg ) translate3d( 0, 0, 0 )
+
+@media bkMediumScreen
+    article
+        column-count auto
+        column-gap normal
+        column-width auto
+        clear fix
+        margin 0 auto
+        background transparent
+        box-shadow none
+
+    figure
+        position absolute
+        top 1rem
+        right -1.5rem
+        z-index 100
+        transform rotate( -2deg ) translate3d( 0, 0, 0 )
+
+    header
+        position absolute
+        width 50rem
+        top 1rem
+        left 0
+        margin 0
+        clear fix
+        z-index 10
+        box-shadow none
+        border 0
+        h1
+            float none
+            margin 0 auto
+            border-bottom 1px solid #999
+            font bold 3.5rem Lato
+            color #ddd
+            text-align left
+        h2
+            float none
+            margin-right 0
+            font normal 2.75rem Lato
+            color #c0c0c0
+            text-align right
+    section
+        position absolute
+        border 0
+        margin 0
+        clear fix
+        transition all .1s ease-in
+        transform-style preserve-3d
+        h3
+            box-shadow none
+            color #c0c0c0
+        h4
+            box-shadow none
+            color #d0d0d0
+        ol li, dl, h3 + p
+            padding 1rem
+            background white
+            retina-image( "img/subtle_freckles.png", 198px 198px, "_@2X" )
+            border 0
+            border-radius 0 !important
+            box-shadow 0 0 .5rem rgba( black, .5 )
+            transition all .15s ease-in-out
+            &:nth-of-type( 1 )
+                transform rotate( 2deg ) translate3d( 0, 0, 0 )
+            &:nth-of-type( 2 )
+                transform rotate( -1deg ) translate3d( 0, 0, 0 )
+            &:nth-of-type( 3 )
+                transform rotate( 1deg ) translate3d( 0, 0, 0 )
+            &:nth-of-type( 4 )
+                transform rotate( -2deg ) translate3d( 0, 0, 0 )
+            &:nth-of-type( 5 )
+                transform rotate( 3deg ) translate3d( 0, 0, 0 )
+            &:nth-of-type( 6 )
+                transform rotate( -1deg ) translate3d( 0, 0, 0 )
+            &:nth-of-type( 7 )
+                transform rotate( 2deg ) translate3d( 0, 0, 0 )
+            &:nth-of-type( 8 )
+                transform rotate( -3deg ) translate3d( 0, 0, 0 )
+            &:hover
+                transform rotate( 0deg ) translate3d( 0, 0, 0 )
+        ol li
+            &:nth-of-type( 2 )
+                margin-top -2rem !important
+            &:nth-of-type( 3 )
+                margin-top -2rem !important
+            &:nth-of-type( 4 )
+                margin-top -2rem !important
+            &:nth-of-type( 5 )
+                margin-top -2rem !important
+            &:nth-of-type( 6 )
+                margin-top -2rem !important
+            &:nth-of-type( 7 )
+                margin-top -2rem !important
+            &:nth-of-type( 8 )
+                margin-top -2rem !important
+    #identite
+        width 50rem
+        top 5.5rem
+        left 0rem
+        z-index 50
+        p
+            color #c0c0c0
+        address ~ p
+            display inline
+            a
+                color lighten( #33a, 20% )
+        address + p
+            margin-right 1.5rem
+    #formation
+        width 22%
+        top 18rem
+        left 0
+    #parcours
+        width 22%
+        left 24%
+        top 18rem
+        margin 0 auto 25px
+        z-index 60
+    #competences
+        width 26%
+        left 48%
+        top 18rem
+        z-index 70
+    #presentation
+        width 24%
+        left 76%
+        top 26rem
+        z-index 80
+
+@media print
+    abbr
+        border-bottom 0
+
+    html
+        font normal 8.5pt/1.25 Lato
+
+    header
+        margin 0 auto 0
+        padding 0
+        box-shadow none
+        border-bottom 0
+        h1
+            float none
+            border-bottom 1px solid #999
+            font bold 3rem/1 Lato
+            color #666
+            text-align left
+            br
+                display none
+        h2
+            float none
+            margin 0 .25rem 0 0
+            font light 2rem/1.25 Lato
+            color #666
+            text-align right
+
+    figure
+        display none
+
+    section
+        page-break-inside avoid
+        margin 0 auto 2rem
+        h3
+            margin .5rem auto 1.5rem
+            border-bottom 1px dotted #999
+            box-shadow none
+            font bold 1.5rem Lato
+            color #666
+            &:before
+                margin 0 .5rem 0 0
+                font normal 3rem Entypo
+                vertical-align middle
+        p
+            margin 0 auto .6rem
+            font normal 1.1rem/1.5 Lato
+        blockquote
+            position relative
+            margin 0 auto 1.2rem
+            padding 2rem
+            border 1px dashed silver
+            border-radius 6px
+            box-shadow 0 0 20px silver
+            background white url( 'subtle_freckles.png' ) top left repeat
+            &:before
+                content ""
+                position absolute
+                bottom 1rem
+                right 1rem
+                z-index 10
+                font normal 15rem Entypo
+                color #ccc
+            p
+                position relative
+                z-index 11
+        h4
+            margin 0 auto 1rem
+            padding 0
+            border-bottom 0
+            box-shadow none
+            font light 1.3rem Lato
+            color #444
+            text-align left
+        dl
+            margin 0 auto 1rem
+            dt
+                float left
+                margin 0 .1rem .25rem 0
+                font normal 1.1rem Lato
+                color #333
+            dd
+                margin 0 0 1rem
+                font normal 1.1rem/1.5 Lato
+                color #555
+                &:after
+                    content ""
+                    display table
+                    clear both
+    #identite
+        margin 2rem 0
+        p
+            font normal 1.1rem/1 Lato
+            margin 0 auto .6rem
+        address ~ p
+            display inline-block
+            margin .5rem 3rem 0 0
+            font normal 1rem/1 Lato
+            strong
+                display none
+            a
+                color $textColor
+                &:before
+                    margin 0 .3rem 0 0
+                    font normal 2rem Entypo
+                    vertical-align top
+                &[href^="mailto:"]:before
+                    content "\2709"
+                &[href^="http:"]:before
+                    content "\1F517"
+    #parcours, #formation
+        ol
+            list-style inside none
+            li
+                margin 0 auto 1rem 1rem
+                padding 0
+                border 0
+                border-radius 0
+                background transparent
+                h4
+                    margin 0 auto
+                    border-bottom 0
+                    box-shadow none
+                    font bold 1.4rem/1 Lato
+                    color #333
+                    text-align left
+                    a
+                        font bold 1.4rem Lato
+                        color headingColorTwo
+                p
+                    display inline-block
+                    margin 0 .5rem 0 0
+                    font normal 1.2rem/1.25 Lato
+                    color #666
+                    strong
+                        margin 0 .5rem 0 0
+                        font-weight bold
+                    br
+                        display none
+                        line-height 0rem
+                    &:first-of-type
+                        margin-left 2.5rem
+                time
+                    display inline-block
+                    margin 0 .5rem 0 0
+                    font normal 1.2rem/1.25 Lato
+                    color #666
+                    &:before
+                        content "\1F4C5"
+                        margin 0 .5rem 0 0
+                        font normal 2.4rem Entypo
+                        vertical-align baseline
+                time ~ p
+                    display inline-block
+                    font normal 1.2rem/1.25 Lato
+                    color #666
+                    &:before
+                        content "\E728"
+                        margin 0 .25rem 0 0
+                        font normal 2rem Entypo
+                        vertical-align baseline
+            &:first-of-type li h4:before
+                content "\1F4D6"
+                margin 0 .5rem 0 0
+                font normal 3.5rem Entypo
+                vertical-align middle
+            &:last-of-type li h4:before
+                content "\1F4BC"
+                margin 0 .5rem 0 0
+                font normal 3.5rem Entypo
+                vertical-align middle
+            &:last-of-type li h4 + p:before
+                content "\1F464"
+                margin 0 .5rem 0 0
+                font normal 2.75rem Entypo
+                vertical-align -0.25rem
+    #parcours
+        h3:before
+            content "\E723"
+        ol li
+            p
+                display block
+            time
+                margin-left 2.5rem
+            &:last-of-type
+                p:nth-child( 3 )
+                    display none
+    #formation
+        h3:first-of-type:before
+            content "\E728"
+        h3:last-of-type
+            display none
+        ol
+            &:first-of-type li:nth-child( 2 )
+                display none
+            &:last-of-type
+                display none
+    #competences
+        h3:before
+            content "\26A1"
+    #presentation
+        h3
+            margin-top 2rem
+        h3:nth-of-type(1):before
+            content "\E720"
+        h3:nth-of-type(2):before
+            content "\1F342"
+        h3:nth-of-type(3):before
+            content "\1F50A"
