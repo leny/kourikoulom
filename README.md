@@ -2,7 +2,7 @@
 
 > Just my resume.
 
-Made width [jade](https://github.com/visionmedia/jade) & [stylus](https://github.com/LearnBoost/stylus), with [kouto swiss](https://github.com/leny/kouto-swiss) framework.
+Made with [jade](https://github.com/visionmedia/jade) & [stylus](https://github.com/LearnBoost/stylus), with [kouto swiss](https://github.com/leny/kouto-swiss) framework.
 
 * * *
 
