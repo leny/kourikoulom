@@ -174,7 +174,6 @@ html {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
   html {
     background-image: url("img/old_mathematics_@2X.png");
-    -webkit-background-size: 200px 200px;
     background-size: 200px 200px;
   }
 }
@@ -219,7 +218,6 @@ figure {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
   figure {
     background-image: url("img/ricepaper2_@2X.png");
-    -webkit-background-size: 485px 485px;
     background-size: 485px 485px;
   }
 }
@@ -331,7 +329,6 @@ section dl dd {
   #parcours ol li,
   #formation ol li {
     background-image: url("img/subtle_freckles_@2X.png");
-    -webkit-background-size: 198px 198px;
     background-size: 198px 198px;
   }
 }
@@ -428,7 +425,7 @@ section dl dd {
 #presentation h3:nth-of-type(3):before {
   content: "\1F50A";
 }
-@media screen and (min-width: 30rem) {
+@media  {
   header h1 br {
     display: none;
   }
@@ -436,8 +433,7 @@ section dl dd {
     float: left;
     margin: 0 2rem 0.5rem 1.5rem;
     -webkit-transform: rotate(-2deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(-2deg) translate3d(0, 0, 0);
-    -o-transform: rotate(-2deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(-2deg) translate3d(0, 0, 0);
     transform: rotate(-2deg) translate3d(0, 0, 0);
   }
   #identite {
@@ -457,7 +453,7 @@ section dl dd {
     font: bold 1.6rem "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 }
-@media screen and (min-width: 40rem) {
+@media  {
   header h1 {
     float: left;
   }
@@ -472,8 +468,7 @@ section dl dd {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transform: rotate(-3deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(-3deg) translate3d(0, 0, 0);
-    -o-transform: rotate(-3deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(-3deg) translate3d(0, 0, 0);
     transform: rotate(-3deg) translate3d(0, 0, 0);
   }
   section h3 {
@@ -488,7 +483,7 @@ section dl dd {
     text-align: left;
   }
 }
-@media screen and (min-width: 48rem) {
+@media  {
   article {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -502,6 +497,7 @@ section dl dd {
   }
   header {
     -webkit-column-span: all;
+    -moz-column-span: all;
     column-span: all;
   }
   section h4 {
@@ -509,6 +505,7 @@ section dl dd {
   }
   #identite {
     -webkit-column-span: all;
+    -moz-column-span: all;
     column-span: all;
   }
   #competences {
@@ -516,18 +513,11 @@ section dl dd {
     -webkit-column-break-before: always;
   }
 }
-@media screen and (min-width: 60rem) {
+@media  {
   html {
     background: #110416;
     background-image: url("img/dark_wood.png");
   }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-    html {
-      background-image: url("img/dark_wood_@2X.png");
-      -webkit-background-size: 512px 512px;
-      background-size: 512px 512px;
-    }
-}
   article {
     width: 90%;
     margin: 3rem auto;
@@ -536,13 +526,6 @@ section dl dd {
     background-image: url("img/old_mathematics.png");
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
   }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-    article {
-      background-image: url("img/old_mathematics_@2X.png");
-      -webkit-background-size: 200px 200px;
-      background-size: 200px 200px;
-    }
-}
   header h2 {
     margin-right: 175px;
   }
@@ -555,12 +538,15 @@ section dl dd {
     margin: 0;
     z-index: 150;
     -webkit-transform: rotate(5deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(5deg) translate3d(0, 0, 0);
-    -o-transform: rotate(5deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(5deg) translate3d(0, 0, 0);
     transform: rotate(5deg) translate3d(0, 0, 0);
   }
 }
-@media screen and (min-width: 80rem) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+}
+@media  {
   article {
     max-width: 115rem;
     margin: 0 auto;
@@ -590,9 +576,15 @@ section dl dd {
     right: -1.5rem;
     z-index: 100;
     -webkit-transform: rotate(-2deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(-2deg) translate3d(0, 0, 0);
-    -o-transform: rotate(-2deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(-2deg) translate3d(0, 0, 0);
     transform: rotate(-2deg) translate3d(0, 0, 0);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  }
+  figure:hover {
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(0deg) translate3d(0, 0, 0);
+    transform: rotate(0deg) translate3d(0, 0, 0);
   }
   header {
     position: absolute;
@@ -632,7 +624,6 @@ section dl dd {
     border: 0;
     margin: 0;
     -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
     transition: all 0.1s ease-in;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -663,88 +654,76 @@ section dl dd {
     border-radius: 0 !important;
     box-shadow: 0 0 0.5rem rgba(0,0,0,0.5);
     -webkit-transition: all 0.15s ease-in-out;
-    -o-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
   }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-    section ol li,
-    section dl,
-    section h3 + p {
-      background-image: url("img/subtle_freckles_@2X.png");
-      -webkit-background-size: 198px 198px;
-      background-size: 198px 198px;
-    }
-}
   section ol li:nth-of-type(1 ),
   section dl:nth-of-type(1 ),
   section h3 + p:nth-of-type(1 ) {
     -webkit-transform: rotate(2deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(2deg) translate3d(0, 0, 0);
-    -o-transform: rotate(2deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(2deg) translate3d(0, 0, 0);
     transform: rotate(2deg) translate3d(0, 0, 0);
   }
   section ol li:nth-of-type(2 ),
   section dl:nth-of-type(2 ),
   section h3 + p:nth-of-type(2 ) {
     -webkit-transform: rotate(-1deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(-1deg) translate3d(0, 0, 0);
-    -o-transform: rotate(-1deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(-1deg) translate3d(0, 0, 0);
     transform: rotate(-1deg) translate3d(0, 0, 0);
   }
   section ol li:nth-of-type(3 ),
   section dl:nth-of-type(3 ),
   section h3 + p:nth-of-type(3 ) {
     -webkit-transform: rotate(1deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(1deg) translate3d(0, 0, 0);
-    -o-transform: rotate(1deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(1deg) translate3d(0, 0, 0);
     transform: rotate(1deg) translate3d(0, 0, 0);
   }
   section ol li:nth-of-type(4 ),
   section dl:nth-of-type(4 ),
   section h3 + p:nth-of-type(4 ) {
     -webkit-transform: rotate(-2deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(-2deg) translate3d(0, 0, 0);
-    -o-transform: rotate(-2deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(-2deg) translate3d(0, 0, 0);
     transform: rotate(-2deg) translate3d(0, 0, 0);
   }
   section ol li:nth-of-type(5 ),
   section dl:nth-of-type(5 ),
   section h3 + p:nth-of-type(5 ) {
     -webkit-transform: rotate(3deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(3deg) translate3d(0, 0, 0);
-    -o-transform: rotate(3deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(3deg) translate3d(0, 0, 0);
     transform: rotate(3deg) translate3d(0, 0, 0);
   }
   section ol li:nth-of-type(6 ),
   section dl:nth-of-type(6 ),
   section h3 + p:nth-of-type(6 ) {
     -webkit-transform: rotate(-1deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(-1deg) translate3d(0, 0, 0);
-    -o-transform: rotate(-1deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(-1deg) translate3d(0, 0, 0);
     transform: rotate(-1deg) translate3d(0, 0, 0);
   }
   section ol li:nth-of-type(7 ),
   section dl:nth-of-type(7 ),
   section h3 + p:nth-of-type(7 ) {
     -webkit-transform: rotate(2deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(2deg) translate3d(0, 0, 0);
-    -o-transform: rotate(2deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(2deg) translate3d(0, 0, 0);
     transform: rotate(2deg) translate3d(0, 0, 0);
   }
   section ol li:nth-of-type(8 ),
   section dl:nth-of-type(8 ),
   section h3 + p:nth-of-type(8 ) {
     -webkit-transform: rotate(-3deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(-3deg) translate3d(0, 0, 0);
-    -o-transform: rotate(-3deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(-3deg) translate3d(0, 0, 0);
     transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  section ol li:nth-of-type(9 ),
+  section dl:nth-of-type(9 ),
+  section h3 + p:nth-of-type(9 ) {
+    -webkit-transform: rotate(1deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(1deg) translate3d(0, 0, 0);
+    transform: rotate(1deg) translate3d(0, 0, 0);
   }
   section ol li:hover,
   section dl:hover,
   section h3 + p:hover {
     -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(0deg) translate3d(0, 0, 0);
-    -o-transform: rotate(0deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(0deg) translate3d(0, 0, 0);
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
   section ol li:nth-of-type(2 ) {
@@ -766,6 +745,9 @@ section dl dd {
     margin-top: -2rem !important;
   }
   section ol li:nth-of-type(8 ) {
+    margin-top: -2rem !important;
+  }
+  section ol li:nth-of-type(9 ) {
     margin-top: -2rem !important;
   }
   #identite {
@@ -810,6 +792,8 @@ section dl dd {
     top: 26rem;
     z-index: 80;
   }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
 }
 @media print {
   abbr {

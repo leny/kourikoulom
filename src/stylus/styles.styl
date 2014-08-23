@@ -344,6 +344,9 @@ section
         right -1.5rem
         z-index 100
         transform rotate( -2deg ) translate3d( 0, 0, 0 )
+        transition all .15s ease-in-out
+        &:hover
+            transform rotate( 0deg ) translate3d( 0, 0, 0 )
 
     header
         position absolute
@@ -405,6 +408,8 @@ section
                 transform rotate( 2deg ) translate3d( 0, 0, 0 )
             &:nth-of-type( 8 )
                 transform rotate( -3deg ) translate3d( 0, 0, 0 )
+            &:nth-of-type( 9 )
+                transform rotate( 1deg ) translate3d( 0, 0, 0 )
             &:hover
                 transform rotate( 0deg ) translate3d( 0, 0, 0 )
         ol li
@@ -421,6 +426,8 @@ section
             &:nth-of-type( 7 )
                 margin-top -2rem !important
             &:nth-of-type( 8 )
+                margin-top -2rem !important
+            &:nth-of-type( 9 )
                 margin-top -2rem !important
     #identite
         width 50rem
