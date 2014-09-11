@@ -276,7 +276,7 @@ section dl dt {
 section dl dd {
   margin: 0 auto 1rem 2.6rem;
   font: 200 1.3rem/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: $HeadingColorOne;
+  color: #555;
 }
 #identite {
   margin: 2rem auto 3rem;
@@ -909,7 +909,7 @@ section dl dd {
     display: none;
   }
   #identite address ~ p a {
-    color: $textColor;
+    color: #333;
   }
   #identite address ~ p a:before {
     margin: 0 0.3rem 0 0;
