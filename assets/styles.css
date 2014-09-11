@@ -10,6 +10,7 @@
  * updates & bugfix in november 2013
  * new desktop styles in january 2014
  * rewriten with stylus/kouto-swiss in may 2014
+ * fix code for stylus/kouto-swiss update in september 2014
  */
 html,
 body,
@@ -371,27 +372,27 @@ section dl dd {
 #formation ol li p:before {
   vertical-align: -0.1rem;
 }
-#parcours ol li time,
-#formation ol li time {
+#parcours ol li .time,
+#formation ol li .time {
   display: inline-block;
   margin: 0 1rem 0 0;
   font: normal 1.25rem/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-#parcours ol li time:before,
-#formation ol li time:before {
+#parcours ol li .time:before,
+#formation ol li .time:before {
   font: normal 3rem "Entypo";
   content: "\1F4C5";
   vertical-align: -0.25rem;
   margin: 0 0.25rem 0 0;
 }
-#parcours ol li time ~ p,
-#formation ol li time ~ p {
+#parcours ol li .time ~ p,
+#formation ol li .time ~ p {
   display: inline-block;
   font: normal 1.25rem/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 auto;
 }
-#parcours ol li time ~ p:before,
-#formation ol li time ~ p:before {
+#parcours ol li .time ~ p:before,
+#formation ol li .time ~ p:before {
   font: normal 3rem "Entypo";
   content: "\E728";
   vertical-align: middle;
@@ -425,7 +426,7 @@ section dl dd {
 #presentation h3:nth-of-type(3):before {
   content: "\1F50A";
 }
-@media  {
+@media screen and (min-width: 30rem) {
   header h1 br {
     display: none;
   }
@@ -453,7 +454,7 @@ section dl dd {
     font: bold 1.6rem "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 }
-@media  {
+@media screen and (min-width: 40rem) {
   header h1 {
     float: left;
   }
@@ -483,7 +484,7 @@ section dl dd {
     text-align: left;
   }
 }
-@media  {
+@media screen and (min-width: 48rem) {
   article {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -513,7 +514,7 @@ section dl dd {
     -webkit-column-break-before: always;
   }
 }
-@media  {
+@media screen and (min-width: 60rem) {
   html {
     background: #110416;
     background-image: url("img/dark_wood.png");
@@ -542,11 +543,7 @@ section dl dd {
     transform: rotate(5deg) translate3d(0, 0, 0);
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-}
-@media  {
+@media screen and (min-width: 80rem) {
   article {
     max-width: 115rem;
     margin: 0 auto;
@@ -793,8 +790,6 @@ section dl dd {
     z-index: 80;
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3/1), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-}
 @media print {
   abbr {
     border-bottom: 0;
@@ -974,28 +969,28 @@ section dl dd {
   #formation ol li p:first-of-type {
     margin-left: 2.5rem;
   }
-  #parcours ol li time,
-  #formation ol li time {
+  #parcours ol li .time,
+  #formation ol li .time {
     display: inline-block;
     margin: 0 0.5rem 0 0;
     font: normal 1.2rem/1.25 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #666;
   }
-  #parcours ol li time:before,
-  #formation ol li time:before {
+  #parcours ol li .time:before,
+  #formation ol li .time:before {
     content: "\1F4C5";
     margin: 0 0.5rem 0 0;
     font: normal 2.4rem "Entypo";
     vertical-align: baseline;
   }
-  #parcours ol li time ~ p,
-  #formation ol li time ~ p {
+  #parcours ol li .time ~ p,
+  #formation ol li .time ~ p {
     display: inline-block;
     font: normal 1.2rem/1.25 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #666;
   }
-  #parcours ol li time ~ p:before,
-  #formation ol li time ~ p:before {
+  #parcours ol li .time ~ p:before,
+  #formation ol li .time ~ p:before {
     content: "\E728";
     margin: 0 0.25rem 0 0;
     font: normal 2rem "Entypo";
@@ -1028,7 +1023,7 @@ section dl dd {
   #parcours ol li p {
     display: block;
   }
-  #parcours ol li time {
+  #parcours ol li .time {
     margin-left: 2.5rem;
   }
   #parcours ol li:last-of-type p:nth-child(3 ) {
