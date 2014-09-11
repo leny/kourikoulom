@@ -1,5 +1,5 @@
 doctype html
-html( lang="fr_BE" )
+html( lang="fr-BE" )
     head
         meta( charset="UTF-8" )/
         title Delnatte Pierre-Antoine - Webdeveloper
@@ -64,21 +64,30 @@ html( lang="fr_BE" )
                             strong TFE:
                             = " "
                             | fish in a pan, CMS et groupes de musique
-                        time( datetime="2004-09-01 - 2007-06-30" ) 2004-2007
+                        .time
+                            time( datetime="2004-09-01" ) 2004
+                            | -
+                            time( datetime="2007-06-30" ) 2007
                         p
                             abbr( title="Haute École de la Province de Liège" ) HEPL
 
                     li
                         h4 Psychologie et Sciences de l'Education
                         p Première année
-                        time( datetime="2003-09-01 - 2004-06-30" ) 2003-2004
+                        .time
+                            time( datetime="2003-09-01" ) 2003
+                            | -
+                            time( datetime="2004-06-30" ) 2004
                         p
                             abbr( title="Université de Liège" ) ULg
 
                     li
                         h4 Humanités générales
                         p Option sciences
-                        time( datetime="1997-09-01 - 2003-06-30" ) 1997-2003
+                        .time
+                            time( datetime="1997-09-01" ) 1997
+                            | -
+                            time( datetime="2003-06-30" ) 2003
                         p
                             abbr( title="Dames de l'Instruction Chrétienne" ) DIC
                             = " "
@@ -96,7 +105,8 @@ html( lang="fr_BE" )
                             sup ème
                             = " "
                             | place, catégorie amateurs &amp; étudiants
-                        time( datetime="2006-02-01" ) février 2006
+                        .time
+                            time( datetime="2006-02-01" ) février 2006
                         p
                             abbr( title="Webdesign Festival International" ) WIF
                             |, Limoges, France
@@ -109,7 +119,8 @@ html( lang="fr_BE" )
                             sup ère
                             = " "
                             | place, catégorie amateurs &amp; étudiants
-                        time( datetime="2005-11-01" ) novembre 2005
+                        .time
+                            time( datetime="2005-11-01" ) novembre 2005
                         p
                             abbr( title="Webdesign Festival International" ) WIF
                             |, Limoges, France
@@ -125,7 +136,9 @@ html( lang="fr_BE" )
                             strong Co-Founder
                             br/
                             | Développement web &amp; app, expertise &amp; sous-traitance
-                        time( datetime="2014-05-01" ) mai 2014 - …
+                        .time
+                            time( datetime="2014-05-01" ) mai 2014
+                            = " - …"
                         p Liège, Belgique
 
                     li
@@ -135,7 +148,9 @@ html( lang="fr_BE" )
                             strong Founder
                             br/
                             | Développement web freelance &amp; sous-traitance
-                        time( datetime="2011-11-05" ) novembre 2011 - …
+                        .time
+                            time( datetime="2011-11-05" ) novembre 2011
+                            = " - …"
                         p Liège, Belgique
 
                     li
@@ -148,7 +163,9 @@ html( lang="fr_BE" )
                             sup ème
                             = " "
                             | années
-                        time( datetime="2011-10-02" ) octobre 2012 - …
+                        .time
+                            time( datetime="2011-10-02" ) octobre 2012
+                            = " - …"
                         p Liège, Belgique
 
                     li
@@ -158,7 +175,10 @@ html( lang="fr_BE" )
                             strong Design &amp; Dev Web, maintenance technique
                             br/
                             | Sites clients, CMS maison &amp; outils internes
-                        time( datetime="2011-11 - 2013-03" ) novembre 2011 - mars 2013
+                        .time
+                            time( datetime="2011-11" ) novembre 2011
+                            = " - "
+                            time( datetime="2013-03" ) mars 2013
                         p Tournai, Belgique
 
                     li
@@ -168,7 +188,10 @@ html( lang="fr_BE" )
                             strong Intégrateur RIA Flash
                             br/
                             | Jeux Boufbowl &amp; TCG Online
-                        time( datetime="2009-06 - 2010-08" ) septembre 2010 - octobre 2011
+                        .time
+                            time( datetime="2010-09" ) septembre 2010
+                            = " - "
+                            time( datetime="2011-10" ) octobre 2011
                         p Roubaix, France
 
                     li
@@ -178,7 +201,10 @@ html( lang="fr_BE" )
                             strong Développeur web (php &amp; flash), intégrateur
                             br/
                             | Sites divers &amp; outils internes
-                        time( datetime="2009-06 - 2010-08" ) juin 2009 - août 2010
+                        .time
+                            time( datetime="2009-06" ) juin 2009
+                            = " - "
+                            time( datetime="2010-08" ) août 2010
                         p Roubaix, France
 
                     li
@@ -188,7 +214,10 @@ html( lang="fr_BE" )
                             strong Développeur web (php &amp; flash), intégrateur
                             br/
                             | Sites divers &amp; outils clients
-                        time( datetime="2008-12 - 2009-06" ) décembre 2008 - juin 2009
+                        .time
+                            time( datetime="2008-12" ) décembre 2008
+                            = " - "
+                            time( datetime="2009-06" ) juin 2009
                         p Bruxelles, Belgique
 
                     li
@@ -198,7 +227,10 @@ html( lang="fr_BE" )
                             strong Développeur web (php), intégrateur &amp; designer web
                             br/
                             | Sites divers &amp; CMS maison
-                        time( datetime="2007-10 - 2008-11" ) octobre 2007 - novembre 2008
+                        .time
+                            time( datetime="2007-10" ) octobre 2007
+                            = " - "
+                            time( datetime="2008-11" ) novembre 2008
                         p Liège, Belgique
 
                     li
@@ -209,7 +241,10 @@ html( lang="fr_BE" )
                             br/
                             | Outils clients
                         p Stage de fin d'études &amp; job étudiant
-                        time( datetime="2007-04 - 2007-07" ) avril - juillet 2007
+                        .time
+                            time( datetime="2007-04" ) avril
+                            = " - "
+                            time( datetime="2007-07" ) juillet 2007
                         p Wiltz, Luxembourg
 
             section#competences
