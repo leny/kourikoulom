@@ -144,10 +144,10 @@ section
                 margin 0 .5rem 0 0
                 font normal 3rem/1.5rem Entypo
                 vertical-align middle
-            &[href^="mailto:"]:before
-                content "\2709"
-            &[href^="http:"]:before
-                content "\1F517"
+        &.mail a:before
+            content "\2709"
+        &.site a:before
+            content "\1F517"
 
 #parcours
     h3:before
@@ -560,11 +560,11 @@ section
                     margin 0 .3rem 0 0
                     font normal 2rem Entypo
                     vertical-align top
-                &[href^="mailto:"]:before
-                    content "\2709"
-                &[href^="http:"]:before
-                    content "\1F517"
     #parcours, #formation
+            &.mail a:before
+                content "\2709"
+            &.site a:before
+                content "\2709"
         ol
             list-style inside none
             li
