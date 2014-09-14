@@ -231,11 +231,8 @@ section[id="presentation"]
         content "\1F50A"
 
 +media-query( screen, min-width 30rem )
-    header
-        h1
-            br
-                display none
-
+    header h1 br
+        display none
     figure
         float left
         margin 0 2rem .5rem 1.5rem
@@ -310,7 +307,7 @@ section[id="presentation"]
 
     figure
         position absolute
-        width 200px
+        width 20rem
         float none
         top -5px
         right -15px
@@ -406,7 +403,7 @@ section[id="presentation"]
     section[id="identite"]
         width 50rem
         top 5.5rem
-        left 0rem
+        left 0
         z-index 50
         p
             color #c0c0c0
@@ -417,6 +414,10 @@ section[id="presentation"]
         address + p
             margin-right 1.5rem
     section[id="parcours"], section[id="formation"]
+        ol li
+            border-radius 0
+            & + li
+                margin-top -2rem
     section[id="formation"]
         width 22%
         top 18rem
@@ -576,7 +577,7 @@ section[id="presentation"]
                         font-weight bold
                     br
                         display none
-                        line-height 0rem
+                        line-height 0
                     &:first-of-type
                         margin-left 2.5rem
                 .time
