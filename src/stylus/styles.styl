@@ -129,7 +129,7 @@ section
             font light 1.3rem/1.5 Lato
             color headingColorOne
 
-#identite
+section[id="identite"]
     margin 2rem auto 3rem
     p
         margin 0 auto .75rem
@@ -149,17 +149,17 @@ section
         &.site a:before
             content "\1F517"
 
-#parcours
+section[id="parcours"]
     h3:before
         content "\E723"
 
-#formation
+section[id="formation"]
     h3:first-of-type:before
         content "\E728"
     h3:last-of-type:before
         content "\1F3C6"
 
-#parcours, #formation
+section[id="parcours"], section[id="formation"]
     ol
         list-style inside none
         li
@@ -216,11 +216,11 @@ section
         &:last-of-type li h4 + p:before
             content "\1F464"
 
-#competences
+section[id="competences"]
     h3:before
         content "\26A1"
 
-#presentation
+section[id="presentation"]
     dl, p
         margin 0 auto 3rem
     h3:nth-of-type(1):before
@@ -240,11 +240,10 @@ section
         float left
         margin 0 2rem .5rem 1.5rem
         transform rotate( -2deg ) translate3d( 0, 0, 0 )
-
-    #identite
+    section[id="identite"]
         margin 3rem auto 3rem
         clear fix
-    #parcours, #formation
+    section[id="parcours"], section[id="formation"]
         ol li h4
             margin 0 auto .05rem
             font bold 1.6rem Lato
@@ -286,9 +285,9 @@ section
     section
         h4
             text-align right
-    #identite
+    section[id="identite"]
         column-span all
-    #competences
+    section[id="competences"]
         -moz-break-before column
         -webkit-column-break-before always
 
@@ -421,7 +420,7 @@ section
                 margin-top -2rem !important
             &:nth-of-type( 9 )
                 margin-top -2rem !important
-    #identite
+    section[id="identite"]
         width 50rem
         top 5.5rem
         left 0rem
@@ -434,22 +433,23 @@ section
                 color lighten( #33a, 20% )
         address + p
             margin-right 1.5rem
-    #formation
+    section[id="parcours"], section[id="formation"]
+    section[id="formation"]
         width 22%
         top 18rem
         left 0
-    #parcours
+    section[id="parcours"]
         width 22%
         left 24%
         top 18rem
         margin 0 auto 25px
         z-index 60
-    #competences
+    section[id="competences"]
         width 26%
         left 48%
         top 18rem
         z-index 70
-    #presentation
+    section[id="presentation"]
         width 24%
         left 76%
         top 26rem
@@ -543,7 +543,7 @@ section
                     content ""
                     display table
                     clear both
-    #identite
+    section[id="identite"]
         margin 2rem 0
         p
             font normal 1.1rem/1 Lato
@@ -560,11 +560,11 @@ section
                     margin 0 .3rem 0 0
                     font normal 2rem Entypo
                     vertical-align top
-    #parcours, #formation
             &.mail a:before
                 content "\2709"
             &.site a:before
                 content "\2709"
+    section[id="parcours"], section[id="formation"]
         ol
             list-style inside none
             li
@@ -630,7 +630,7 @@ section
                 margin 0 .5rem 0 0
                 font normal 2.75rem Entypo
                 vertical-align -0.25rem
-    #parcours
+    section[id="parcours"]
         h3:before
             content "\E723"
         ol li
@@ -641,7 +641,7 @@ section
             &:last-of-type
                 p:nth-child( 3 )
                     display none
-    #formation
+    section[id="formation"]
         h3:first-of-type:before
             content "\E728"
         h3:last-of-type
@@ -651,10 +651,10 @@ section
                 display none
             &:last-of-type
                 display none
-    #competences
+    section[id="competences"]
         h3:before
             content "\26A1"
-    #presentation
+    section[id="presentation"]
         h3
             margin-top 2rem
         h3:nth-of-type(1):before
