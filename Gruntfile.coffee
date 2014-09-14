@@ -2,42 +2,75 @@
 
 module.exports = ( grunt ) ->
 
+  require( "matchdep" ).filterDev( "grunt-*" ).forEach grunt.loadNpmTasks
+
   grunt.initConfig
-    stylus:
-      options:
-        compress: no
-      styles:
-        files:
-          "assets/styles.css": "src/stylus/styles.styl"
+    # html
     jade:
       options:
         compress: no
       page:
         files:
           "index.html": "src/jade/index.jade"
+    # CSS
+    stylus:
+      options:
+        compress: no
+        use: [
+          require "kouto-swiss"
+        ]
+      styles:
+        files:
+          "assets/styles.css": "src/stylus/styles.styl"
+    csslint:
+      options:
+        "box-model": no
+        "compatible-vendor-prefixes": no
+        "qualified-headings": no
+        "unique-headings": no
+        "duplicate-background-images": no
+        "known-properties": no
+      styles:
+        files:
+          src: [
+            "assets/styles.css"
+          ]
+    csso:
+      options:
+        report: "gzip"
+      styles:
+        files:
+          "assets/styles.min.css": "assets/styles.css"
+    # Perfs
+
+    # Watch
     watch:
       jade:
         files: "src/jade/index.jade"
-        tasks: [ "jade" ]
+        tasks: [ "html" ]
         options:
           livereload: yes
       styles:
         files: "src/stylus/styles.styl"
-        tasks: [ "stylus" ]
+        tasks: [ "css" ]
         options:
           livereload: yes
 
-  grunt.loadNpmTasks "grunt-ks-stylus"
-  grunt.loadNpmTasks "grunt-contrib-jade"
-  grunt.loadNpmTasks "grunt-contrib-watch"
+  grunt.registerTask "html", [ "jade" ]
+
+  grunt.registerTask "css", [
+    "stylus"
+    "csslint"
+    "csso"
+  ]
 
   grunt.registerTask "default", [
-    "jade"
-    "stylus"
+    "html"
+    "css"
   ]
 
   grunt.registerTask "work", [
     "jade"
-    "stylus"
+    "css"
     "watch"
   ]
