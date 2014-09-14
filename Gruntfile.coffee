@@ -21,7 +21,10 @@ module.exports = ( grunt ) ->
         ]
       styles:
         files:
-          "assets/styles.css": "src/stylus/styles.styl"
+          "assets/unclean.css": "src/stylus/styles.styl"
+    colorguard:
+      styles:
+        src: [ "assets/unclean.css" ]
     csslint:
       options:
         "box-model": no
@@ -32,9 +35,13 @@ module.exports = ( grunt ) ->
         "known-properties": no
       styles:
         files:
-          src: [
-            "assets/styles.css"
-          ]
+          src: [ "assets/unclean.css" ]
+    uncss:
+      options:
+        stylesheets: [ "assets/unclean.css" ]
+      styles:
+        files:
+          "assets/styles.css": [ "index.html" ]
     csso:
       options:
         report: "gzip"
@@ -60,7 +67,9 @@ module.exports = ( grunt ) ->
 
   grunt.registerTask "css", [
     "stylus"
+    "colorguard"
     "csslint"
+    "uncss"
     "csso"
   ]
 
