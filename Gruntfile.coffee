@@ -42,6 +42,12 @@ module.exports = ( grunt ) ->
       styles:
         files:
           "assets/styles.css": [ "index.html" ]
+    parker:
+      styles:
+        src: [ "assets/styles.css" ]
+    stylestats:
+      styles:
+        src: [ "assets/styles.css" ]
     csso:
       options:
         report: "gzip"
@@ -71,6 +77,15 @@ module.exports = ( grunt ) ->
     "csslint"
     "uncss"
     "csso"
+  ]
+
+  grunt.registerTask "css-report", [
+    "stylus"
+    "colorguard"
+    "csslint"
+    "uncss"
+    "parker"
+    "stylestats"
   ]
 
   grunt.registerTask "default", [
