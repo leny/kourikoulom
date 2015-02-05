@@ -57,7 +57,7 @@ body
     padding 1rem
     color textColor
 
-article
+main
     position relative
 
 header
@@ -67,13 +67,16 @@ header
     border-bottom .1rem solid #999
     box-shadow 0 .1rem .1rem white
     h1
-        font bold 3rem Lato
-        color headingColorOne
-        text-align center
-    h2
-        font light 2rem Lato
-        color headingColorThree
-        text-align center
+        strong
+            display block
+            font bold 3rem Lato
+            color headingColorOne
+            text-align center
+        span
+            display block
+            font light 2rem Lato
+            color headingColorThree
+            text-align center
 
 figure
     width 10rem
@@ -91,7 +94,7 @@ figure
 
 section
     margin 0 auto 3rem
-    h3
+    h2
         position relative
         margin 0 auto .75rem
         padding 0 0 .25rem
@@ -110,7 +113,7 @@ section
     p
         margin 0 auto 1.2rem
         font normal 1.4rem/1.5 Lato
-    h4
+    h3
         margin 0 auto 1.5rem
         padding 0 0 .25rem
         border-bottom .1rem dotted #999
@@ -131,6 +134,8 @@ section
 
 section[id="identite"]
     margin 2rem auto 3rem
+    h2
+        display none
     p
         margin 0 auto .75rem
         font normal 1.5rem Lato
@@ -150,13 +155,13 @@ section[id="identite"]
             content "\1F517"
 
 section[id="parcours"]
-    h3:before
+    h2:before
         content "\E723"
 
 section[id="formation"]
-    h3:first-of-type:before
+    h2:first-of-type:before
         content "\E728"
-    h3:last-of-type:before
+    h2:last-of-type:before
         content "\1F3C6"
 
 section[id="parcours"], section[id="formation"]
@@ -168,11 +173,11 @@ section[id="parcours"], section[id="formation"]
             border .1rem solid silver
             border-radius .6rem
             retina-image( "img/subtle_freckles.png", 198px 198px, "_@2X" )
-            h4:before, p:before
+            h3:before, p:before
                 font normal 3rem Entypo
                 margin 0 .5rem 0 0
                 vertical-align middle
-            h4
+            h3
                 font bold 1.4rem Lato
                 margin 0 auto .25rem
                 color headingColorTwo
@@ -209,25 +214,25 @@ section[id="parcours"], section[id="formation"]
                     content "\E728"
                     vertical-align middle
                     margin 0 .25rem 0 0
-        &:first-of-type li h4:before
+        &:first-of-type li h3:before
             content "\1F4D6"
-        &:last-of-type li h4:before
+        &:last-of-type li h3:before
             content "\1F4BC"
-        &:last-of-type li h4 + p:before
+        &:last-of-type li h3 + p:before
             content "\1F464"
 
 section[id="competences"]
-    h3:before
+    h2:before
         content "\26A1"
 
 section[id="presentation"]
     dl, p
         margin 0 auto 3rem
-    h3:nth-of-type(1):before
+    h2:nth-of-type(1):before
         content "\E720"
-    h3:nth-of-type(2):before
+    h2:nth-of-type(2):before
         content "\1F342"
-    h3:nth-of-type(3):before
+    h2:nth-of-type(3):before
         content "\1F50A"
 
 +media-query( screen, min-width 30rem )
@@ -241,18 +246,19 @@ section[id="presentation"]
         margin 3rem auto 3rem
         clear fix
     section[id="parcours"], section[id="formation"]
-        ol li h4
+        ol li h3
             margin 0 auto .05rem
             font bold 1.6rem Lato
 
 +media-query( screen, min-width 40rem )
     header
         h1
-            float left
-        h2
-            float right
-            margin .25rem 0 0
-            font light 2.25rem Lato
+            strong
+                float left
+            span
+                float right
+                margin .25rem 0 0
+                font light 2.25rem Lato
 
     figure
         width 15rem
@@ -261,17 +267,17 @@ section[id="presentation"]
         transform rotate( -3deg ) translate3d( 0, 0, 0 )
 
     section
-        h3
+        h2
             padding-left 2.75rem
             text-align left
             &:before
                 bottom -.35rem
                 font-size 4rem
-        h4
+        h3
             text-align left
 
 +media-query( screen, min-width 48rem )
-    article
+    main
         column-count 2
         column-gap 3%
         column-width 46%
@@ -280,7 +286,7 @@ section[id="presentation"]
         column-span all
 
     section
-        h4
+        h3
             text-align right
     section[id="identite"]
         column-span all
@@ -293,7 +299,7 @@ section[id="presentation"]
         background #110416
         retina-image( "img/dark_wood.png", 512px 512px, "_@2X" )
 
-    article
+    main
         width 90%
         margin 3rem auto
         padding 2rem
@@ -302,7 +308,7 @@ section[id="presentation"]
         box-shadow 0 5px 20px rgba( black, .5 )
 
     header
-        h2
+        span
             margin-right 17.5rem
 
     figure
@@ -316,7 +322,7 @@ section[id="presentation"]
         transform rotate( 5deg ) translate3d( 0, 0, 0 )
 
 +media-query( screen, min-width 80rem )
-    article
+    main
         max-width 115rem
         margin 0 auto
         clear fix
@@ -347,18 +353,19 @@ section[id="presentation"]
         box-shadow none
         border 0
         h1
-            float none
-            margin 0 auto
-            border-bottom .1rem solid #999
-            font bold 3.5rem Lato
-            color #ddd
-            text-align left
-        h2
-            float none
-            margin-right 0
-            font normal 2.75rem Lato
-            color #c0c0c0
-            text-align right
+            strong
+                float none
+                margin 0 auto
+                border-bottom .1rem solid #999
+                font bold 3.5rem Lato
+                color #ddd
+                text-align left
+            span
+                float none
+                margin-right 0
+                font normal 2.75rem Lato
+                color #c0c0c0
+                text-align right
     section
         position absolute
         border 0
@@ -366,13 +373,13 @@ section[id="presentation"]
         clear fix
         transition all .1s ease-in
         transform-style preserve-3d
-        h3
+        h2
             box-shadow none
             color #c0c0c0
-        h4
+        h3
             box-shadow none
             color #ccc
-        ol li, dl, h3 + p
+        ol li, dl, &.boxed h2 + p
             padding 1rem
             background white
             retina-image( "img/subtle_freckles.png", 198px 198px, "_@2X" )
@@ -452,19 +459,20 @@ section[id="presentation"]
         box-shadow none
         border-bottom 0
         h1
-            float none
-            border-bottom .1rem solid #999
-            font bold 3rem/1 Lato
-            color #666
-            text-align left
-            br
-                display none
-        h2
-            float none
-            margin 0 .25rem 0 0
-            font light 2rem/1.25 Lato
-            color #666
-            text-align right
+            strong
+                float none
+                border-bottom .1rem solid #999
+                font bold 3rem/1 Lato
+                color #666
+                text-align left
+                br
+                    display none
+            span
+                float none
+                margin 0 .25rem 0 0
+                font light 2rem/1.25 Lato
+                color #666
+                text-align right
 
     figure
         display none
@@ -472,7 +480,7 @@ section[id="presentation"]
     section
         page-break-inside avoid
         margin 0 auto 2rem
-        h3
+        h2
             margin .5rem auto 1.5rem
             border-bottom .1rem dotted #999
             box-shadow none
@@ -504,7 +512,7 @@ section[id="presentation"]
             p
                 position relative
                 z-index 11
-        h4
+        h3
             margin 0 auto 1rem
             padding 0
             border-bottom 0
@@ -557,7 +565,7 @@ section[id="presentation"]
                 border 0
                 border-radius 0
                 background transparent
-                h4
+                h3
                     margin 0 auto
                     border-bottom 0
                     box-shadow none
@@ -599,23 +607,23 @@ section[id="presentation"]
                         margin 0 .25rem 0 0
                         font normal 2rem Entypo
                         vertical-align baseline
-            &:first-of-type li h4:before
+            &:first-of-type li h3:before
                 content "\1F4D6"
                 margin 0 .5rem 0 0
                 font normal 3.5rem Entypo
                 vertical-align middle
-            &:last-of-type li h4:before
+            &:last-of-type li h3:before
                 content "\1F4BC"
                 margin 0 .5rem 0 0
                 font normal 3.5rem Entypo
                 vertical-align middle
-            &:last-of-type li h4 + p:before
+            &:last-of-type li h3 + p:before
                 content "\1F464"
                 margin 0 .5rem 0 0
                 font normal 2.75rem Entypo
                 vertical-align -0.25rem
     section[id="parcours"]
-        h3:before
+        h2:before
             content "\E723"
         ol li
             p
@@ -626,9 +634,9 @@ section[id="presentation"]
                 p:nth-child( 3 )
                     display none
     section[id="formation"]
-        h3:first-of-type:before
+        h2:first-of-type:before
             content "\E728"
-        h3:last-of-type
+        h2:last-of-type
             display none
         ol
             &:first-of-type li:nth-child( 2 )
@@ -636,14 +644,14 @@ section[id="presentation"]
             &:last-of-type
                 display none
     section[id="competences"]
-        h3:before
+        h2:before
             content "\26A1"
     section[id="presentation"]
-        h3
+        h2
             margin-top 2rem
-        h3:nth-of-type( 1 ):before
+        h2:nth-of-type( 1 ):before
             content "\E720"
-        h3:nth-of-type( 2 ):before
+        h2:nth-of-type( 2 ):before
             content "\1F342"
-        h3:nth-of-type( 3 ):before
+        h2:nth-of-type( 3 ):before
             content "\1F50A"
