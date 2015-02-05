@@ -16,10 +16,10 @@
 html,
 body,
 div,
+span,
 h1,
 h2,
 h3,
-h4,
 p,
 a,
 abbr,
@@ -33,7 +33,6 @@ dt,
 dd,
 ol,
 li,
-article,
 figure,
 figcaption,
 header,
@@ -47,7 +46,6 @@ time {
   vertical-align: baseline;
 }
 
-article,
 figcaption,
 figure,
 header,
@@ -117,7 +115,7 @@ body {
   color: #333;
 }
 
-article {
+main {
   position: relative;
 }
 
@@ -138,13 +136,15 @@ header:after {
   clear: both;
 }
 
-header h1 {
+header h1 strong {
+  display: block;
   font: bold 3rem "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #555;
   text-align: center;
 }
 
-header h2 {
+header h1 span {
+  display: block;
   font: 200 2rem "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #666;
   text-align: center;
@@ -180,7 +180,7 @@ section {
   margin: 0 auto 3rem;
 }
 
-section h3 {
+section h2 {
   position: relative;
   margin: 0 auto 0.75rem;
   padding: 0 0 0.25rem;
@@ -191,7 +191,7 @@ section h3 {
   text-align: right;
 }
 
-section h3:before {
+section h2:before {
   position: absolute;
   bottom: -0.6rem;
   left: 0;
@@ -205,7 +205,7 @@ section p {
   font: normal 1.4rem/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-section h4 {
+section h3 {
   margin: 0 auto 1.5rem;
   padding: 0 0 0.25rem;
   border-bottom: 0.1rem dotted #999;
@@ -233,6 +233,10 @@ section dl dd {
 
 section[id="identite"] {
   margin: 2rem auto 3rem;
+}
+
+section[id="identite"] h2 {
+  display: none;
 }
 
 section[id="identite"] p {
@@ -266,15 +270,15 @@ section[id="identite"] address ~ p.site a:before {
   content: "\1F517";
 }
 
-section[id="parcours"] h3:before {
+section[id="parcours"] h2:before {
   content: "\E723";
 }
 
-section[id="formation"] h3:first-of-type:before {
+section[id="formation"] h2:first-of-type:before {
   content: "\E728";
 }
 
-section[id="formation"] h3:last-of-type:before {
+section[id="formation"] h2:last-of-type:before {
   content: "\1F3C6";
 }
 
@@ -300,8 +304,8 @@ section[id="formation"] ol li {
   }
 }
 
-section[id="parcours"] ol li h4:before,
-section[id="formation"] ol li h4:before,
+section[id="parcours"] ol li h3:before,
+section[id="formation"] ol li h3:before,
 section[id="parcours"] ol li p:before,
 section[id="formation"] ol li p:before {
   font: normal 3rem "Entypo";
@@ -309,8 +313,8 @@ section[id="formation"] ol li p:before {
   vertical-align: middle;
 }
 
-section[id="parcours"] ol li h4,
-section[id="formation"] ol li h4 {
+section[id="parcours"] ol li h3,
+section[id="formation"] ol li h3 {
   font: bold 1.4rem "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 auto 0.25rem;
   color: #444;
@@ -319,12 +323,12 @@ section[id="formation"] ol li h4 {
   box-shadow: none;
 }
 
-section[id="parcours"] ol li h4 a {
+section[id="parcours"] ol li h3 a {
   text-decoration: none;
 }
 
-section[id="parcours"] ol li h4:before,
-section[id="formation"] ol li h4:before {
+section[id="parcours"] ol li h3:before,
+section[id="formation"] ol li h3:before {
   line-height: 1.6rem;
   vertical-align: bottom;
 }
@@ -375,22 +379,22 @@ section[id="formation"] ol li .time ~ p:before {
   margin: 0 0.25rem 0 0;
 }
 
-section[id="parcours"] ol:first-of-type li h4:before,
-section[id="formation"] ol:first-of-type li h4:before {
+section[id="parcours"] ol:first-of-type li h3:before,
+section[id="formation"] ol:first-of-type li h3:before {
   content: "\1F4D6";
 }
 
-section[id="parcours"] ol:last-of-type li h4:before,
-section[id="formation"] ol:last-of-type li h4:before {
+section[id="parcours"] ol:last-of-type li h3:before,
+section[id="formation"] ol:last-of-type li h3:before {
   content: "\1F4BC";
 }
 
-section[id="parcours"] ol:last-of-type li h4 + p:before,
-section[id="formation"] ol:last-of-type li h4 + p:before {
+section[id="parcours"] ol:last-of-type li h3 + p:before,
+section[id="formation"] ol:last-of-type li h3 + p:before {
   content: "\1F464";
 }
 
-section[id="competences"] h3:before {
+section[id="competences"] h2:before {
   content: "\26A1";
 }
 
@@ -399,15 +403,15 @@ section[id="presentation"] p {
   margin: 0 auto 3rem;
 }
 
-section[id="presentation"] h3:nth-of-type(1):before {
+section[id="presentation"] h2:nth-of-type(1):before {
   content: "\E720";
 }
 
-section[id="presentation"] h3:nth-of-type(2):before {
+section[id="presentation"] h2:nth-of-type(2):before {
   content: "\1F342";
 }
 
-section[id="presentation"] h3:nth-of-type(3):before {
+section[id="presentation"] h2:nth-of-type(3):before {
   content: "\1F50A";
 }
 
@@ -438,19 +442,19 @@ section[id="presentation"] h3:nth-of-type(3):before {
     clear: both;
   }
 
-  section[id="parcours"] ol li h4,
-  section[id="formation"] ol li h4 {
+  section[id="parcours"] ol li h3,
+  section[id="formation"] ol li h3 {
     margin: 0 auto 0.05rem;
     font: bold 1.6rem "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 }
 
 @media screen and (min-width: 40rem) {
-  header h1 {
+  header h1 strong {
     float: left;
   }
 
-  header h2 {
+  header h1 span {
     float: right;
     margin: 0.25rem 0 0;
     font: 200 2.25rem "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -466,23 +470,23 @@ section[id="presentation"] h3:nth-of-type(3):before {
     transform: rotate(-3deg) translate3d(0, 0, 0);
   }
 
-  section h3 {
+  section h2 {
     padding-left: 2.75rem;
     text-align: left;
   }
 
-  section h3:before {
+  section h2:before {
     bottom: -0.35rem;
     font-size: 4rem;
   }
 
-  section h4 {
+  section h3 {
     text-align: left;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  article {
+  main {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
@@ -500,7 +504,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     column-span: all;
   }
 
-  section h4 {
+  section h3 {
     text-align: right;
   }
 
@@ -522,7 +526,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     background-image: url("img/dark_wood.png");
   }
 
-  article {
+  main {
     width: 90%;
     margin: 3rem auto;
     padding: 2rem;
@@ -531,7 +535,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
   }
 
-  header h2 {
+  header span {
     margin-right: 17.5rem;
   }
 
@@ -550,7 +554,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
 }
 
 @media screen and (min-width: 80rem) {
-  article {
+  main {
     max-width: 115rem;
     margin: 0 auto;
     -webkit-column-count: auto;
@@ -566,13 +570,13 @@ section[id="presentation"] h3:nth-of-type(3):before {
     box-shadow: none;
   }
 
-  article:before,
-  article:after {
+  main:before,
+  main:after {
     content: " ";
     display: table;
   }
 
-  article:after {
+  main:after {
     clear: both;
   }
 
@@ -615,7 +619,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     clear: both;
   }
 
-  header h1 {
+  header h1 strong {
     float: none;
     margin: 0 auto;
     border-bottom: 0.1rem solid #999;
@@ -624,7 +628,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     text-align: left;
   }
 
-  header h2 {
+  header h1 span {
     float: none;
     margin-right: 0;
     font: normal 2.75rem "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -652,19 +656,19 @@ section[id="presentation"] h3:nth-of-type(3):before {
     clear: both;
   }
 
-  section h3 {
+  section h2 {
     box-shadow: none;
     color: #c0c0c0;
   }
 
-  section h4 {
+  section h3 {
     box-shadow: none;
     color: #ccc;
   }
 
   section ol li,
   section dl,
-  section h3 + p {
+  section.boxed h2 + p {
     padding: 1rem;
     background: #fff;
     background-image: url("img/subtle_freckles.png");
@@ -677,7 +681,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
 
   section ol li:nth-of-type(1 ),
   section dl:nth-of-type(1 ),
-  section h3 + p:nth-of-type(1 ) {
+  section.boxed h2 + p:nth-of-type(1 ) {
     -webkit-transform: rotate(2deg) translate3d(0, 0, 0);
     -ms-transform: rotate(2deg) translate3d(0, 0, 0);
     transform: rotate(2deg) translate3d(0, 0, 0);
@@ -685,7 +689,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
 
   section ol li:nth-of-type(2 ),
   section dl:nth-of-type(2 ),
-  section h3 + p:nth-of-type(2 ) {
+  section.boxed h2 + p:nth-of-type(2 ) {
     -webkit-transform: rotate(-1deg) translate3d(0, 0, 0);
     -ms-transform: rotate(-1deg) translate3d(0, 0, 0);
     transform: rotate(-1deg) translate3d(0, 0, 0);
@@ -736,7 +740,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
 
   section ol li:hover,
   section dl:hover,
-  section h3 + p:hover {
+  section.boxed h2 + p:hover {
     -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
     -ms-transform: rotate(0deg) translate3d(0, 0, 0);
     transform: rotate(0deg) translate3d(0, 0, 0);
@@ -820,7 +824,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     border-bottom: 0;
   }
 
-  header h1 {
+  header h1 strong {
     float: none;
     border-bottom: 0.1rem solid #999;
     font: bold 3rem/1 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -828,11 +832,11 @@ section[id="presentation"] h3:nth-of-type(3):before {
     text-align: left;
   }
 
-  header h1 br {
+  header h1 strong br {
     display: none;
   }
 
-  header h2 {
+  header h1 span {
     float: none;
     margin: 0 0.25rem 0 0;
     font: 200 2rem/1.25 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -849,7 +853,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     margin: 0 auto 2rem;
   }
 
-  section h3 {
+  section h2 {
     margin: 0.5rem auto 1.5rem;
     border-bottom: 0.1rem dotted #999;
     box-shadow: none;
@@ -857,7 +861,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     color: #666;
   }
 
-  section h3:before {
+  section h2:before {
     margin: 0 0.5rem 0 0;
     font: normal 3rem "Entypo";
     vertical-align: middle;
@@ -868,7 +872,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     font: normal 1.1rem/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
-  section h4 {
+  section h3 {
     margin: 0 auto 1rem;
     padding: 0;
     border-bottom: 0;
@@ -952,8 +956,8 @@ section[id="presentation"] h3:nth-of-type(3):before {
     background: transparent;
   }
 
-  section[id="parcours"] ol li h4,
-  section[id="formation"] ol li h4 {
+  section[id="parcours"] ol li h3,
+  section[id="formation"] ol li h3 {
     margin: 0 auto;
     border-bottom: 0;
     box-shadow: none;
@@ -962,7 +966,7 @@ section[id="presentation"] h3:nth-of-type(3):before {
     text-align: left;
   }
 
-  section[id="parcours"] ol li h4 a {
+  section[id="parcours"] ol li h3 a {
     font: bold 1.4rem "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #444;
   }
@@ -1022,31 +1026,31 @@ section[id="presentation"] h3:nth-of-type(3):before {
     vertical-align: baseline;
   }
 
-  section[id="parcours"] ol:first-of-type li h4:before,
-  section[id="formation"] ol:first-of-type li h4:before {
+  section[id="parcours"] ol:first-of-type li h3:before,
+  section[id="formation"] ol:first-of-type li h3:before {
     content: "\1F4D6";
     margin: 0 0.5rem 0 0;
     font: normal 3.5rem "Entypo";
     vertical-align: middle;
   }
 
-  section[id="parcours"] ol:last-of-type li h4:before,
-  section[id="formation"] ol:last-of-type li h4:before {
+  section[id="parcours"] ol:last-of-type li h3:before,
+  section[id="formation"] ol:last-of-type li h3:before {
     content: "\1F4BC";
     margin: 0 0.5rem 0 0;
     font: normal 3.5rem "Entypo";
     vertical-align: middle;
   }
 
-  section[id="parcours"] ol:last-of-type li h4 + p:before,
-  section[id="formation"] ol:last-of-type li h4 + p:before {
+  section[id="parcours"] ol:last-of-type li h3 + p:before,
+  section[id="formation"] ol:last-of-type li h3 + p:before {
     content: "\1F464";
     margin: 0 0.5rem 0 0;
     font: normal 2.75rem "Entypo";
     vertical-align: -0.25rem;
   }
 
-  section[id="parcours"] h3:before {
+  section[id="parcours"] h2:before {
     content: "\E723";
   }
 
@@ -1062,11 +1066,11 @@ section[id="presentation"] h3:nth-of-type(3):before {
     display: none;
   }
 
-  section[id="formation"] h3:first-of-type:before {
+  section[id="formation"] h2:first-of-type:before {
     content: "\E728";
   }
 
-  section[id="formation"] h3:last-of-type {
+  section[id="formation"] h2:last-of-type {
     display: none;
   }
 
@@ -1078,23 +1082,23 @@ section[id="presentation"] h3:nth-of-type(3):before {
     display: none;
   }
 
-  section[id="competences"] h3:before {
+  section[id="competences"] h2:before {
     content: "\26A1";
   }
 
-  section[id="presentation"] h3 {
+  section[id="presentation"] h2 {
     margin-top: 2rem;
   }
 
-  section[id="presentation"] h3:nth-of-type(1 ):before {
+  section[id="presentation"] h2:nth-of-type(1 ):before {
     content: "\E720";
   }
 
-  section[id="presentation"] h3:nth-of-type(2 ):before {
+  section[id="presentation"] h2:nth-of-type(2 ):before {
     content: "\1F342";
   }
 
-  section[id="presentation"] h3:nth-of-type(3 ):before {
+  section[id="presentation"] h2:nth-of-type(3 ):before {
     content: "\1F50A";
   }
 }
