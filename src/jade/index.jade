@@ -28,20 +28,23 @@ html( lang="fr-BE" )
         <![endif]-->
 
     body
-        article
+        main
             header
                 h1
-                    | DELNATTE
-                    br/
-                    = " "
-                    | Pierre-Antoine
-                h2 Webdeveloper
+                    strong
+                        | DELNATTE
+                        br/
+                        = " "
+                        | Pierre-Antoine
+                    span Webdeveloper
 
             figure
                 img( alt="Pierre-Antoine Delnatte", src="assets/me.jpg" )/
                 figcaption 2012
 
             section#identite
+                h2 À propos de moi…
+                
                 p Né le 8 mai 1985
                 address
                     p Résidant à Liège, Belgique
@@ -54,12 +57,12 @@ html( lang="fr-BE" )
                     = " "
                     a( href="http://leny.me", rel="external" ) http://leny.me
 
-            section#formation
-                h3 Formations
+            section.boxed#formation
+                h2 Formations
 
                 ol
                     li
-                        h4 Bachelor en Techniques Infographiques
+                        h3 Bachelor en Techniques Infographiques
                         p Orientation WEB
                         p
                             strong TFE:
@@ -73,7 +76,7 @@ html( lang="fr-BE" )
                             abbr( title="Haute École de la Province de Liège" ) HEPL
 
                     li
-                        h4 Psychologie et Sciences de l'Education
+                        h3 Psychologie et Sciences de l'Education
                         p Première année
                         .time
                             time( datetime="2003-09-01" ) 2003
@@ -83,7 +86,7 @@ html( lang="fr-BE" )
                             abbr( title="Université de Liège" ) ULg
 
                     li
-                        h4 Humanités générales
+                        h3 Humanités générales
                         p Option sciences
                         .time
                             time( datetime="1997-09-01" ) 1997
@@ -94,11 +97,11 @@ html( lang="fr-BE" )
                             = " "
                             | Collège
 
-                h3 Distinctions
+                h2 Distinctions
 
                 ol
                     li
-                        h4
+                        h3
                             abbr( title="Webdesign Festival International") WIF
                             | - Finale
                         p
@@ -112,7 +115,7 @@ html( lang="fr-BE" )
                             abbr( title="Webdesign Festival International" ) WIF
                             |, Limoges, France
                     li
-                        h4
+                        h3
                             abbr( title="Webdesign Festival International" ) WIF
                             | - Préselections Nationales Belges
                         p
@@ -126,12 +129,12 @@ html( lang="fr-BE" )
                             abbr( title="Webdesign Festival International" ) WIF
                             |, Limoges, France
 
-            section#parcours
-                h3 Parcours
+            section.boxed#parcours
+                h2 Parcours
 
                 ol
                     li
-                        h4
+                        h3
                             a( href="http://krkn.be", rel="external" ) KRKN
                         p
                             strong Co-Founder
@@ -143,7 +146,7 @@ html( lang="fr-BE" )
                         p Liège, Belgique
 
                     li
-                        h4
+                        h3
                             a( href="http://flatland.be", rel="external" ) flatLand!
                         p
                             strong Founder
@@ -155,7 +158,7 @@ html( lang="fr-BE" )
                         p Liège, Belgique
 
                     li
-                        h4
+                        h3
                             a( href="http://www.hepl.be", rel="external" ) Haute École de la Province de Liège
                         p
                             strong Prof. Invité
@@ -183,7 +186,7 @@ html( lang="fr-BE" )
                         p Liège, Belgique
 
                     li
-                        h4
+                        h3
                             a( href="http://www.id-co.be", rel="external" ) ID&amp;CO
                         p
                             strong Design &amp; Dev Web, maintenance technique
@@ -196,7 +199,7 @@ html( lang="fr-BE" )
                         p Tournai, Belgique
 
                     li
-                        h4
+                        h3
                             a( href="http://www.ankama.com", rel="external" ) Ankama Studio
                         p
                             strong Intégrateur RIA Flash
@@ -209,7 +212,7 @@ html( lang="fr-BE" )
                         p Roubaix, France
 
                     li
-                        h4
+                        h3
                             a( href="http://www.ankama.com", rel="external" ) Ankama Games
                         p
                             strong Développeur web (php &amp; flash), intégrateur
@@ -222,7 +225,7 @@ html( lang="fr-BE" )
                         p Roubaix, France
 
                     li
-                        h4
+                        h3
                             a( href="http://www.com2b.be", rel="external" ) COM2B Networks
                         p
                             strong Développeur web (php &amp; flash), intégrateur
@@ -235,7 +238,7 @@ html( lang="fr-BE" )
                         p Bruxelles, Belgique
 
                     li
-                        h4
+                        h3
                             a( href="http://www.newedge.be", rel="external" ) New Edge Concept
                         p
                             strong Développeur web (php), intégrateur &amp; designer web
@@ -248,7 +251,7 @@ html( lang="fr-BE" )
                         p Liège, Belgique
 
                     li
-                        h4
+                        h3
                             a( href="http://www.valain.com", rel="external" ) VAlain S.A.
                         p
                             strong Développeur Web (php)
@@ -261,10 +264,10 @@ html( lang="fr-BE" )
                             time( datetime="2007-07" ) juillet 2007
                         p Wiltz, Luxembourg
 
-            section#competences
-                h3 Compétences
+            section.boxed#competences
+                h2 Compétences
 
-                h4 Langages
+                h3 Langages
                 dl
                     dt Spécialiste javascript
                     dd
@@ -313,7 +316,7 @@ html( lang="fr-BE" )
                     dt Application
                     dd phonegap/cordova, TitaniumJS, AIR
 
-                h4 Outils &amp; Méthodologies
+                h3 Outils &amp; Méthodologies
                 dl
                     dt Adobe Creative Suite 5, 6 &amp; CC
                     dd photoshop, illustrator, indesign, flash, edge tools
@@ -339,7 +342,7 @@ html( lang="fr-BE" )
                         = " "
                         abbr( title="eXtreme Programming" ) XP
 
-                h4 Systèmes
+                h3 Systèmes
                 dl
                     dt Mac OSX
                     dd 10.6, 10.7, 10.8, 10.9 (système principal)
@@ -348,8 +351,8 @@ html( lang="fr-BE" )
                     dt Linux
                     dd debian-based, shell, nginx &amp; apache fine-tuning, administration serveurs web
 
-            section#presentation
-                h3 Langues
+            section.boxed#presentation
+                h2 Langues
                 dl
                     dt Français
                     dd Langue maternelle, maîtrise de l'orthographe et de la grammaire
@@ -358,8 +361,8 @@ html( lang="fr-BE" )
                     dt Néérlandais
                     dd Bases
 
-                h3 Motorisation
+                h2 Motorisation
                 p Permis B en cours d'obtention, maîtrise de la marche à pieds et des transports en commun
 
-                h3 Centres d'intérêt
+                h2 Centres d'intérêt
                 p Musique (composition, écoute), nouvelles technologies, contributions open-source, actualités, littérature, contre-culture
