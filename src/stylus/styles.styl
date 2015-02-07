@@ -11,13 +11,14 @@
  * new desktop styles in january 2014
  * rewriten with stylus/kouto-swiss in may 2014
  * fix code for stylus/kouto-swiss update in september 2014
+ * fix code using normalize instead of reset in february 2015
  */
 
 // imports
 @import "kouto-swiss"
 
 // resets
-meyer-reset()
+normalize()
 
 // fonts
 font-face( "Entypo", "./fonts/entypo/entypo" )
@@ -67,6 +68,7 @@ header
     border-bottom .1rem solid #999
     box-shadow 0 .1rem .1rem white
     h1
+        margin 0 auto
         strong
             display block
             font bold 3rem Lato
@@ -128,7 +130,7 @@ section
             font bold 1.3rem Lato
             color headingColorOne
         dd
-            margin 0 auto 1rem 2.6rem
+            margin 0 auto 1rem
             font light 1.3rem/1.5 Lato
             color headingColorOne
 
@@ -166,6 +168,8 @@ section[id="formation"]
 
 section[id="parcours"], section[id="formation"]
     ol
+        margin 0
+        padding 0
         list-style inside none
         li
             margin 0 auto 2rem
@@ -285,6 +289,16 @@ section[id="presentation"]
     header
         column-span all
 
+    figure
+        position absolute
+        width 15rem
+        float none
+        top 4rem
+        right .5rem
+        margin 0
+        z-index 150
+        transform rotate( 5deg ) translate3d( 0, 0, 0 )
+
     section
         h3
             text-align right
@@ -308,18 +322,14 @@ section[id="presentation"]
         box-shadow 0 5px 20px rgba( black, .5 )
 
     header
-        span
-            margin-right 17.5rem
+        h1
+            span
+                margin-right 17.5rem
 
     figure
-        position absolute
         width 20rem
-        float none
         top -.5rem
         right -1.5rem
-        margin 0
-        z-index 150
-        transform rotate( 5deg ) translate3d( 0, 0, 0 )
 
 +media-query( screen, min-width 80rem )
     main
