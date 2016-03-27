@@ -29,359 +29,47 @@ html( lang="fr-BE" )
 
     body
         main
-            header
-                h1
-                    strong
-                        | DELNATTE
-                        br/
+            .head
+                header
+                    h1
+                        include ../svg/leny.svg
                         = " "
-                        | Pierre-Antoine
+                        strong
+                            include ../svg/delnatte.svg
+                            = " "
+                            include ../svg/pierre-antoine.svg
+
+                        = " "
+                        include ../svg/webdeveloper.svg
+
+                section#identity
+                    include sections/identity
+
+                nav
+                    h2 Navigation rapide
+
+                    a( href="#education" ) Formations
                     = " "
-                    span Webdeveloper
-
-            figure
-                img( alt="Pierre-Antoine Delnatte", src="assets/me.jpg" )/
-                figcaption 2012
-
-            section#identite
-                h2 À propos de moi…
-
-                p Né le 8 mai 1985
-                address
-                    p Résidant à Liège, Belgique
-                p.mail
-                    strong Mail&nbsp;:&nbsp;
+                    a( href="#experience" ) Parcours
                     = " "
-                    a( href="mailto:pierre-antoine@delnatte.be" ) pierre-antoine@delnatte.be
-                p.site
-                    strong URL&nbsp;:&nbsp;
+                    a( href="#skills" ) Compétences
                     = " "
-                    a( href="http://leny.me", rel="external" ) http://leny.me
+                    a( href="#languages" ) Langues
+                    = " "
+                    a( href="#misc" ) Divers
 
-            section.boxed#formation
-                h2 Formations
+            .content
+                section#education
+                    include sections/education
 
-                ol
-                    li
-                        h3 Bachelor en Techniques Infographiques
-                        p Orientation WEB
-                        p
-                            strong TFE&nbsp;:&nbsp;
-                            = " "
-                            | fish in a pan, CMS et groupes de musique
-                        .time
-                            time( datetime="2004-09-01" ) 2004
-                            | -
-                            time( datetime="2007-06-30" ) 2007
-                        p
-                            abbr( title="Haute École de la Province de Liège" ) HEPL
+                section#experience
+                    include sections/experience
 
-                    li
-                        h3 Psychologie et Sciences de l’Education
-                        p Première année
-                        .time
-                            time( datetime="2003-09-01" ) 2003
-                            | -
-                            time( datetime="2004-06-30" ) 2004
-                        p
-                            abbr( title="Université de Liège" ) ULg
+                section#skills
+                    include sections/skills
 
-                    li
-                        h3 Humanités générales
-                        p Option sciences
-                        .time
-                            time( datetime="1997-09-01" ) 1997
-                            | -
-                            time( datetime="2003-06-30" ) 2003
-                        p
-                            abbr( title="Dames de l’Instruction Chrétienne" ) DIC
-                            = " "
-                            | Collège
+                section#languages
+                    include sections/languages
 
-                h2 Distinctions
-
-                ol
-                    li
-                        h3
-                            abbr( title="Webdesign Festival International") WIF
-                            | - Finale
-                        p
-                            | 2
-                            sup ème
-                            = " "
-                            | place, catégorie amateurs &amp; étudiants
-                        .time
-                            time( datetime="2006-02-01" ) février 2006
-                        p
-                            abbr( title="Webdesign Festival International" ) WIF
-                            |, Limoges, France
-                    li
-                        h3
-                            abbr( title="Webdesign Festival International" ) WIF
-                            | - Préselections Nationales Belges
-                        p
-                            | 1
-                            sup ère
-                            = " "
-                            | place, catégorie amateurs &amp; étudiants
-                        .time
-                            time( datetime="2005-11-01" ) novembre 2005
-                        p
-                            abbr( title="Webdesign Festival International" ) WIF
-                            |, Limoges, France
-
-            section.boxed#parcours
-                h2 Parcours
-
-                ol
-                    li
-                        h3
-                            a( href="http://flatland.be", rel="external" ) flatLand!
-                        p
-                            strong Founder
-                            br/
-                            | Développement web freelance &amp; sous-traitance
-                        .time
-                            time( datetime="2011-11-05" ) novembre 2011
-                            = " - …"
-                        p Liège, Belgique
-
-                    li
-                        h3
-                            a( href="http://www.hepl.be", rel="external" ) Haute École de la Province de Liège
-                        p
-                            strong Prof. Invité
-                            br/
-                            | Cours de
-                            = " "
-                            abbr( title="Rich Internet Applications - Applications internet riches" ) RIA
-                            = " "
-                            | à destination des 3
-                            sup ème
-                            = " "
-                            | années
-                            br/
-                            | Cours de
-                            = " "
-                            em Multimédia interactif
-                            = " "
-                            | et de
-                            = " "
-                            em Design Web Mobile
-                            = " "
-                            | à destination des 2
-                            sup ème
-                            = " "
-                            | années
-                            br/
-                            | Cours de
-                            = " "
-                            em Création de pages Web
-                            = " "
-                            | à destination des 1
-                            sup ère
-                            = " "
-                            | années
-                        .time
-                            time( datetime="2011-10-02" ) octobre 2012
-                            = " - …"
-                        p Liège, Belgique
-                    li
-                        h3
-                            a( href="http://krkn.be", rel="external" ) KRKN
-                        p
-                            strong Co-Founder
-                            br/
-                            | Développement web &amp; app, expertise &amp; sous-traitance
-                        .time
-                            time( datetime="2014-05" ) mai 2014
-                            = " - "
-                            time( datetime="2015-08" ) août 2015
-                        p Liège, Belgique
-                    li
-                        h3
-                            a( href="http://www.id-co.be", rel="external" ) ID&amp;CO
-                        p
-                            strong Design &amp; Dev Web, maintenance technique
-                            br/
-                            | Sites clients, CMS maison &amp; outils internes
-                        .time
-                            time( datetime="2011-11" ) novembre 2011
-                            = " - "
-                            time( datetime="2013-03" ) mars 2013
-                        p Tournai, Belgique
-
-                    li
-                        h3
-                            a( href="http://www.ankama.com", rel="external" ) Ankama Studio
-                        p
-                            strong Intégrateur RIA Flash
-                            br/
-                            | Jeux Boufbowl &amp; TCG Online
-                        .time
-                            time( datetime="2010-09" ) septembre 2010
-                            = " - "
-                            time( datetime="2011-10" ) octobre 2011
-                        p Roubaix, France
-
-                    li
-                        h3
-                            a( href="http://www.ankama.com", rel="external" ) Ankama Games
-                        p
-                            strong Développeur web (php &amp; flash), intégrateur
-                            br/
-                            | Sites divers &amp; outils internes
-                        .time
-                            time( datetime="2009-06" ) juin 2009
-                            = " - "
-                            time( datetime="2010-08" ) août 2010
-                        p Roubaix, France
-
-                    li
-                        h3
-                            a( href="http://www.com2b.be", rel="external" ) COM2B Networks
-                        p
-                            strong Développeur web (php &amp; flash), intégrateur
-                            br/
-                            | Sites divers &amp; outils clients
-                        .time
-                            time( datetime="2008-12" ) décembre 2008
-                            = " - "
-                            time( datetime="2009-06" ) juin 2009
-                        p Bruxelles, Belgique
-
-                    li
-                        h3
-                            a( href="http://www.newedge.be", rel="external" ) New Edge Concept
-                        p
-                            strong Développeur web (php), intégrateur &amp; designer web
-                            br/
-                            | Sites divers &amp; CMS maison
-                        .time
-                            time( datetime="2007-10" ) octobre 2007
-                            = " - "
-                            time( datetime="2008-11" ) novembre 2008
-                        p Liège, Belgique
-
-                    li
-                        h3
-                            a( href="http://www.valain.com", rel="external" ) VAlain S.A.
-                        p
-                            strong Développeur Web (php)
-                            br/
-                            | Outils clients
-                        p Stage de fin d’études &amp; job étudiant
-                        .time
-                            time( datetime="2007-04" ) avril
-                            = " - "
-                            time( datetime="2007-07" ) juillet 2007
-                        p Wiltz, Luxembourg
-
-            section.boxed#competences
-                h2 Compétences
-
-                h3 Langages
-                dl
-                    dt Spécialiste javascript
-                    dd
-                        | ES5, ES2015
-                        br/
-                        | node.js (server, CLI, tools)
-                        br/
-                        abbr( title="Document Object Model" ) DOM
-                        | , APIs HTML5 (canvas, geolocalisation,
-                        = " "
-                        abbr( title="Server-Sent Events" ) SSE
-                        | , storage, …)
-                        br/
-                        | jQuery, jQuery UI, AJAX/AJAJ, prototype, mootools, underscorejs/lodash, CoffeeScript
-                        br/
-                        | backbone, angular, ember
-                    dt
-                        | Spécialiste standards
-                        = " "
-                        abbr( title="World Wide Web Consortium" ) W3C
-                        = " "
-                        | /
-                        = " "
-                        abbr( title="Web Hypertext Application Technology Working Group" ) WHATWG
-                    dd
-                        abbr( title="Hypertext Markup Language" ) html
-                        = " "
-                        | 5,
-                        = " "
-                        abbr( title="eXtended Hypertext Markup Language" ) xhtml
-                        | ,
-                        = " "
-                        abbr( title="Cascading Stylesheet" ) css
-                        | ,
-                        = " "
-                        abbr( title="eXtended Markup Language" ) xml
-                        | ,
-                        = " "
-                        abbr( title="eXtensible Stylesheet Language" ) xsl
-                        | , xpath,
-                        = " "
-                        abbr( title="Web Accessibility Initiative" ) wai
-                        | ,
-                        = " "
-                        abbr( title="Scalable Vector Graphics" ) svg
-                    dt Spécialiste performances web
-                    dd server-side, client-side
-                    dt Client
-                    dd html5, xhtml, css3, stylus, sass/compass, less, javascript, json, xml, xsl, RegExp
-                    dt Serveur
-                    dd node.js (express, sockets.io, …), nosql (Redis, MongoDB), PHP 5.4+ &amp; POO, MySQL 5, PostgreSQL, ElasticSearch, xslt, bash
-                    dt Application
-                    dd iOS natif (Swift)
-
-                h3 Outils &amp; Méthodologies
-                dl
-                    dt Adobe Creative Suite 5, 6 &amp; CC
-                    dd photoshop, illustrator, indesign, flash, edge tools
-                    dt Apple Pro Apps
-                    dd Logic Pro 8, Final Cut Pro X, XCode 4+
-                    dt Text Editors &amp; IDE
-                    dd Atom, Sublime Text 2 &amp; 3, Eclipse &amp; flex builder
-                    dt Task runners and workflow control
-                    dd GruntJS, GulpJS, Codekit, Vagrant, docker
-                    dt Version Control
-                    dd
-                        abbr( title="Subversion" ) SVN
-                        | ,
-                        = " "
-                        abbr( title="Mercurial" ) hg
-                        | , git
-                    dt Méthodologies
-                    dd
-                        | Scrum,
-                        = " "
-                        abbr( title="Get Things Done" ) GTD
-                        | ,
-                        = " "
-                        abbr( title="eXtreme Programming" ) XP
-
-                h3 Systèmes
-                dl
-                    dt Mac OSX
-                    dd 10.6~10, 10.11 (système principal)
-                    dt Windows
-                    dd xp, vista, seven, 8, 8.1, 10
-                    dt Linux
-                    dd debian-based, shell, nginx &amp; apache fine-tuning, administration serveurs web
-
-            section.boxed#presentation
-                h2 Langues
-                dl
-                    dt Français
-                    dd Langue maternelle, maîtrise de l’orthographe et de la grammaire
-                    dt Anglais
-                    dd Connaissances moyennes, compréhension à la lecture, maîtrise du langage technique
-                    dt Néérlandais
-                    dd Bases
-
-                h2 Motorisation
-                p Permis B en cours d’obtention, maîtrise de la marche à pieds et des transports en commun
-
-                h2 Centres d’intérêt
-                p nouvelles technologies, contributions open-source, actualités, littérature, contre-culture
+                section#misc
+                    include sections/misc
