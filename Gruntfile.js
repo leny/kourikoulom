@@ -10,8 +10,8 @@ module.exports = function( grunt ) {
             "options": {
                 "compress": false
             },
-            "page":{
-                "files":{
+            "page": {
+                "files": {
                     "index.html": "src/jade/index.jade"
                 }
             }
@@ -43,7 +43,7 @@ module.exports = function( grunt ) {
         // Watch
         "watch": {
             "jade": {
-                "files": "src/jade/index.jade",
+                "files": [ "src/**/*.jade", "src/**/*.svg" ],
                 "tasks": [ "html" ],
                 "options": {
                     "livereload": true
