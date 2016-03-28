@@ -209,9 +209,9 @@ html {
   box-sizing: inherit;
 }
 @font-face {
-  font-family: "Source Sans Pro";
+  font-family: "SourceSansPro";
   src: url("./fonts/source-sans/SourceSansPro-Regular-webfont.eot");
-  src: url("./fonts/source-sans/SourceSansPro-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/source-sans/SourceSansPro-Regular-webfont.woff") format("woff"), url("./fonts/source-sans/SourceSansPro-Regular-webfont.ttf") format("truetype"), url("./fonts/source-sans/SourceSansPro-Regular-webfont.svg#Source Sans Pro") format("svg");
+  src: local("SourceSansPro"), url("./fonts/source-sans/SourceSansPro-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/source-sans/SourceSansPro-Regular-webfont.woff") format("woff"), url("./fonts/source-sans/SourceSansPro-Regular-webfont.ttf") format("truetype"), url("./fonts/source-sans/SourceSansPro-Regular-webfont.svg#SourceSansPro") format("svg");
 }
 :focus {
   outline: 0;
@@ -252,7 +252,7 @@ abbr[title]:after {
 }
 html {
   height: 100%;
-  font: normal 62.5%/1.5 "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 62.5%/1.5 "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
