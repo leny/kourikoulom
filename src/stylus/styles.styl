@@ -248,3 +248,32 @@ section[id="experience"]
                     margin-right: .25rem
                     g
                         fill: tint( textColor, 50% )
+
+section[id="skills"], section[id="languages"]
+    dl
+        margin: 0 auto 3.2rem
+        font-size: 1.4rem
+        dt
+            margin: 0 auto .66rem
+            font-weight: bold
+        dd
+            margin: 0 auto 1.4rem
+
+section[id="misc"]
+    h3
+        margin: 0 auto 1.2rem
+        font-size: 1.8rem
+        color: tint( textColor, 25% )
+        text-align: left
+        &:before, &:after
+            content: none
+        svg
+            display: inline-block
+            size: 1.8rem
+            margin-right: .6rem
+            vertical-align: -.2rem
+            g
+                fill: tint( textColor, 25% )
+    p
+        margin: 0 auto 1.4rem
+        font-size: 1.4rem
