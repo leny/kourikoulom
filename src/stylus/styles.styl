@@ -100,573 +100,101 @@ svg[id="leny-icon"]
     size: 4.8rem
 
 section
-    margin 0 auto 3rem
+    margin: 0 auto 3.6rem
+
     h2
-        position relative
-        margin 0 auto .75rem
-        padding 0 0 .25rem
-        border-bottom .1rem solid #999
-        box-shadow 0 .1rem .1rem white
-        font light 2.5rem Lato
-        color headingColorThree
-        text-align right
-        &:before
-            position absolute
-            bottom -.6rem
-            left 0
-            margin 0
-            font normal 4rem Entypo
-            vertical-align middle
-    p
-        margin 0 auto 1.2rem
-        font normal 1.4rem/1.5 Lato
-    h3
-        margin 0 auto 1.5rem
-        padding 0 0 .25rem
-        border-bottom .1rem dotted #999
-        box-shadow 0 .1rem .1rem white
-        font light 1.6rem Lato
-        color headingColorThree
-        text-align right
+        position: relative
+        margin: 0 auto 3.2rem
+        padding-bottom: .75rem
+        border-bottom: .1rem solid rgba( textColor, .33 )
+        font-size: 2.4rem
+        text-align: right
+        svg
+            absolute: 50% auto auto 0
+            size: 2.4rem
+            transform: translateY( -50% )
+
+    > h3
+        margin: 0 auto 2.4rem
+        font-size: 2rem
+        text-align: center
+        &:before, &:after
+            content: ""
+            display: inline-block
+            margin: 0 1rem
+            size: 2rem .1rem
+            background: rgba( textColor, .33 )
+            vertical-align: middle
+
+ol
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+        margin: 0 auto 3.2rem
+        h3
+            margin: 0 auto 1rem
+            font-size: 1.8rem
+        p
+            margin: 0 auto .7rem
+            font-size: 1.4rem
+
+
+// ----- section:identity
+
+section[id="identity"]
+    h2
+        display: none
     dl
-        margin 0 auto 1rem
+        margin: 0
+        font-size: 1.6rem
         dt
-            margin 0 auto .25rem
-            font bold 1.3rem Lato
-            color headingColorOne
+            display: inline
+            font-size: 0
+            &.icon
+                svg
+                    display: inline-block
+                    size: 1.6rem
+                    margin-right: 1.2rem
+                    vertical-align: -.3rem
+                    g
+                        fill: linkColor
         dd
-            margin 0 auto 1rem
-            font light 1.3rem/1.5 Lato
-            color headingColorOne
+            display: inline
+            margin: 0
+            &[data-prefix]:before
+                content: attr(data-prefix) " "
+            &:after
+                content: ""
+                display: block;
+                size: 100% .1rem
+                margin: 0 0 1.1rem
 
-section[id="identite"]
-    margin 2rem auto 3rem
-    h2
-        display none
-    p
-        margin 0 auto .75rem
-        font normal 1.5rem Lato
-    address ~ p
-        margin .5rem 0 1rem
-        strong
-            display none
-        a
-            text-decoration none
-            &:before
-                margin 0 .5rem 0 0
-                font normal 3rem/1.5rem Entypo
-                vertical-align middle
-        &.mail a:before
-            content "\2709"
-        &.site a:before
-            content "\1F517"
 
-section[id="parcours"]
-    h2:before
-        content "\E723"
+// ----- nav
 
-section[id="formation"]
-    h2:first-of-type:before
-        content "\E728"
-    h2:last-of-type:before
-        content "\1F3C6"
+nav
+    display: none
 
-section[id="parcours"], section[id="formation"]
+// ----- content
+
+// ----- section:education
+
+section[id="education"]
     ol
-        margin 0
-        padding 0
-        list-style inside none
         li
-            margin 0 auto 2rem
-            padding 1rem
-            border .1rem solid silver
-            border-radius .6rem
-            retina-image( "img/subtle_freckles.png", 198px 198px, "_@2X" )
-            h3:before, p:before
-                font normal 3rem Entypo
-                margin 0 .5rem 0 0
-                vertical-align middle
-            h3
-                font bold 1.4rem Lato
-                margin 0 auto .25rem
-                color headingColorTwo
-                text-align left
-                border-bottom 0
-                box-shadow none
-                a
-                    text-decoration none
-                &:before
-                    line-height 1.6rem
-                    vertical-align bottom
-            p
-                font normal 1.25rem/1.5 Lato
-                margin 0 auto .5rem
-                strong
-                    font-weight bold
-                &:before
-                    vertical-align -.1rem
+            boxWidth = 15rem
+            boxHeight = 1.8rem
+            boxMargin = .8rem
+            position: relative
+            margin: 0 auto 3.2rem
+            padding-left: ( boxHeight + boxMargin )
             .time
-                display inline-block
-                margin 0 1rem 0 0
-                font normal 1.25rem/1.5 Lato
-                &:before
-                    font normal 3rem Entypo
-                    content "\1F4C5"
-                    vertical-align -.25rem
-                    margin 0 .25rem 0 0
-            .time ~ p
-                display inline-block
-                font normal 1.25rem/1.5 Lato
-                margin 0 auto
-                &:before
-                    font normal 3rem Entypo
-                    content "\E728"
-                    vertical-align middle
-                    margin 0 .25rem 0 0
-        &:first-of-type li h3:before
-            content "\1F4D6"
-        &:last-of-type li h3:before
-            content "\1F4BC"
-        &:last-of-type li h3 + p:before
-            content "\1F464"
-
-section[id="competences"]
-    h2:before
-        content "\26A1"
-
-section[id="presentation"]
-    dl, p
-        margin 0 auto 3rem
-    h2:nth-of-type(1):before
-        content "\E720"
-    h2:nth-of-type(2):before
-        content "\1F342"
-    h2:nth-of-type(3):before
-        content "\1F50A"
-
-+media-query( screen, min-width 30rem )
-    header h1 br
-        display none
-    figure
-        float left
-        margin 0 2rem .5rem 1.5rem
-        transform rotate( -2deg ) translate3d( 0, 0, 0 )
-    section[id="identite"]
-        margin 3rem auto 3rem
-        clear fix
-    section[id="parcours"], section[id="formation"]
-        ol li h3
-            margin 0 auto .05rem
-            font bold 1.6rem Lato
-
-+media-query( screen, min-width 40rem )
-    header
-        h1
-            strong
-                float left
-            span
-                float right
-                margin .25rem 0 0
-                font light 2.25rem Lato
-
-    figure
-        width 15rem
-        margin -2.5rem 3rem .5rem 1.5rem
-        transform-style preserve-3d
-        transform rotate( -3deg ) translate3d( 0, 0, 0 )
-
-    section
-        h2
-            padding-left 2.75rem
-            text-align left
-            &:before
-                bottom -.35rem
-                font-size 4rem
-        h3
-            text-align left
-
-+media-query( screen, min-width 48rem )
-    main
-        column-count 2
-        column-gap 3%
-        column-width 46%
-
-    header
-        column-span all
-
-    figure
-        position absolute
-        width 15rem
-        float none
-        top 4rem
-        right .5rem
-        margin 0
-        z-index 150
-        transform rotate( 5deg ) translate3d( 0, 0, 0 )
-
-    section
-        h3
-            text-align right
-    section[id="identite"]
-        column-span all
-    section[id="competences"]
-        -moz-break-before column
-        -webkit-column-break-before always
-
-+media-query( screen, min-width 60rem )
-    html
-        background #110416
-        retina-image( "img/dark_wood.png", 512px 512px, "_@2X" )
-
-    main
-        width 90%
-        margin 3rem auto
-        padding 2rem
-        background white
-        retina-image( "img/old_mathematics.png", 200px 200px, "_@2X" )
-        box-shadow 0 5px 20px rgba( black, .5 )
-
-    header
-        h1
-            span
-                margin-right 17.5rem
-
-    figure
-        width 20rem
-        top -.5rem
-        right -1.5rem
-
-+media-query( screen, min-width 80rem )
-    main
-        max-width 115rem
-        margin 0 auto
-        clear fix
-        column-count auto
-        column-gap normal
-        column-width auto
-        background transparent
-        box-shadow none
-
-    figure
-        position absolute
-        top 1rem
-        right -1.5rem
-        z-index 100
-        transform rotate( -2deg ) translate3d( 0, 0, 0 )
-        transition all .15s ease-in-out
-        &:hover
-            transform rotate( 0deg ) translate3d( 0, 0, 0 )
-
-    header
-        position absolute
-        width 50rem
-        top 1rem
-        left 0
-        margin 0
-        clear fix
-        z-index 10
-        box-shadow none
-        border 0
-        h1
-            strong
-                float none
-                margin 0 auto
-                border-bottom .1rem solid #999
-                font bold 3.5rem Lato
-                color #ddd
-                text-align left
-            span
-                float none
-                margin-right 0
-                font normal 2.75rem Lato
-                color #c0c0c0
-                text-align right
-    section
-        position absolute
-        border 0
-        margin 0
-        clear fix
-        transition all .1s ease-in
-        transform-style preserve-3d
-        h2
-            box-shadow none
-            color #c0c0c0
-        h3
-            box-shadow none
-            color #ccc
-        ol li, dl, &.boxed h2 + p
-            padding 1rem
-            background white
-            retina-image( "img/subtle_freckles.png", 198px 198px, "_@2X" )
-            border 0
-            border-radius 0
-            box-shadow 0 0 .5rem rgba( black, .5 )
-            transition all .15s ease-in-out
-            &:nth-of-type( 1 )
-                transform rotate( 2deg ) translate3d( 0, 0, 0 )
-            &:nth-of-type( 2 )
-                transform rotate( -1deg ) translate3d( 0, 0, 0 )
-            &:nth-of-type( 3 )
-                transform rotate( 1deg ) translate3d( 0, 0, 0 )
-            &:nth-of-type( 4 )
-                transform rotate( -2deg ) translate3d( 0, 0, 0 )
-            &:nth-of-type( 5 )
-                transform rotate( 3deg ) translate3d( 0, 0, 0 )
-            &:nth-of-type( 6 )
-                transform rotate( -1deg ) translate3d( 0, 0, 0 )
-            &:nth-of-type( 7 )
-                transform rotate( 2deg ) translate3d( 0, 0, 0 )
-            &:nth-of-type( 8 )
-                transform rotate( -3deg ) translate3d( 0, 0, 0 )
-            &:nth-of-type( 9 )
-                transform rotate( 1deg ) translate3d( 0, 0, 0 )
-            &:hover
-                transform rotate( 0deg ) translate3d( 0, 0, 0 )
-    section[id="identite"]
-        width 50rem
-        top 5.5rem
-        left 0
-        z-index 50
-        p
-            color #c0c0c0
-        address ~ p
-            display inline
-            a
-                color lighten( #33a, 20% )
-        address + p
-            margin-right 1.5rem
-    section[id="parcours"], section[id="formation"]
-        ol li
-            border-radius 0
-            & + li
-                margin-top -2rem
-    section[id="formation"]
-        width 22%
-        top 18rem
-        left 0
-    section[id="parcours"]
-        width 22%
-        left 24%
-        top 18rem
-        margin 0 auto 2.5rem
-        z-index 60
-    section[id="competences"]
-        width 26%
-        left 48%
-        top 18rem
-        z-index 70
-    section[id="presentation"]
-        width 24%
-        left 76%
-        top 26rem
-        z-index 80
-
-@media print
-    abbr
-        border-bottom 0
-
-    html
-        font normal 8.5pt/1.25 Lato
-
-    header
-        margin 0 auto 0
-        padding 0
-        box-shadow none
-        border-bottom 0
-        h1
-            strong
-                float none
-                border-bottom .1rem solid #999
-                font bold 3rem/1 Lato
-                color #666
-                text-align left
-                br
-                    display none
-            span
-                float none
-                margin 0 .25rem 0 0
-                font light 2rem/1.25 Lato
-                color #666
-                text-align right
-
-    figure
-        display none
-
-    section
-        page-break-inside avoid
-        margin 0 auto 2rem
-        h2
-            margin .5rem auto 1.5rem
-            border-bottom .1rem dotted #999
-            box-shadow none
-            font bold 1.5rem Lato
-            color #666
-            &:before
-                margin 0 .5rem 0 0
-                font normal 3rem Entypo
-                vertical-align middle
-        p
-            margin 0 auto .6rem
-            font normal 1.1rem/1.5 Lato
-        blockquote
-            position relative
-            margin 0 auto 1.2rem
-            padding 2rem
-            border .1rem dashed silver
-            border-radius 6px
-            box-shadow 0 0 2rem silver
-            background white url( 'subtle_freckles.png' ) top left repeat
-            &:before
-                content ""
-                position absolute
-                bottom 1rem
-                right 1rem
-                z-index 10
-                font normal 15rem Entypo
-                color #ccc
-            p
-                position relative
-                z-index 11
-        h3
-            margin 0 auto 1rem
-            padding 0
-            border-bottom 0
-            box-shadow none
-            font light 1.3rem Lato
-            color #444
-            text-align left
-        dl
-            margin 0 auto 1rem
-            dt
-                float left
-                margin 0 .1rem .25rem 0
-                font normal 1.1rem Lato
-                color #333
-            dd
-                margin 0 0 1rem
-                font normal 1.1rem/1.5 Lato
-                color #555
-                &:after
-                    content ""
-                    display table
-                    clear both
-    section[id="identite"]
-        margin 2rem 0
-        p
-            font normal 1.1rem/1 Lato
-            margin 0 auto .6rem
-        address ~ p
-            display inline-block
-            margin .5rem 3rem 0 0
-            font normal 1rem/1 Lato
-            strong
-                display none
-            a
-                color textColor
-                &:before
-                    margin 0 .3rem 0 0
-                    font normal 2rem Entypo
-                    vertical-align top
-            &.mail a:before
-                content "\2709"
-            &.site a:before
-                content "\2709"
-    section[id="parcours"], section[id="formation"]
-        ol
-            list-style inside none
-            li
-                margin 0 auto 1rem 1rem
-                padding 0
-                border 0
-                border-radius 0
-                background transparent
-                h3
-                    margin 0 auto
-                    border-bottom 0
-                    box-shadow none
-                    font bold 1.4rem/1 Lato
-                    color #333
-                    text-align left
-                    a
-                        font bold 1.4rem Lato
-                        color headingColorTwo
-                p
-                    display inline-block
-                    margin 0 .5rem 0 0
-                    font normal 1.2rem/1.25 Lato
-                    color #666
-                    strong
-                        margin 0 .5rem 0 0
-                        font-weight bold
-                    br
-                        display none
-                        line-height 0
-                    &:first-of-type
-                        margin-left 2.5rem
-                .time
-                    display inline-block
-                    margin 0 .5rem 0 0
-                    font normal 1.2rem/1.25 Lato
-                    color #666
-                    &:before
-                        content "\1F4C5"
-                        margin 0 .5rem 0 0
-                        font normal 2.4rem Entypo
-                        vertical-align baseline
-                .time ~ p
-                    display inline-block
-                    font normal 1.2rem/1.25 Lato
-                    color #666
-                    &:before
-                        content "\E728"
-                        margin 0 .25rem 0 0
-                        font normal 2rem Entypo
-                        vertical-align baseline
-            &:first-of-type li h3:before
-                content "\1F4D6"
-                margin 0 .5rem 0 0
-                font normal 3.5rem Entypo
-                vertical-align middle
-            &:last-of-type li h3:before
-                content "\1F4BC"
-                margin 0 .5rem 0 0
-                font normal 3.5rem Entypo
-                vertical-align middle
-            &:last-of-type li h3 + p:before
-                content "\1F464"
-                margin 0 .5rem 0 0
-                font normal 2.75rem Entypo
-                vertical-align -0.25rem
-    section[id="parcours"]
-        h2:before
-            content "\E723"
-        ol li
-            p
-                display block
-            .time
-                margin-left 2.5rem
-            &:last-of-type
-                p:nth-child( 3 )
-                    display none
-    section[id="formation"]
-        h2:first-of-type:before
-            content "\E728"
-        h2:last-of-type
-            display none
-        ol
-            &:first-of-type li:nth-child( 2 )
-                display none
-            &:last-of-type
-                display none
-    section[id="competences"]
-        h2:before
-            content "\26A1"
-    section[id="presentation"]
-        h2
-            margin-top 2rem
-        h2:nth-of-type( 1 ):before
-            content "\E720"
-        h2:nth-of-type( 2 ):before
-            content "\1F342"
-        h2:nth-of-type( 3 ):before
-            content "\1F50A"
+                absolute: 0 auto 0 ( -1 * ( boxWidth + boxHeight ) )
+                size: boxWidth boxHeight
+                padding: 0 .8rem
+                font-size: 1.6rem
+                color: tint( textColor, 25% )
+                text-align: right
+                transform: rotate( -90deg )
+                transform-origin: top right
