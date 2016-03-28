@@ -12,7 +12,7 @@
  * rewriten with stylus/kouto-swiss in may 2014
  * fix code for stylus/kouto-swiss update in september 2014
  * fix code using normalize instead of reset in february 2015
- * new design (& flexbox adaptation) in march 2016
+ * new design in march 2016
  */
 
 // imports
@@ -20,6 +20,7 @@
 
 // resets
 normalize()
+box-sizing-reset()
 
 // fonts
 font-face( "Source Sans Pro", "./fonts/source-sans/SourceSansPro-Regular-webfont", formats: eot woff truetype svg )
@@ -106,8 +107,8 @@ section
     h2
         position: relative
         margin: 0 auto 3.2rem
-        padding-bottom: .75rem
-        border-bottom: .1rem solid tint( textColor, 33% )
+        padding-bottom: .25rem
+        border-bottom: .1rem solid tint( textColor, 50% )
         font-size: 2.4rem
         text-align: right
         svg
@@ -171,12 +172,6 @@ section[id="identity"]
                 size: 100% .1rem
                 margin: 0 0 1.1rem
 
-
-// ----- nav
-
-nav
-    display: none
-
 // ----- content
 
 // ----- section:education
@@ -191,7 +186,7 @@ section[id="education"]
             margin: 0 auto 3.2rem
             padding-left: ( boxHeight + boxMargin )
             .time
-                absolute: 0 auto 0 ( -1 * ( boxWidth + boxHeight ) )
+                absolute: 0 auto 0 ( -1 * ( boxWidth + boxMargin * 3 / 4 ) )
                 size: boxWidth boxHeight
                 padding: 0 .8rem
                 font-size: 1.6rem
@@ -277,3 +272,34 @@ section[id="misc"]
     p
         margin: 0 auto 1.4rem
         font-size: 1.4rem
+
++media-query( screen, min-width 640px )
+    main
+        position: relative
+        width: 57.6rem
+        margin: 0 auto
+        padding: 8.1rem 0 18rem 28.5rem
+
+    .head
+        fixed: 2.5rem auto auto 50%
+        width: 25rem
+        margin-left: -28.8rem
+
+    section
+        margin: 0 auto 12.4rem
+
++media-query( screen, min-width 960px )
+    main
+        width: 64rem
+        padding: 15.2rem 0 18rem 28.5rem
+
+    .head
+        top: 9.6rem
+        margin-left: -32rem
+
++media-query( screen, min-width 1280px )
+    main
+        padding: 18rem 0 18rem 28.5rem
+
+    .head
+        top: 12.4rem
