@@ -205,9 +205,8 @@ section[id="education"]
 section[id="experience"]
     ol
         li
-            display: flex
-            flex-direction: column
-            overflow: hidden
+            position: relative
+            padding: 3.2rem 0 0
             h3, p
                 width: 100%
             h3 + p
@@ -218,16 +217,17 @@ section[id="experience"]
                     vertical-align: -.1rem
 
             .time
-                position: relative
-                flex: 0 0 auto
-                order: -1
-                margin: 0 auto 1.5rem
+                position: absolute
+                top: 0
+                left: 50%
                 padding: .2rem .6rem 0
                 background: tint( mix( textColor, linkColor ), 50% )
                 font-size: 1.1rem
                 color: invert( textColor )
                 text-align: center
                 text-transform: uppercase
+                white-space: nowrap
+                transform: translateX( -50% )
                 &:before, &:after
                     content: ""
                     display: block
