@@ -1,16 +1,22 @@
 h2 À propos de moi…
 
 dl
-    dt( class="hidden" ) Date de naissance
+    dt Date de naissance
     dd( data-prefix="Né le" ) 8 mai 1985
 
-    dt( class="hidden" ) Adresse
+    dt Adresse
     dd( data-prefix="Résidant à" ) Liège, Belgique
 
-    dt( class="link mail" ) Mail&nbsp;:&nbsp;
+    dt( class="icon mail" )
+        include ../../svg/icons/email.svg
+        = " "
+        | Mail&nbsp;:&nbsp;
     dd
         a( href="mailto:pierre-antoine@delnatte.be" ) pierre-antoine@delnatte.be
 
-    dt( class="link url" ) URL&nbsp;:&nbsp;
+    dt( class="icon url" )
+        include ../../svg/icons/website.svg
+        = " "
+        | URL&nbsp;:&nbsp;
     dd
         a( href="http://leny.me", rel="external" ) http://leny.me

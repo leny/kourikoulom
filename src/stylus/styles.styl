@@ -12,6 +12,7 @@
  * rewriten with stylus/kouto-swiss in may 2014
  * fix code for stylus/kouto-swiss update in september 2014
  * fix code using normalize instead of reset in february 2015
+ * new design (& flexbox adaptation) in march 2016
  */
 
 // imports
@@ -21,78 +22,82 @@
 normalize()
 
 // fonts
-font-face( "Entypo", "./fonts/entypo/entypo" )
-Entypo = "Entypo"
-font-face( "Lato", "./fonts/lato/LatoLatin-Regular", formats: eot woff truetype )
-font-face( "Lato", "./fonts/lato/LatoLatin-Bold", bold, formats: eot woff truetype )
-font-face( "Lato", "./fonts/lato/LatoLatinLight-Regular", 200, formats: eot woff truetype )
-light = 200
-Lato = "Lato", font-stack( "Helvetica" )
+font-face( "Source Sans Pro", "./fonts/source-sans/SourceSansPro-Regular-webfont", formats: eot woff truetype svg )
+SourceSansPro = "Source Sans Pro", font-stack( "Helvetica" )
 
 // vars
-textColor = #333
-linkColor = #33a
-headingColorOne = #555
-headingColorTwo = #444
-headingColorThree = #666
-headingColorFour = #777
+textColor = #000
+linkColor = tint( #33a, 25% )
+linkHoverColor = tint( #33a, 50% )
+
+ks-color-fallback-enabled = true
 
 // ----- commons
 
-a
-    color linkColor
 
-abbr
-    border-bottom .1rem dotted gray
-    cursor help
+:focus
+    outline: 0
+
+a
+    color: linkColor
+    text-decoration: none
+    transition: color .25s ease-in-out
+    svg
+        g
+            fill: textColor
+            transition: fill .25s ease-in-out
+    &:hover
+        color: linkHoverColor
+        svg
+            g
+                fill: linkHoverColor
 
 // ----- layout
 
 html
-    retina-image( "img/old_mathematics.png", 200px 200px, "_@2X" )
-    font normal 62.5%/1.5 Lato
-    -webkit-font-smoothing antialiased
-    -webkit-text-size-adjust 100%
+    height: 100%
+    font: normal 62.5%/1.5 SourceSansPro
+    -webkit-font-smoothing: antialiased
+    -webkit-text-size-adjust: 100%
 
 body
-    padding 1rem
-    color textColor
+    position: relative
+    display: flex
+    width: 100%
+    min-height: 100%
+    color: textColor
 
 main
-    position relative
+    width: 90%
+    margin: 0 auto
+    padding-top: 2.4rem
+
+// ----- head
+
+.head // TMP?
+    color: black
 
 header
-    margin 0 auto 2rem
-    padding 0 0 .5rem
-    clear fix
-    border-bottom .1rem solid #999
-    box-shadow 0 .1rem .1rem white
-    h1
-        margin 0 auto
-        strong
-            display block
-            font bold 3rem Lato
-            color headingColorOne
-            text-align center
-        span
-            display block
-            font light 2rem Lato
-            color headingColorThree
-            text-align center
+    margin: 0 auto 2.4rem
 
-figure
-    width 10rem
-    margin 1rem auto
-    padding .75rem .75rem .25rem
-    retina-image( "img/ricepaper2.png", 485px 485px, "_@2X" )
-    box-shadow 0 .5rem 1rem rgba( black, .33 )
-    img
-        display block
-        max-width 100%
-        margin 0 auto .25rem
-    figcaption
-        color headingColorTwo
-        text-align right
+h1
+    margin: 0 auto 2.4rem
+    strong
+        display: block
+        margin: 0 auto 1rem
+        padding-bottom: 1rem
+        border-bottom: .1rem solid rgba( textColor, .5 )
+    svg
+        display: block
+        margin: 0 auto
+        &[id="function"]
+            width: 45%
+            margin-right: 0
+
+svg[id="leny-icon"]
+    display: block
+    margin: 0 auto 2rem
+    size: 4.8rem
 
 section
     margin 0 auto 3rem
