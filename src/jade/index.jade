@@ -39,21 +39,21 @@ html( lang="fr-BE" )
                         = " "
                         include ../svg/webdeveloper.svg
 
-                section#identity
-                    include sections/identity
+                include sections/identity
 
             .content
-                section#skills
+                .col-two
                     include sections/skills
 
-                section#experience
-                    include sections/experience
+                .col-two
+                    .col-three
+                        include sections/experience
 
-                section#education
-                    include sections/education
+                    .col-three
+                        .col-four
+                            include sections/education
 
-                section#languages
-                    include sections/languages
+                        .col-four
+                            include sections/languages
 
-                section#misc
-                    include sections/misc
+                            include sections/misc

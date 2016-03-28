@@ -233,6 +233,23 @@ a:hover {
 a:hover svg g {
   fill: #9999d4;
 }
+abbr[title] {
+  position: relative;
+  border-bottom: 0;
+  cursor: help;
+}
+abbr[title]:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0.2rem;
+  left: 0;
+  width: auto;
+  height: 0;
+  border-bottom: 0.1rem dotted #6666bf;
+}
 html {
   height: 100%;
   font: normal 62.5%/1.5 "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -253,9 +270,6 @@ main {
   width: 90%;
   margin: 0 auto;
   padding-top: 2.4rem;
-}
-.head {
-  color: #000;
 }
 header {
   margin: 0 auto 2.4rem;
@@ -327,15 +341,15 @@ ol {
   padding: 0;
 }
 ol li {
-  margin: 0 auto 3.2rem;
+  margin: 0 auto 3.6rem;
 }
 ol li h3 {
   margin: 0 auto 1rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 ol li p {
   margin: 0 auto 0.7rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 section[id="identity"] h2 {
   display: none;
@@ -398,7 +412,7 @@ section[id="education"] ol li .time {
 }
 section[id="experience"] ol li {
   position: relative;
-  padding: 3.2rem 0 0;
+  padding: 4.2rem 0 0;
 }
 section[id="experience"] ol li h3,
 section[id="experience"] ol li p {
@@ -413,11 +427,11 @@ section[id="experience"] ol li h3 + p svg {
 }
 section[id="experience"] ol li .time {
   position: absolute;
-  top: 0;
+  top: 0.7rem;
   left: 50%;
   padding: 0.2rem 0.6rem 0;
   background: #9999af;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
@@ -458,16 +472,17 @@ section[id="experience"] ol li p:last-child svg g {
 section[id="skills"] dl,
 section[id="languages"] dl {
   margin: 0 auto 3.2rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 section[id="skills"] dl dt,
 section[id="languages"] dl dt {
   margin: 0 auto 0.66rem;
   font-weight: bold;
+  font-size: 1.8rem;
 }
 section[id="skills"] dl dd,
 section[id="languages"] dl dd {
-  margin: 0 auto 1.4rem;
+  margin: 0 auto 1.6rem;
 }
 section[id="misc"] h3 {
   margin: 0 auto 1.2rem;
@@ -490,13 +505,13 @@ section[id="misc"] h3 svg g {
   fill: #3f3f3f;
 }
 section[id="misc"] p {
-  margin: 0 auto 1.4rem;
-  font-size: 1.4rem;
+  margin: 0 auto 1.6rem;
+  font-size: 1.6rem;
 }
 @media screen and (min-width: 640px) {
   main {
     position: relative;
-    width: 57.6rem;
+    width: 90%;
     margin: 0 auto;
     padding: 8.1rem 0 18rem 28.5rem;
   }
@@ -507,27 +522,77 @@ section[id="misc"] p {
     bottom: auto;
     left: 50%;
     width: 25rem;
-    margin-left: -28.8rem;
+    margin-left: -45%;
   }
   section {
-    margin: 0 auto 12.4rem;
+    margin: 0 auto 9.6rem;
   }
 }
 @media screen and (min-width: 960px) {
   main {
-    width: 64rem;
-    padding: 15.2rem 0 18rem 28.5rem;
+    padding-top: 15.6rem;
   }
   .head {
-    top: 9.6rem;
-    margin-left: -32rem;
+    top: 10rem;
+  }
+  .content:before,
+  .content:after {
+    content: " ";
+    display: table;
+  }
+  .content:after {
+    clear: both;
+  }
+  .col-two {
+    width: 46%;
+    float: left;
+  }
+  .col-two + .col-two {
+    margin-left: 8%;
   }
 }
 @media screen and (min-width: 1280px) {
+  .col-two {
+    width: 30.666666666666668%;
+  }
+  .col-two + .col-two {
+    width: 65.33333333333333%;
+    margin-left: 4%;
+  }
+  .col-three {
+    width: 47%;
+    float: left;
+  }
+  .col-three + .col-three {
+    margin-left: 6%;
+  }
+}
+@media screen and (min-width: 1520px) {
   main {
-    padding: 18rem 0 18rem 28.5rem;
+    width: 96%;
   }
   .head {
-    top: 12.4rem;
+    margin-left: -48%;
+  }
+  .col-two {
+    width: 23.125%;
+  }
+  .col-two + .col-two {
+    width: 74.375%;
+    margin-left: 2.5%;
+  }
+  .col-three {
+    width: 31.11111111111111%;
+  }
+  .col-three + .col-three {
+    width: 65.55555555555556%;
+    margin-left: 3.333333333333333%;
+  }
+  .col-four {
+    width: 47.5%;
+    float: left;
+  }
+  .col-four + .col-four {
+    margin-left: 5%;
   }
 }
