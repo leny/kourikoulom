@@ -569,10 +569,10 @@ section[id="misc"] p {
 }
 @media screen and (min-width: 1520px) {
   main {
-    width: 96%;
+    width: 140rem;
   }
   .head {
-    margin-left: -48%;
+    margin-left: -70rem;
   }
   .col-two {
     width: 23.125%;
