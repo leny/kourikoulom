@@ -329,7 +329,7 @@ section > h3:before,
 section > h3:after {
   content: "";
   display: inline-block;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   width: 2rem;
   height: 0.1rem;
   background: #545454;
