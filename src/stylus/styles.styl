@@ -305,11 +305,15 @@ section[id="misc"]
         top: 10rem
 
     .content
-        clear: fix
+        absolute: 0 0 0 28.5rem
+
     .col-two
-        width: 46%
-        float: left
+        absolute: 0 auto 0 0
+        size: 46% auto
+        padding: 15.6rem 0
+        overflow: scroll
         & + .col-two
+            absolute: 0 0 0 auto
             margin-left: 8%
 
 +media-query( screen, min-width 1280px )
@@ -322,14 +326,18 @@ section[id="misc"]
         & + .col-two
             width: ( 100 - colGap - colSize )
             margin-left: colGap
+            overflow: visible
 
     colSubGap = ( colGap * colAmount / ( colAmount - 1 ) )
 
     .col-three
+        absolute: 0 auto 0 0
         width: ( ( 100 - colSubGap ) / ( colAmount - 1 ) )
-        float: left
+        padding: 15.6rem 0
+        overflow: scroll
         & + .col-three
-             margin-left: colSubGap
+            absolute: 0 0 0 auto
+            margin-left: colSubGap
 
 +media-query( screen, min-width 1520px )
     main
@@ -356,12 +364,16 @@ section[id="misc"]
         & + .col-three
             width: ( 100 - colSubGap - colSubSize )
             margin-left: colSubGap
+            overflow: visible
 
     colSubSubGap = ( colSubGap * ( colAmount - 1 ) / ( colAmount - 2 ) )
     colSubSubSize = ( ( 100 - ( ( colAmount - 3 ) * colSubSubGap ) ) / ( colAmount - 2 ) )
 
     .col-four
+        absolute: 0 auto 0 0
         width: colSubSubSize
-        float: left
+        padding: 15.6rem 0
+        overflow: scroll
         & + .col-four
+            absolute: 0 0 0 auto
             margin-left: colSubSubGap

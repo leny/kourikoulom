@@ -535,19 +535,30 @@ section[id="misc"] p {
   .head {
     top: 10rem;
   }
-  .content:before,
-  .content:after {
-    content: " ";
-    display: table;
-  }
-  .content:after {
-    clear: both;
+  .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 28.5rem;
   }
   .col-two {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
     width: 46%;
-    float: left;
+    height: auto;
+    padding: 15.6rem 0;
+    overflow: scroll;
   }
   .col-two + .col-two {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
     margin-left: 8%;
   }
 }
@@ -558,12 +569,24 @@ section[id="misc"] p {
   .col-two + .col-two {
     width: 65.33333333333333%;
     margin-left: 4%;
+    overflow: visible;
   }
   .col-three {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
     width: 47%;
-    float: left;
+    padding: 15.6rem 0;
+    overflow: scroll;
   }
   .col-three + .col-three {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
     margin-left: 6%;
   }
 }
@@ -587,12 +610,24 @@ section[id="misc"] p {
   .col-three + .col-three {
     width: 65.55555555555556%;
     margin-left: 3.333333333333333%;
+    overflow: visible;
   }
   .col-four {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
     width: 47.5%;
-    float: left;
+    padding: 15.6rem 0;
+    overflow: scroll;
   }
   .col-four + .col-four {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
     margin-left: 5%;
   }
 }
