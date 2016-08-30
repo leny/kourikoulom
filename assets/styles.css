@@ -457,6 +457,14 @@ section[id="experience"] ol li .time:before {
 section[id="experience"] ol li .time:after {
   right: -3rem;
 }
+section[id="experience"] ol li ul {
+  padding-left: 2rem;
+}
+section[id="experience"] ol li ul li {
+  margin: 0 auto 0.7rem;
+  padding: 0;
+  font-size: 1.6rem;
+}
 section[id="experience"] ol li p:last-child {
   color: #7f7f7f;
 }
