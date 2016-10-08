@@ -414,16 +414,23 @@ section[id="experience"] ol li {
   position: relative;
   padding: 4.2rem 0 0;
 }
-section[id="experience"] ol li h3,
-section[id="experience"] ol li p {
+section[id="experience"] ol li h3 {
   width: 100%;
 }
-section[id="experience"] ol li h3 + p svg {
+section[id="experience"] ol li .details {
+  width: 100%;
+  margin: 0 auto 0.7rem;
+  font-size: 1.6rem;
+}
+section[id="experience"] ol li .details svg {
   display: inline-block;
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 0.5rem;
   vertical-align: -0.1rem;
+}
+section[id="experience"] ol li .details strong {
+  display: block;
 }
 section[id="experience"] ol li .time {
   position: absolute;
