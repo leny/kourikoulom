@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 "use strict"
 
 module.exports = function( grunt ) {
@@ -6,13 +8,13 @@ module.exports = function( grunt ) {
 
     grunt.initConfig( {
         // html
-        "jade": {
+        "pug": {
             "options": {
                 "compress": false
             },
             "page": {
                 "files": {
-                    "index.html": "src/jade/index.jade"
+                    "index.html": "src/pug/index.pug"
                 }
             }
         },
@@ -42,8 +44,8 @@ module.exports = function( grunt ) {
         },
         // Watch
         "watch": {
-            "jade": {
-                "files": [ "src/**/*.jade", "src/**/*.svg" ],
+            "pug": {
+                "files": [ "src/**/*.pug", "src/**/*.svg" ],
                 "tasks": [ "html" ],
                 "options": {
                     "livereload": true
@@ -60,7 +62,7 @@ module.exports = function( grunt ) {
     } );
 
 
-    grunt.registerTask( "html", [ "jade" ] );
+    grunt.registerTask( "html", [ "pug" ] );
 
     grunt.registerTask( "css", [
         "stylus",
@@ -73,7 +75,7 @@ module.exports = function( grunt ) {
     ] );
 
     grunt.registerTask( "work", [
-        "jade",
+        "html",
         "css",
         "watch"
     ] );
