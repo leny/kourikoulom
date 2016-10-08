@@ -369,7 +369,8 @@ section[id="identity"] dl dt.icon svg {
   margin-right: 1.2rem;
   vertical-align: -0.3rem;
 }
-section[id="identity"] dl dt.icon svg g {
+section[id="identity"] dl dt.icon svg > g,
+section[id="identity"] dl dt.icon svg > path {
   fill: #6666bf;
 }
 section[id="identity"] dl dd {
