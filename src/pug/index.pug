@@ -1,0 +1,59 @@
+doctype html
+html( lang="fr-BE" )
+    head
+        meta( charset="UTF-8" )/
+        title Delnatte Pierre-Antoine - Webdeveloper
+
+        meta( name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" )/
+
+        link( rel="stylesheet" href="assets/styles.min.css" )/
+
+        // Twitter Card
+        meta( property="twitter:card" content="summary" )/
+        meta( property="twitter:title" content="Delnatte Pierre-Antoine - Webdeveloper" )/
+        meta( property="twitter:description" content="C.V. en ligne de Pierre-Antoine &quot;Leny&quot; Delnatte, Développeur web Belge" )/
+        meta( property="twitter:image" content="http://pierre-antoine.delnatte.be/assets/me.jpg" )/
+        meta( property="twitter:creator" content="@leny_be" )/
+
+        // Facebook OpenGraph
+        meta( property="og:type" content="profile" )/
+        meta( property="og:title" content="Delnatte Pierre-Antoine - Webdeveloper" )/
+        meta( property="og:site_name" content="pierre-antoine.delnatte.be" )/
+        meta( property="og:description" content="C.V. en ligne de Pierre-Antoine &quot;Leny&quot; Delnatte, Développeur web Belge" )/
+        meta( property="og:image" content="http://pierre-antoine.delnatte.be/assets/me.jpg" )/
+        meta( property="og:locale" content="fr_BE" )/
+
+        <!--[if lt IE 9]>
+        script( src="http://html5shiv.googlecode.com/svn/trunk/html5.js" )
+        <![endif]-->
+
+    body
+        main
+            .head
+                header
+                    h1
+                        include ../svg/leny.svg
+                        = " "
+                        strong
+                            include ../svg/delnatte-pierre-antoine.svg
+                        = " "
+                        include ../svg/webdeveloper.svg
+
+                include sections/identity.pug
+
+            .content
+                .col-two
+                    include sections/skills.pug
+
+                .col-two
+                    .col-three
+                        include sections/experience.pug
+
+                    .col-three
+                        .col-four
+                            include sections/education.pug
+
+                        .col-four
+                            include sections/languages.pug
+
+                            include sections/misc.pug

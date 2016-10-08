@@ -1,0 +1,67 @@
+mixin position( title )
+    strong
+        include ../../svg/icons/person.svg
+        = ` ${ title }`
+
+mixin location( name )
+    p
+        include ../../svg/icons/location.svg
+        = ` ${ name }`
+
+mixin experience( name, url, position, from_date, from_text, to_date, to_text, location )
+    li
+        h3
+            a( href=url, rel="external" )= name
+        .details
+            +position( position )
+            block
+        if to_date
+            .time.
+                #[time( datetime=from_date )= from_text] - #[time( datetime=to_date )= to_text]
+        else
+            .time.
+                #[time( datetime=from_date )= from_text] - …
+        +location( location )
+
+section#experience
+    h2
+        include ../../svg/icons/experience.svg
+        = " "
+        | Parcours
+
+    ol
+        +experience( "flatLand!", "http://flatland.be", "Founder", "2011-11-05", "novembre 2011", null, "…", "Liège, Belgique" )
+            | Développement web freelance &amp; sous-traitance, analyse &amp; conseil
+
+        +experience( "Haute École de la Province de Liège", "http://www.hepl.be", "Professeur Invité", "2011-10-02", "octobre 2012", null, "…", "Liège, Belgique" )
+            ul
+                li.
+                    #[abbr( title="Rich Internet Applications - Applications internet riches" ) RIA] (3#[sup ème] année)
+                li.
+                    Multimédia interactif (2#[sup ème] année)
+                li.
+                    Design web mobile (2#[sup ème] année)
+                li.
+                    Création de pages Web (1#[sup ère] année)
+
+        +experience( "KRKN", "http://krkn.be", "Co-Founder", "2014-05", "mai 2014", "2015-08", "août 2015", "Liège, Belgium" )
+            | Développement web &amp; app, expertise &amp; sous-traitance
+
+        +experience( "ID&CO", "http://www.id-co.be", "Design & Dev Web, maintenance technique", "2011-11", "novembre 2011", "2013-03", "mars 2013", "Tournai, Belgique" )
+            | Sites clients, CMS maison &amp; outils internes
+
+        +experience( "Ankama Studio", "http://www.ankama.com", "Intégrateur RIA Flash", "2010-09", "septembre 2010", "2011-10", "octobre 2011", "Roubaix, France" )
+            | Jeux Boufbowl &amp; TCG Online
+
+        +experience( "Ankama Games", "http://www.ankama.com", "Développeur web (php & flash), intégrateur", "2009-06", "juin 2009", "2010-08", "août 2010", "Roubaix, France" )
+            | Sites divers &amp; outils internes
+
+        +experience( "COM2B Networks", "http://www.com2b.be", "Développeur web (php & flash), intégrateur", "2008-12", "décembre 2008", "2009-06", "juin 2009", "Bruxelles, Belgique" )
+            | Sites divers &amp; outils clients
+
+        +experience( "New Edge Concept", "http://www.newedge.be", "Développeur web (php), intégrateur & designer", "2007-10", "octobre 2007", "2008-11", "novembre 2008", "Liège, Belgique" )
+            | Sites divers &amp; CMS maison
+
+        +experience( "VAlain S.A.", "http://www.valain.com", "Développeur Web (php)", "2007-04", "avril", "2007-07", "juillet 2007", "Wiltz, Luxembourg" )
+            | Outils clients #[br/]
+            | Stage de fin d’études &amp; job étudiant
