@@ -18,6 +18,19 @@ module.exports = function( grunt ) {
                 }
             }
         },
+        "htmlmin": {
+            "options": {
+                "removeComments": true,
+                "collapseWhitespace": true,
+                "decodeEntities": true,
+                "collapseBooleanAttributes": true,
+            },
+            "page": {
+                "files": {
+                    "index.html": "index.html",
+                },
+            }
+        },
         // CSS
         "stylus": {
             "options": {
@@ -62,7 +75,7 @@ module.exports = function( grunt ) {
     } );
 
 
-    grunt.registerTask( "html", [ "pug" ] );
+    grunt.registerTask( "html", [ "pug", "htmlmin" ] );
 
     grunt.registerTask( "css", [
         "stylus",
