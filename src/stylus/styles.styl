@@ -27,31 +27,35 @@ font-face( "SourceSansPro", "./fonts/source-sans/SourceSansPro-Regular-webfont",
 SourceSansPro = "SourceSansPro", font-stack( "Helvetica" )
 
 // vars
-textColor = #000
-linkColor = tint( #33a, 25% )
-linkHoverColor = tint( #33a, 50% )
+bcgColor = #fff
+mainColor = #000
+altColor = tint( #33a, 25% )
+altHoverColor = tint( altColor, 50% )
 
 ks-color-fallback-enabled = true
 
 // ----- commons
 
+*
+    -webkit-font-smoothing: antialiased
+    -webkit-text-size-adjust: 100%
 
 :focus
     outline: 0
 
 a
-    color: linkColor
+    color: altColor
     text-decoration: none
     transition: color .25s ease-in-out
     svg
         g
-            fill: textColor
+            fill: mainColor
             transition: fill .25s ease-in-out
     &:hover
-        color: linkHoverColor
+        color: altHoverColor
         svg
             g
-                fill: linkHoverColor
+                fill: altHoverColor
 
 abbr[title]
     position: relative
@@ -62,22 +66,21 @@ abbr[title]
         display: block
         absolute: auto 0 .2rem
         size: auto 0
-        border-bottom: .1rem dotted linkColor
+        border-bottom: .1rem dotted altColor
 
 // ----- layout
 
 html
     height: 100%
+    background: bcgColor
     font: normal 62.5%/1.5 SourceSansPro
-    -webkit-font-smoothing: antialiased
-    -webkit-text-size-adjust: 100%
 
 body
     position: relative
     display: flex
     width: 100%
     min-height: 100%
-    color: textColor
+    color: mainColor
 
 
 main
@@ -96,7 +99,7 @@ h1
         display: block
         margin: 0 auto 1rem
         padding-bottom: 1rem
-        border-bottom: .1rem solid tint( textColor, 50% )
+        border-bottom: .1rem solid tint( mainColor, 50% )
     svg
         display: block
         margin: 0 auto
@@ -104,10 +107,13 @@ h1
             width: 45%
             margin-right: 0
 
-svg[id="leny-icon"]
-    display: block
-    margin: 0 auto 2rem
-    size: 4.8rem
+svg
+    g
+        fill: mainColor
+    &[id="leny-icon"]
+        display: block
+        margin: 0 auto 2rem
+        size: 4.8rem
 
 section
     margin: 0 auto 3.6rem
@@ -116,7 +122,7 @@ section
         position: relative
         margin: 0 auto 3.2rem
         padding-bottom: .25rem
-        border-bottom: .1rem solid tint( textColor, 50% )
+        border-bottom: .1rem solid tint( mainColor, 50% )
         font-size: 2.4rem
         text-align: right
         svg
@@ -133,7 +139,7 @@ section
             display: inline-block
             margin: 0 .5rem
             size: 2rem .1rem
-            background: tint( textColor, 33% )
+            background: tint( mainColor, 33% )
             vertical-align: middle
 
 ol
@@ -169,7 +175,7 @@ section[id="identity"]
                     vertical-align: -.3rem
                     > g
                     > path
-                        fill: linkColor
+                        fill: altColor
         dd
             display: inline
             margin: 0
@@ -199,7 +205,7 @@ section[id="education"]
                 size: boxWidth boxHeight
                 padding: 0 .8rem
                 font-size: 1.6rem
-                color: tint( textColor, 25% )
+                color: tint( mainColor, 25% )
                 text-align: right
                 transform: rotate( -90deg )
                 transform-origin: top right
@@ -229,9 +235,9 @@ section[id="experience"]
                 top: .7rem
                 left: 50%
                 padding: .2rem .6rem 0
-                background: tint( mix( textColor, linkColor ), 50% )
+                background: tint( mix( mainColor, altColor ), 50% )
                 font-size: 1.2rem
-                color: invert( textColor )
+                color: invert( mainColor )
                 text-align: center
                 text-transform: uppercase
                 white-space: nowrap
@@ -242,7 +248,7 @@ section[id="experience"]
                     position: absolute
                     top: 50%
                     size: 2rem .1rem
-                    background: tint( mix( textColor, linkColor ), 50% )
+                    background: tint( mix( mainColor, altColor ), 50% )
                     vertical-align: middle
                 &:before
                     left: -3rem
@@ -255,13 +261,13 @@ section[id="experience"]
                     padding: 0
                     font-size: 1.6rem
             p:last-child
-                color: tint( textColor, 50% )
+                color: tint( mainColor, 50% )
                 svg
                     display: inline-block
                     size: 1.1rem
                     margin-right: .25rem
                     g
-                        fill: tint( textColor, 50% )
+                        fill: tint( mainColor, 50% )
 
 section[id="skills"], section[id="languages"]
     dl
@@ -278,7 +284,7 @@ section[id="misc"]
     h3
         margin: 0 auto 1.2rem
         font-size: 1.8rem
-        color: tint( textColor, 25% )
+        color: tint( mainColor, 25% )
         text-align: left
         &:before, &:after
             content: none
@@ -288,7 +294,7 @@ section[id="misc"]
             margin-right: .6rem
             vertical-align: -.2rem
             g
-                fill: tint( textColor, 25% )
+                fill: tint( mainColor, 25% )
     p
         margin: 0 auto 1.6rem
         font-size: 1.6rem
