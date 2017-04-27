@@ -61,6 +61,7 @@ abbr[title]
     position: relative
     border-bottom: 0
     cursor: help
+    text-decoration: none
     &:after
         content: ""
         display: block
@@ -329,6 +330,9 @@ section[id="misc"]
         size: 46% auto
         padding: 15.6rem 0
         overflow: scroll
+        &::-webkit-scrollbar
+            width: 0px
+            background: transparent
         & + .col-two
             absolute: 0 0 0 auto
             margin-left: 8%
@@ -352,6 +356,9 @@ section[id="misc"]
         width: ( ( 100 - colSubGap ) / ( colAmount - 1 ) )
         padding: 15.6rem 0
         overflow: scroll
+        &::-webkit-scrollbar
+            width: 0px
+            background: transparent
         & + .col-three
             absolute: 0 0 0 auto
             margin-left: colSubGap
@@ -391,6 +398,9 @@ section[id="misc"]
         width: colSubSubSize
         padding: 15.6rem 0
         overflow: scroll
+        &::-webkit-scrollbar
+            width: 0px
+            background: transparent
         & + .col-four
             absolute: 0 0 0 auto
             margin-left: colSubSubGap

@@ -241,6 +241,7 @@ abbr[title] {
   position: relative;
   border-bottom: 0;
   cursor: help;
+  text-decoration: none;
 }
 abbr[title]:after {
   content: "";
@@ -575,6 +576,10 @@ section[id="misc"] p {
     padding: 15.6rem 0;
     overflow: scroll;
   }
+  .col-two::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
   .col-two + .col-two {
     position: absolute;
     top: 0;
@@ -602,6 +607,10 @@ section[id="misc"] p {
     width: 47%;
     padding: 15.6rem 0;
     overflow: scroll;
+  }
+  .col-three::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
   }
   .col-three + .col-three {
     position: absolute;
@@ -643,6 +652,10 @@ section[id="misc"] p {
     width: 47.5%;
     padding: 15.6rem 0;
     overflow: scroll;
+  }
+  .col-four::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
   }
   .col-four + .col-four {
     position: absolute;
