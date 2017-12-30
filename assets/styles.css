@@ -503,18 +503,21 @@ section[id="experience"] ol li p:last-child svg g {
   fill: #7f7f7f;
 }
 section[id="skills"] dl,
-section[id="languages"] dl {
+section[id="languages"] dl,
+section[id="projects"] dl {
   margin: 0 auto 3.2rem;
   font-size: 1.6rem;
 }
 section[id="skills"] dl dt,
-section[id="languages"] dl dt {
+section[id="languages"] dl dt,
+section[id="projects"] dl dt {
   margin: 0 auto 0.66rem;
   font-weight: bold;
   font-size: 1.8rem;
 }
 section[id="skills"] dl dd,
-section[id="languages"] dl dd {
+section[id="languages"] dl dd,
+section[id="projects"] dl dd {
   margin: 0 auto 1.6rem;
 }
 section[id="misc"] h3 {
@@ -584,7 +587,6 @@ section[id="misc"] p {
     width: 46%;
     height: auto;
     padding: 15.6rem 0;
-    overflow: scroll;
   }
   .col-two::-webkit-scrollbar {
     width: 0px;
@@ -606,7 +608,6 @@ section[id="misc"] p {
   .col-two + .col-two {
     width: 65.33333333333333%;
     margin-left: 4%;
-    overflow: visible;
   }
   .col-three {
     position: absolute;
@@ -616,7 +617,6 @@ section[id="misc"] p {
     left: 0;
     width: 47%;
     padding: 15.6rem 0;
-    overflow: scroll;
   }
   .col-three::-webkit-scrollbar {
     width: 0px;
@@ -651,7 +651,6 @@ section[id="misc"] p {
   .col-three + .col-three {
     width: 65.55555555555556%;
     margin-left: 3.333333333333333%;
-    overflow: visible;
   }
   .col-four {
     position: absolute;
@@ -661,7 +660,6 @@ section[id="misc"] p {
     left: 0;
     width: 47.5%;
     padding: 15.6rem 0;
-    overflow: scroll;
   }
   .col-four::-webkit-scrollbar {
     width: 0px;

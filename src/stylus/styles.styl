@@ -270,7 +270,7 @@ section[id="experience"]
                     g
                         fill: tint( mainColor, 50% )
 
-section[id="skills"], section[id="languages"]
+section[id="skills"], section[id="languages"], section[id="projects"]
     dl
         margin: 0 auto 3.2rem
         font-size: 1.6rem
@@ -329,7 +329,7 @@ section[id="misc"]
         absolute: 0 auto 0 0
         size: 46% auto
         padding: 15.6rem 0
-        overflow: scroll
+        // overflow: scroll
         &::-webkit-scrollbar
             width: 0px
             background: transparent
@@ -347,7 +347,7 @@ section[id="misc"]
         & + .col-two
             width: ( 100 - colGap - colSize )
             margin-left: colGap
-            overflow: visible
+            // overflow: visible
 
     colSubGap = ( colGap * colAmount / ( colAmount - 1 ) )
 
@@ -355,7 +355,7 @@ section[id="misc"]
         absolute: 0 auto 0 0
         width: ( ( 100 - colSubGap ) / ( colAmount - 1 ) )
         padding: 15.6rem 0
-        overflow: scroll
+        // overflow: scroll
         &::-webkit-scrollbar
             width: 0px
             background: transparent
@@ -388,7 +388,7 @@ section[id="misc"]
         & + .col-three
             width: ( 100 - colSubGap - colSubSize )
             margin-left: colSubGap
-            overflow: visible
+            // overflow: visible
 
     colSubSubGap = ( colSubGap * ( colAmount - 1 ) / ( colAmount - 2 ) )
     colSubSubSize = ( ( 100 - ( ( colAmount - 3 ) * colSubSubGap ) ) / ( colAmount - 2 ) )
@@ -397,7 +397,7 @@ section[id="misc"]
         absolute: 0 auto 0 0
         width: colSubSubSize
         padding: 15.6rem 0
-        overflow: scroll
+        // overflow: scroll
         &::-webkit-scrollbar
             width: 0px
             background: transparent
