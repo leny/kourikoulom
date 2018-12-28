@@ -29,6 +29,7 @@ SourceSansPro = "SourceSansPro", font-stack( "Helvetica" )
 // vars
 bcgColor = #fff
 mainColor = #000
+fadeColor=#444
 altColor = tint( #33a, 25% )
 altHoverColor = tint( altColor, 50% )
 
@@ -280,6 +281,14 @@ section[id="skills"], section[id="languages"], section[id="projects"]
             font-size: 1.8rem
         dd
             margin: 0 auto 1.6rem
+
+section[id="skills"]
+    dl
+        dd
+            color: fadeColor
+            strong
+                font-weight: normal
+                color: mainColor
 
 section[id="misc"]
     h3
