@@ -520,6 +520,13 @@ section[id="languages"] dl dd,
 section[id="projects"] dl dd {
   margin: 0 auto 1.6rem;
 }
+section[id="skills"] dl dd {
+  color: #444;
+}
+section[id="skills"] dl dd strong {
+  font-weight: normal;
+  color: #000;
+}
 section[id="misc"] h3 {
   margin: 0 auto 1.2rem;
   font-size: 1.8rem;
