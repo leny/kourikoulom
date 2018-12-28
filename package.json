@@ -12,8 +12,13 @@
     "type": "git",
     "url": "git://github.com/leny/kourikoulom.git"
   },
+  "scripts":{
+    "build": "npx grunt build",
+    "work": "npx grunt work"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-cli": "^1.3.2",
     "grunt-contrib-htmlmin": "^2.0.0",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-stylus": "^1.2.0",

@@ -1,95 +1,85 @@
 /* eslint-disable */
 
-"use strict"
+"use strict";
 
-module.exports = function( grunt ) {
+module.exports = function(grunt) {
+    require("matchdep")
+        .filterDev("grunt-*")
+        .forEach(grunt.loadNpmTasks);
 
-    require( "matchdep" ).filterDev( "grunt-*" ).forEach( grunt.loadNpmTasks );
-
-    grunt.initConfig( {
+    grunt.initConfig({
         // html
-        "pug": {
-            "options": {
-                "compress": false
+        pug: {
+            options: {
+                compress: false,
             },
-            "page": {
-                "files": {
-                    "index.html": "src/pug/index.pug"
-                }
-            }
+            page: {
+                files: {
+                    "index.html": "src/pug/index.pug",
+                },
+            },
         },
-        "htmlmin": {
-            "options": {
-                "removeComments": true,
-                "collapseWhitespace": true,
-                "decodeEntities": true,
-                "collapseBooleanAttributes": true,
+        htmlmin: {
+            options: {
+                removeComments: true,
+                collapseWhitespace: true,
+                decodeEntities: true,
+                collapseBooleanAttributes: true,
             },
-            "page": {
-                "files": {
+            page: {
+                files: {
                     "index.html": "index.html",
                 },
-            }
+            },
         },
         // CSS
-        "stylus": {
-            "options": {
-                "compress": false,
-                "use": [
-                    require( "kouto-swiss" )
-                ]
+        stylus: {
+            options: {
+                compress: false,
+                use: [require("kouto-swiss")],
             },
-            "styles": {
-                "files": {
-                    "assets/styles.css": "src/stylus/styles.styl"
-                }
-            }
+            styles: {
+                files: {
+                    "assets/styles.css": "src/stylus/styles.styl",
+                },
+            },
         },
-        "csso": {
-            "options": {
-                "report": "gzip"
+        csso: {
+            options: {
+                report: "gzip",
             },
-            "styles": {
-                "files": {
-                    "assets/styles.min.css": "assets/styles.css"
-                }
-            }
+            styles: {
+                files: {
+                    "assets/styles.min.css": "assets/styles.css",
+                },
+            },
         },
         // Watch
-        "watch": {
-            "pug": {
-                "files": [ "src/**/*.pug", "src/**/*.svg" ],
-                "tasks": [ "html" ],
-                "options": {
-                    "livereload": true
-                }
+        watch: {
+            pug: {
+                files: ["src/**/*.pug", "src/**/*.svg"],
+                tasks: ["html"],
+                options: {
+                    livereload: true,
+                },
             },
-            "styles": {
-                "files": "src/stylus/styles.styl",
-                "tasks": [ "css" ],
-                "options": {
-                    "livereload": true
-                }
-            }
-        }
-    } );
+            styles: {
+                files: "src/stylus/styles.styl",
+                tasks: ["css"],
+                options: {
+                    livereload: true,
+                },
+            },
+        },
+    });
 
+    grunt.registerTask("html", ["pug", "htmlmin"]);
 
-    grunt.registerTask( "html", [ "pug", "htmlmin" ] );
+    grunt.registerTask("css", ["stylus", "csso"]);
 
-    grunt.registerTask( "css", [
-        "stylus",
-        "csso"
-    ] );
+    grunt.registerTask("build", ["html", "css"]);
 
-    grunt.registerTask( "default", [
-        "html",
-        "css"
-    ] );
+    grunt.registerTask("default", ["build"]);
 
-    grunt.registerTask( "work", [
-        "html",
-        "css",
-        "watch"
-    ] );
+    grunt.registerTask("work", ["html", "css", "watch"]);
 };
