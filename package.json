@@ -13,18 +13,18 @@
     "url": "git://github.com/leny/kourikoulom.git"
   },
   "scripts": {
-    "build": "npx grunt build",
-    "work": "npx grunt work"
+    "html": "npx pug src/pug/index.pug -o .",
+    "css:stylus": "npx stylus -u ./node_modules/kouto-swiss < src/stylus/styles.styl > assets/styles.css",
+    "css:csso": "npx csso assets/styles.css -o assets/styles.min.css",
+    "css:clean": "npx del-cli assets/styles.css",
+    "css": "npm run css:stylus && npm run css:csso && npm run css:clean",
+    "build": "npm run html && npm run css"
   },
   "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-cli": "^1.3.2",
-    "grunt-contrib-htmlmin": "^3.0.0",
-    "grunt-contrib-pug": "^2.0.0",
-    "grunt-contrib-stylus": "^1.2.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-csso": "^2.2.4",
-    "kouto-swiss": "^1.1.0",
-    "matchdep": "^2.0.0"
+    "csso-cli": "^2.0.2",
+    "del-cli": "^1.1.0",
+    "kouto-swiss": "^0.14.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5"
   }
 }
