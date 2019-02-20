@@ -23,7 +23,7 @@ action "npm: build css" {
 }
 
 action "deploy: gh-pages" {
-  uses = "leny/ghpages@ca131df014e4c8ddcb981192d615efc21c9404a8"
+  uses = "leny/ghpages@4a198bf06ef6f7c96f37bcbb28adc17421437ac8"
   needs = ["npm: build html", "npm: build css"]
   secrets = ["GH_PAT"]
   env = {
