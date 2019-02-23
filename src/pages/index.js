@@ -23,9 +23,6 @@ const styles = {
         margin: [0, "auto"].join(" "),
         paddingTop: rem(2.4),
     }),
-    head: css({
-        // TODO: will have styles with mq.
-    }),
 };
 
 // TODO: extract this
@@ -57,9 +54,7 @@ export default () => (
         <GlobalStyles />
         <ShareCard type={"twitter"} values={TWITTER_CARD} />
         <ShareCard type={"og"} values={FACEBOOK_CARD} />
-        <div css={styles.head}>
-            <Header />
-            <IdentitySection />
-        </div>
+        <Header />
+        <IdentitySection />
     </main>
 );
