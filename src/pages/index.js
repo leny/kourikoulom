@@ -13,6 +13,7 @@ import {rem, percent} from "koutla-swiss";
 import {Helmet} from "react-helmet";
 import GlobalStyles from "../components/head/global-styles";
 import ShareCard from "../components/head/share-card";
+import Header from "../components/header/header";
 
 const styles = {
     main: css({
@@ -20,9 +21,8 @@ const styles = {
         margin: [0, "auto"].join(" "),
         paddingTop: rem(2.4),
     }),
-    tmp: css({
-        fontSize: rem(4),
-        color: "red",
+    head: css({
+        // TODO: will have styles with mq.
     }),
 };
 
@@ -55,6 +55,8 @@ export default () => (
         <GlobalStyles />
         <ShareCard type={"twitter"} values={TWITTER_CARD} />
         <ShareCard type={"og"} values={FACEBOOK_CARD} />
-        <h1 css={styles.tmp}>{"Hello, leny!"}</h1>
+        <div css={styles.head}>
+            <Header />
+        </div>
     </main>
 );
