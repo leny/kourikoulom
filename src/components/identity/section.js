@@ -10,7 +10,7 @@ import React from "react";
 import {css} from "@emotion/core";
 import {rem} from "koutla-swiss";
 
-import CommonSection from "../commons/section";
+import Section from "../commons/section";
 import Entry from "./entry";
 
 // TODO: extract this
@@ -79,11 +79,11 @@ const styles = {
 };
 
 export default () => (
-    <CommonSection title={"À propos de moi…"} hideTitle>
+    <Section title={"À propos de moi…"} hideTitle>
         <dl css={styles.list}>
             {IDENTITY.map(entry => (
                 <Entry key={entry.label} {...entry} />
             ))}
         </dl>
-    </CommonSection>
+    </Section>
 );

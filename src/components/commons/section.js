@@ -6,11 +6,17 @@
  * started at 23/02/2019
  */
 
-// TODO: icon
-
 import React from "react";
 import {css} from "@emotion/core";
-import {rem, margin, borderBottom} from "koutla-swiss";
+import {
+    rem,
+    margin,
+    flexrow,
+    borderBottom,
+    size,
+    important,
+} from "koutla-swiss";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {BORDER_COLOR} from "../../core/constants";
 
@@ -19,19 +25,32 @@ const styles = {
         ...margin(0, "auto", rem(3.6)),
     }),
     title: css({
-        position: "relative",
+        ...flexrow("space-between", "center"),
         ...margin(0, "auto", rem(3.2)),
         paddingBottom: rem(0.25),
         ...borderBottom(rem(0.1), "solid", BORDER_COLOR),
         fontSize: rem(2.4),
         textAlign: "right",
     }),
+    titleContent: {flex: 1},
     hideTitle: css({display: "none"}),
+    icon: css({
+        ...important(size(rem(2.4))),
+    }),
 };
 
-export default ({title, hideTitle = false, children}) => (
-    <div css={styles.container}>
-        <h2 css={[styles.title, hideTitle && styles.hideTitle]}>{title}</h2>
-        {children}
-    </div>
-);
+export default ({title, hideTitle = false, children, icon}) => {
+    let $icon;
+
+    icon && ($icon = <FontAwesomeIcon icon={icon} css={styles.icon} />);
+
+    return (
+        <section css={styles.container}>
+            <h2 css={[styles.title, hideTitle && styles.hideTitle]}>
+                {$icon}
+                <span css={styles.titleContent}>{title}</span>
+            </h2>
+            {children}
+        </section>
+    );
+};
