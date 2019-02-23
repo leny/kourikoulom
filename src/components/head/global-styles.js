@@ -11,11 +11,13 @@ import {css, Global} from "@emotion/core";
 import {percent} from "koutla-swiss";
 import {Helmet} from "react-helmet";
 
+import normalize from "normalize-jss";
 import {
-    meyerReset,
     boxSizingReset,
     BCG_COLOR,
     MAIN_COLOR,
+    ALT_COLOR,
+    ALT_HOVER_COLOR,
     SOURCE_SANS_PRO_STACK,
 } from "../../core/constants";
 
@@ -27,7 +29,7 @@ export default () => (
                 rel={"stylesheet"}
             />
         </Helmet>
-        <Global styles={css(meyerReset)} />
+        <Global styles={css(normalize)} />
         <Global styles={css(boxSizingReset)} />
         <Global
             styles={css({
@@ -48,6 +50,12 @@ export default () => (
                 body: {
                     position: "relative",
                     color: MAIN_COLOR,
+                },
+                a: {
+                    color: ALT_COLOR,
+                    textDecoration: "none",
+                    transition: ["color", ".25s", "ease-in-out"].join(" "),
+                    "&:hover": {color: ALT_HOVER_COLOR},
                 },
             })}
         />

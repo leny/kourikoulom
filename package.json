@@ -26,6 +26,7 @@
     "gatsby": "^2.1.17",
     "gatsby-plugin-emotion": "^4.0.4",
     "koutla-swiss": "^0.7.0",
+    "normalize-jss": "^4.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0"
