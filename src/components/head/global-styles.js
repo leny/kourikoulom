@@ -25,7 +25,9 @@ export default () => (
     <>
         <Helmet>
             <link
-                href={"https://fonts.googleapis.com/css?family=Source+Sans+Pro"}
+                href={
+                    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"
+                }
                 rel={"stylesheet"}
             />
         </Helmet>
