@@ -19,9 +19,13 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.7",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/pro-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "gatsby": "^2.1.17",
     "gatsby-plugin-emotion": "^4.0.4",
-    "koutla-swiss": "^0.6.0",
+    "koutla-swiss": "^0.7.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0"

@@ -11,6 +11,7 @@ import {css} from "@emotion/core";
 import {rem, percent} from "koutla-swiss";
 
 import {Helmet} from "react-helmet";
+import "../core/font-awesome";
 import GlobalStyles from "../components/head/global-styles";
 import ShareCard from "../components/head/share-card";
 import Header from "../components/header/header";
