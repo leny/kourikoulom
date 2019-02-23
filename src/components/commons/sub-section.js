@@ -27,7 +27,7 @@ const styles = {
     }),
 };
 
-export default ({title}) => (
+export default ({title, children}) => (
     <>
         <h3 css={styles.title}>
             <span css={styles.titleContent}>{title}</span>
