@@ -10,7 +10,9 @@ import React from "react";
 import {css} from "@emotion/core";
 import {rem, percent} from "koutla-swiss";
 
+import {Helmet} from "react-helmet";
 import GlobalStyles from "../components/head/global-styles";
+import ShareCard from "../components/head/share-card";
 
 const styles = {
     main: css({
@@ -24,9 +26,35 @@ const styles = {
     }),
 };
 
+// TODO: extract this
+
+const TWITTER_CARD = {
+    card: "summary",
+    title: "Delnatte Pierre-Antoine - Webdeveloper",
+    description:
+        "C.V. en ligne de Pierre-Antoine &quot;Leny&quot; Delnatte, Développeur web Belge",
+    image: "http://pierre-antoine.delnatte.be/me.jpg",
+    creator: "@leny_be",
+};
+
+const FACEBOOK_CARD = {
+    type: "profile",
+    title: "Delnatte Pierre-Antoine - Webdeveloper",
+    site_name: "pierre-antoine.delnatte.be",
+    description:
+        "C.V. en ligne de Pierre-Antoine &quot;Leny&quot; Delnatte, Développeur web Belge",
+    image: "http://pierre-antoine.delnatte.be/assets/me.jpg",
+    locale: "fr_BE",
+};
+
 export default () => (
     <main css={styles.main}>
+        <Helmet>
+            <title>{"Delnatte Pierre-Antoine - Webdeveloper"}</title>
+        </Helmet>
         <GlobalStyles />
+        <ShareCard type={"twitter"} values={TWITTER_CARD} />
+        <ShareCard type={"og"} values={FACEBOOK_CARD} />
         <h1 css={styles.tmp}>{"Hello, leny!"}</h1>
     </main>
 );
