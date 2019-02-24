@@ -30,8 +30,8 @@ const LANGS = [
     },
 ];
 
-export default () => (
-    <Section title={"Langues"} icon={"comments"}>
+export default ({className}) => (
+    <Section className={className} title={"Langues"} icon={"comments"}>
         <DefinitionList elements={LANGS} />
     </Section>
 );

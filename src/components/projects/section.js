@@ -52,8 +52,8 @@ const styles = {
     }),
 };
 
-export default () => (
-    <Section title={"Projets personnels"} icon={"flask"}>
+export default ({className}) => (
+    <Section className={className} title={"Projets personnels"} icon={"flask"}>
         <dl css={styles.list}>
             {PROJECTS.map(project => (
                 <Entry key={project.name} {...project} />

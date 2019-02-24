@@ -35,8 +35,8 @@ const MISCS = [
     },
 ];
 
-export default () => (
-    <Section title={"Divers"} icon={"user"}>
+export default ({className}) => (
+    <Section className={className} title={"Divers"} icon={"user"}>
         <DefinitionList elements={MISCS} />
     </Section>
 );

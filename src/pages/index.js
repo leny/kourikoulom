@@ -8,7 +8,14 @@
 
 import React from "react";
 import {css} from "@emotion/core";
-import {rem, percent} from "koutla-swiss";
+import {rem, percent, mq, fixed, margin, padding, vw} from "koutla-swiss";
+
+import {
+    MQ_TABLET,
+    MQ_SMALL_DESKTOP,
+    MQ_MEDIUM_DESKTOP,
+    MQ_LARGE_DESKTOP,
+} from "../core/constants";
 
 import {Helmet} from "react-helmet";
 import "../core/font-awesome";
@@ -26,10 +33,52 @@ import LanguagesSection from "../components/misc/languages-section";
 import MiscSection from "../components/misc/misc-section";
 
 const styles = {
-    main: css({
+    wrapper: css({
+        position: "relative",
         width: percent(90),
-        margin: [0, "auto"].join(" "),
+        ...margin(0, "auto"),
         paddingTop: rem(2.4),
+        ...mq(MQ_TABLET, {
+            ...padding(rem(8.1), 0, rem(18), rem(28.5)),
+        }),
+        ...mq(MQ_SMALL_DESKTOP, {
+            paddingTop: rem(15.6),
+        }),
+        ...mq(MQ_LARGE_DESKTOP, {
+            width: rem(140),
+        }),
+    }),
+    head: css({
+        ...mq(MQ_TABLET, {
+            ...fixed({top: rem(2.5), left: percent(50)}),
+            width: rem(25),
+            marginLeft: percent(-45),
+        }),
+        ...mq(MQ_SMALL_DESKTOP, {
+            top: rem(10),
+        }),
+        ...mq(MQ_LARGE_DESKTOP, {
+            marginLeft: rem(-70),
+        }),
+    }),
+    content: css({
+        ...mq(MQ_SMALL_DESKTOP, {
+            columns: 2,
+            columnGap: percent(8),
+        }),
+        ...mq(MQ_MEDIUM_DESKTOP, {
+            columns: 3,
+            columnGap: percent(4),
+        }),
+        ...mq(MQ_LARGE_DESKTOP, {
+            columns: 4,
+            columnGap: percent(2.5),
+        }),
+    }),
+    forceBreak: css({
+        ...mq(MQ_LARGE_DESKTOP, {
+            marginBottom: vw(100),
+        }),
     }),
 };
 
@@ -55,20 +104,24 @@ const FACEBOOK_CARD = {
 };
 
 export default () => (
-    <main css={styles.main}>
+    <div css={styles.wrapper}>
         <Helmet>
             <title>{"Delnatte Pierre-Antoine - Webdeveloper"}</title>
         </Helmet>
         <GlobalStyles />
         <ShareCard type={"twitter"} values={TWITTER_CARD} />
         <ShareCard type={"og"} values={FACEBOOK_CARD} />
-        <Header />
-        <IdentitySection />
-        <SkillsSection />
-        <ExperienceSection />
-        <FormationsSection />
-        <ProjectsSection />
-        <LanguagesSection />
-        <MiscSection />
-    </main>
+        <div css={styles.head}>
+            <Header />
+            <IdentitySection />
+        </div>
+        <main css={styles.content}>
+            <SkillsSection />
+            <ExperienceSection />
+            <FormationsSection css={styles.forceBreak} />
+            <ProjectsSection />
+            <LanguagesSection />
+            <MiscSection />
+        </main>
+    </div>
 );

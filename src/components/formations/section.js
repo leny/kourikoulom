@@ -66,8 +66,8 @@ const styles = {
     }),
 };
 
-export default () => (
-    <Section title={"Formations"} icon={"graduation-cap"}>
+export default ({className}) => (
+    <Section className={className} title={"Formations"} icon={"graduation-cap"}>
         {Object.entries(FORMATIONS).map(([title, formations], index) => (
             <SubSection key={title} title={title} hideTitle={index === 0}>
                 <ol css={styles.list}>

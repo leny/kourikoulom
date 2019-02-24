@@ -15,14 +15,22 @@ import {
     borderBottom,
     size,
     important,
+    mq,
 } from "koutla-swiss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import {BORDER_COLOR} from "../../core/constants";
+import {BORDER_COLOR, MQ_TABLET, MQ_SMALL_DESKTOP} from "../../core/constants";
 
 const styles = {
     container: css({
         ...margin(0, "auto", rem(3.6)),
+        ...mq(MQ_TABLET, {
+            marginBottom: rem(19.2),
+        }),
+        ...mq(MQ_SMALL_DESKTOP, {
+            breakInside: "avoid",
+            marginBottom: rem(9.6),
+        }),
     }),
     title: css({
         ...flexrow("space-between", "center"),
@@ -39,13 +47,13 @@ const styles = {
     }),
 };
 
-export default ({title, hideTitle = false, children, icon}) => {
+export default ({className, title, hideTitle = false, children, icon}) => {
     let $icon;
 
     icon && ($icon = <FontAwesomeIcon icon={icon} css={styles.icon} />);
 
     return (
-        <section css={styles.container}>
+        <section css={styles.container} className={className}>
             <h2 css={[styles.title, hideTitle && styles.hideTitle]}>
                 {$icon}
                 <span css={styles.titleContent}>{title}</span>

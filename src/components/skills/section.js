@@ -242,8 +242,8 @@ const styles = {
     }),
 };
 
-export default () => (
-    <Section title={"Compétences"} icon={"bolt"}>
+export default ({className}) => (
+    <Section className={className} title={"Compétences"} icon={"bolt"}>
         {SKILLS.map(({title, fields}) => (
             <SubSection key={title} title={title}>
                 <dl css={styles.list}>

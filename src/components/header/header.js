@@ -43,8 +43,8 @@ const styles = {
     }),
 };
 
-export default () => (
-    <header css={styles.container}>
+export default ({className}) => (
+    <header css={styles.container} className={className}>
         <h1 css={styles.title}>
             <Leny css={[styles.svg, styles.leny]} />
             <strong css={styles.name}>

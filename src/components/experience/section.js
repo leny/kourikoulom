@@ -142,8 +142,8 @@ const styles = {
     }),
 };
 
-export default () => (
-    <Section title={"Parcours"} icon={"route"}>
+export default ({className}) => (
+    <Section className={className} title={"Parcours"} icon={"route"}>
         <ol css={styles.list}>
             {EXPERIENCES.map(experience=>(
                 <Entry key={experience.company} css={styles.element} {...experience} />
