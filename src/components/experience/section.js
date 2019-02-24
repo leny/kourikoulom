@@ -13,6 +13,7 @@ import {css} from "@emotion/core";
 import {rem, margin} from "koutla-swiss";
 
 import Section from "../commons/section";
+import Entry from "./entry";
 
 // TODO: extract this
 
@@ -87,8 +88,8 @@ const EXPERIENCES = [
         company: "Ankama Studio",
         url: "https://ankama.com",
         position: "Intégrateur RIA Flash",
-        from: "2010-09",
-        to: "2011-10",
+        from: "2010-09-01",
+        to: "2011-10-01",
         location: "Roubaix, France",
         details: ["Jeux Boufbowl & Wakfu TCG Online"],
     },
@@ -96,8 +97,8 @@ const EXPERIENCES = [
         company: "Ankama Games",
         url: "https://ankama.com",
         position: "Développeur web (php & flash), intégrateur",
-        from: "2009-06",
-        to: "2010-08",
+        from: "2009-06-01",
+        to: "2010-08-01",
         location: "Roubaix, France",
         details: ["Sites divers & outils internes"],
     },
@@ -105,8 +106,8 @@ const EXPERIENCES = [
         company: "COM2B Networks",
         url: "http://www.com2b.be",
         position: "Développeur web (php & flash), intégrateur",
-        from: "2008-12",
-        to: "2009-06",
+        from: "2008-12-01",
+        to: "2009-06-01",
         location: "Bruxelles, Belgique",
         details: ["Sites divers & outils clients"],
     },
@@ -114,17 +115,17 @@ const EXPERIENCES = [
         company: "New Edge Concept",
         url: "http://www.newedge.be",
         position: "Développeur web (php), intégrateur & designer",
-        from: "2007-10",
-        to: "2008-11",
+        from: "2007-10-01",
+        to: "2008-11-01",
         location: "Liège, Belgique",
         details: ["Sites divers & CMS maison"],
     },
     {
         company: "Valain S.A.",
         url: "http://www.valain.com",
-        position: "Développeur Web (php)",
-        from: "2007-04",
-        to: "2007-07",
+        position: "Développeur PHP",
+        from: "2007-04-01",
+        to: "2007-07-01",
         location: "Wiltz, Luxembourg",
         details: ["Outils clients", "Stage de fin d'études & Job étudiant"],
     },
@@ -132,13 +133,21 @@ const EXPERIENCES = [
 
 const styles = {
     list: css({
-        ...margin(0, "auto", rem(3.2)),
-        fontSize: rem(1.6),
+        listStyle: "none",
+        margin: 0,
+        padding: 0 ,
+    }),
+    element: css({
+        ...margin(0,"auto",rem(3.6)),
     }),
 };
 
 export default () => (
     <Section title={"Parcours"} icon={"route"}>
-        {"Huh?"}
+        <ol css={styles.list}>
+            {EXPERIENCES.map(experience=>(
+                <Entry key={experience.company} css={styles.element} {...experience} />
+            ))}
+        </ol>
     </Section>
 );
