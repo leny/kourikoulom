@@ -7,6 +7,7 @@
  */
 
 import React from "react";
+import {graphql} from "gatsby";
 import {css} from "@emotion/core";
 import {rem, percent, mq, fixed, margin, padding, vw} from "koutla-swiss";
 
@@ -82,35 +83,39 @@ const styles = {
     }),
 };
 
-// TODO: extract this
+export const query = graphql`
+    query {
+        dataJson {
+            title
+            cards {
+                twitter {
+                    card
+                    title
+                    description
+                    image
+                    creator
+                }
+                facebook {
+                    type
+                    title
+                    description
+                    site_name
+                    image
+                    locale
+                }
+            }
+        }
+    }
+`;
 
-const TWITTER_CARD = {
-    card: "summary",
-    title: "Delnatte Pierre-Antoine - Webdeveloper",
-    description:
-        "C.V. en ligne de Pierre-Antoine &quot;Leny&quot; Delnatte, Développeur web Belge",
-    image: "http://pierre-antoine.delnatte.be/me.jpg",
-    creator: "@leny_be",
-};
-
-const FACEBOOK_CARD = {
-    type: "profile",
-    title: "Delnatte Pierre-Antoine - Webdeveloper",
-    site_name: "pierre-antoine.delnatte.be",
-    description:
-        "C.V. en ligne de Pierre-Antoine &quot;Leny&quot; Delnatte, Développeur web Belge",
-    image: "http://pierre-antoine.delnatte.be/assets/me.jpg",
-    locale: "fr_BE",
-};
-
-export default () => (
+export default ({data}) => (
     <div css={styles.wrapper}>
         <Helmet>
-            <title>{"Delnatte Pierre-Antoine - Webdeveloper"}</title>
+            <title>{data.dataJson.title}</title>
         </Helmet>
         <GlobalStyles />
-        <ShareCard type={"twitter"} values={TWITTER_CARD} />
-        <ShareCard type={"og"} values={FACEBOOK_CARD} />
+        <ShareCard type={"twitter"} values={data.dataJson.cards.twitter} />
+        <ShareCard type={"og"} values={data.dataJson.cards.facebook} />
         <div css={styles.head}>
             <Header />
             <IdentitySection />
