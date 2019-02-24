@@ -14,8 +14,11 @@ import {Helmet} from "react-helmet";
 import "../core/font-awesome";
 import GlobalStyles from "../components/head/global-styles";
 import ShareCard from "../components/head/share-card";
+
 import Header from "../components/header/header";
+
 import IdentitySection from "../components/identity/section";
+import SkillsSection from "../components/skills/section";
 
 const styles = {
     main: css({
@@ -56,5 +59,6 @@ export default () => (
         <ShareCard type={"og"} values={FACEBOOK_CARD} />
         <Header />
         <IdentitySection />
+        <SkillsSection />
     </main>
 );

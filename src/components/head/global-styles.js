@@ -8,7 +8,7 @@
 
 import React from "react";
 import {css, Global} from "@emotion/core";
-import {percent} from "koutla-swiss";
+import {percent, absolute, size, borderBottom, rem} from "koutla-swiss";
 import {Helmet} from "react-helmet";
 
 import normalize from "normalize-jss";
@@ -58,6 +58,19 @@ export default () => (
                     textDecoration: "none",
                     transition: ["color", ".25s", "ease-in-out"].join(" "),
                     "&:hover": {color: ALT_HOVER_COLOR},
+                },
+                "abbr[title]": {
+                    position: "relative",
+                    borderBottom: 0,
+                    cursor: "help",
+                    textDecoration: "none",
+                    "&::after": {
+                        content: `""`,
+                        display: "block",
+                        ...absolute("auto", 0, rem(0.2)),
+                        ...size("auto", 0),
+                        ...borderBottom(rem(0.1), "dotted", ALT_COLOR),
+                    },
                 },
             })}
         />
