@@ -110,6 +110,13 @@ const SKILLS = [
                 title: "Mobile",
                 fields: [{text: "iOS natif", details: ["Swift"]}],
             },
+            {
+                title: "Desktop",
+                fields: [
+                    {text: "macOS natif", details: ["Swift"]},
+                    {text: "Electron", focus: true},
+                ],
+            },
             {title: "Système", fields: ["bash", "python", "go-lang"]},
         ],
     },
