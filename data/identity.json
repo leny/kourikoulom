@@ -1,0 +1,52 @@
+[
+    {
+        "label": "Date de naissance",
+        "value": "8 mai 1985",
+        "prefix": "Né le"
+    },
+    {
+        "label": "Adresse",
+        "value": "Liège, Belgique",
+        "prefix": "Résidant à"
+    },
+    {
+        "label": "Mail",
+        "value": "pierre-antoine@delnatte.be",
+        "link": "mailto:pierre-antoine@delnatte.be",
+        "tooltip": "Contactez-moi par mail",
+        "icon": "envelope"
+    },
+    {
+        "label": "URL",
+        "value": "leny.me",
+        "link": "https://leny.me",
+        "external": true,
+        "tooltip": "Allez voir mon site perso",
+        "icon": "link"
+    },
+    {
+        "label": "GitHub",
+        "value": "leny",
+        "link": "https://github.com/leny",
+        "external": true,
+        "tooltip": "Mon profil GitHub",
+        "icon": "fab_github-alt"
+    },
+    {
+        "label": "LinkedIn",
+        "value": "padelnatte",
+        "link": "https://www.linkedin.com/in/padelnatte",
+        "external": true,
+        "tooltip": "Mon profil LinkedIn",
+        "icon": "fab_linkedin"
+    },
+    {
+        "label": "npm",
+        "value": "$ npx leny",
+        "link": "https://www.npmjs.com/package/leny",
+        "external": true,
+        "tooltip": "Ma carte de visite virtuelle avec npx",
+        "icon": "fab_npm",
+        "kbd": true
+    }
+]

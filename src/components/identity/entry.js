@@ -61,7 +61,11 @@ export default ({
 
     icon &&
         ($icon = (
-            <FontAwesomeIcon color={ALT_COLOR} css={styles.icon} icon={icon} />
+            <FontAwesomeIcon
+                color={ALT_COLOR}
+                css={styles.icon}
+                icon={icon.includes("_") ? icon.split("_") : icon}
+            />
         ));
 
     kbd && ($content = <kbd>{value}</kbd>);
