@@ -11,7 +11,7 @@ import {css} from "@emotion/core";
 import {rem, margin} from "koutla-swiss";
 
 import {FADE_COLOR} from "../../core/constants";
-import FieldEntry from "./field-entry";
+import DescriptionParser from "../commons/description-parser";
 
 const styles = {
     title: css({
@@ -30,7 +30,7 @@ export default ({title, fields}) => (
         <dt css={styles.title}>{title}</dt>
         <dd css={styles.value}>
             {fields.map((entry, index, arr) => (
-                <FieldEntry
+                <DescriptionParser
                     key={entry.text || entry}
                     entry={entry}
                     last={index === arr.length - 1}

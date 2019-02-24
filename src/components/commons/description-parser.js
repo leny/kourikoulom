@@ -1,6 +1,6 @@
 /* leny/kourikoulom
  *
- * /src/components/skills/field-entry.js - FieldEntry Skills Component
+ * /src/components/commons/description-parser.js - Commons Description Parser
  *
  * coded by leny@flatLand!
  * started at 24/02/2019
@@ -23,7 +23,7 @@ export default ({entry, last}) => {
         return `${entry}${last ? "" : ", "}`;
     }
 
-    const {text, focus, details, abbr} = entry;
+    const {text, focus, details, abbr, url} = entry;
 
     let $text = text,
         $separator = last || ", ",
@@ -31,6 +31,14 @@ export default ({entry, last}) => {
 
     if (abbr) {
         $text = <abbr title={abbr}>{text}</abbr>;
+    }
+
+    if (url) {
+        $text = (
+            <a href={url} rel={"external"}>
+                {$text}
+            </a>
+        );
     }
 
     if (focus) {
