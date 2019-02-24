@@ -21,6 +21,7 @@ import IdentitySection from "../components/identity/section";
 import SkillsSection from "../components/skills/section";
 import ExperienceSection from "../components/experience/section";
 import FormationsSection from "../components/formations/section";
+import ProjectsSection from "../components/projects/section";
 
 const styles = {
     main: css({
@@ -64,5 +65,6 @@ export default () => (
         <SkillsSection />
         <ExperienceSection />
         <FormationsSection />
+        <ProjectsSection />
     </main>
 );
