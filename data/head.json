@@ -5,7 +5,7 @@
             "card": "summary",
             "title": "Delnatte Pierre-Antoine - Webdeveloper",
             "description": "C.V. en ligne de Pierre-Antoine &quot;Leny&quot; Delnatte, Développeur web Belge",
-            "image": "http://pierre-antoine.delnatte.be/me.jpg",
+            "image": "https://pierre-antoine.delnatte.be/me.jpg",
             "creator": "@leny_be"
         },
         "facebook": {
@@ -13,7 +13,7 @@
             "title": "Delnatte Pierre-Antoine - Webdeveloper",
             "site_name": "pierre-antoine.delnatte.be",
             "description": "C.V. en ligne de Pierre-Antoine &quot;Leny&quot; Delnatte, Développeur web Belge",
-            "image": "http://pierre-antoine.delnatte.be/assets/me.jpg",
+            "image": "https://pierre-antoine.delnatte.be/assets/me.jpg",
             "locale": "fr_BE"
         }
     }
