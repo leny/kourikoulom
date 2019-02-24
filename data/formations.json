@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Diplômes",
+        "details": [
+            {
+                "title": "Simplon - Formation de Formateurs",
+                "from": "2018-09",
+                "details": "Formation pédagogie active - Méthodologie Simplon",
+                "location": "Simplon, Montreuil, France"
+            },
+            {
+                "title": "Bachelor en Techniques Infographiques",
+                "from": "2004",
+                "to": "2007",
+                "details": "Orientation WEB",
+                "location": "Haute École de la Province de Liège, Belgique"
+            },
+            {
+                "title": "Psychologie et Sciences de l'Éducation",
+                "from": "2003",
+                "to": "2004",
+                "details": "Première année",
+                "location": "ULiège, Belgique"
+            }
+        ]
+    },
+    {
+        "title": "Distinctions",
+        "details": [
+            {
+                "title": "Webdesign International Festival - Finale",
+                "from": "2006-02",
+                "details": "Seconde place, catégorie amateurs & étudiants",
+                "location": "Limoges, France"
+            },
+            {
+                "title": "Webdesign International Festival - Présélections Belges",
+                "from": "2005-11",
+                "details": "Première place, catégorie amaterus & étudiants",
+                "location": "Belgique"
+            }
+        ]
+    }
+]

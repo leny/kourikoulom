@@ -84,7 +84,7 @@ export default ({className, title, from, to, location, details}) => {
 
     $from = (
         <time dateTime={from}>
-            {formatDate(from, to && "yyyy", to && "yyyy")}
+            {formatDate(from, to ? "yyyy" : undefined, to ? "yyyy" : undefined)}
         </time>
     );
 
