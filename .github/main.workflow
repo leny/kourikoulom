@@ -1,8 +1,7 @@
 workflow "Build and deploy on push" {
   on = "push"
   resolves = [
-    "deploy: gh-pages",
-    "actions/bin/sh@master",
+    "deploy: gh-pages"
   ]
 }
 
@@ -31,13 +30,11 @@ action "npm: build" {
 }
 
 action "deploy: gh-pages" {
-  uses = "actions/bin/sh@master"
+  uses = "maxheld83/ghpages@v0.2.1"
   needs = ["npm: build"]
-  args = ["ls -ltr"]
-}
+  secrets = ["GH_PAT"]
+  env = {
+    BUILD_DIR = "./public"
+  }
 
-action "actions/bin/sh@master" {
-  uses = "actions/bin/sh@master"
-  needs = ["create .npmrc"]
-  args = ["cat .npmrc"]
 }
