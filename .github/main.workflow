@@ -31,5 +31,6 @@ action "npm: build" {
 
 action "deploy: gh-pages" {
   uses = "actions/bin/sh@master"
+  needs = ["npm: build"]
   args = ["ls -ltr"]
 }
