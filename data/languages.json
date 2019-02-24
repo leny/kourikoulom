@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Français",
+        "description": [
+            "Langue maternelle",
+            "maîtrise de l'orthographe et de la grammaire"
+        ]
+    },
+    {
+        "name": "Anglais",
+        "description": [
+            "Connaissances avancées",
+            "maîtrise du langage technique"
+        ]
+    }
+]

@@ -7,36 +7,35 @@
  */
 
 import React from "react";
+import {StaticQuery, graphql} from "gatsby";
 
 import Section from "../commons/section";
 import DefinitionList from "../commons/definition-list";
 
-// TODO: extract this
-
-const MISCS = [
-    {
-        name: "Motorisation",
-        icon: "car",
-        description: [
-            "Maîtrise de la marche à pied et des transports en commun",
-        ],
-    },
-    {
-        name: "Centres d'intérêt",
-        icon: "mug-marshmallows",
-        description: [
-            "Nouvelles technologies",
-            "éducation & vulgratisation",
-            {text: "développement open-source", url: "https://github.com/leny"},
-            "actualités",
-            "littérature",
-            "contre-culture",
-        ],
-    },
-];
-
 export default ({className}) => (
-    <Section className={className} title={"Divers"} icon={"user"}>
-        <DefinitionList elements={MISCS} />
-    </Section>
+    <StaticQuery
+        query={graphql`
+            query {
+                allMiscJson {
+                    edges {
+                        node {
+                            name
+                            icon
+                            description {
+                                text
+                                url
+                            }
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => (
+            <Section className={className} title={"Divers"} icon={"user"}>
+                <DefinitionList
+                    elements={data.allMiscJson.edges.map(({node}) => node)}
+                />
+            </Section>
+        )}
+    />
 );

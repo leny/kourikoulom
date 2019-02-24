@@ -7,31 +7,31 @@
  */
 
 import React from "react";
+import {StaticQuery, graphql} from "gatsby";
 
 import Section from "../commons/section";
 import DefinitionList from "../commons/definition-list";
 
-// TODO: extract this
-
-const LANGS = [
-    {
-        name: "Français",
-        description: [
-            "Langue maternelle",
-            "maîtrise de l'orthographe et de la grammaire",
-        ],
-    },
-    {
-        name: "Anglais",
-        description: [
-            "Connaissances avancées",
-            "maîtrise du langage technique",
-        ],
-    },
-];
-
 export default ({className}) => (
-    <Section className={className} title={"Langues"} icon={"comments"}>
-        <DefinitionList elements={LANGS} />
-    </Section>
+    <StaticQuery
+        query={graphql`
+            query {
+                allLanguagesJson {
+                    edges {
+                        node {
+                            name
+                            description
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => (
+            <Section className={className} title={"Langues"} icon={"comments"}>
+                <DefinitionList
+                    elements={data.allLanguagesJson.edges.map(({node}) => node)}
+                />
+            </Section>
+        )}
+    />
 );
