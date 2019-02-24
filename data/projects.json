@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Kouto Swiss",
+        "url": "http://kouto-swiss.io",
+        "tooltip": "Visiter le site de Kouto Swiss",
+        "description": "Framework Open-Source pour Stylus"
+    },
+    {
+        "name": "Tèsèvè",
+        "url": "http://teseve.github.io",
+        "tooltip": "Visiter le site de Tèsèvè",
+        "description": "Utilitaire Open-Source multiplateforme (Electron)"
+    },
+    {
+        "name": "egzagò",
+        "url": "http://egzago.com",
+        "tooltip": "Visiter le site d'egzagò",
+        "description": "Jeux Mobile (iOS / Swift)"
+    }
+]
