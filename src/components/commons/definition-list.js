@@ -51,7 +51,7 @@ export default ({elements}) => (
                     <dd css={styles.description}>
                         {description.map((entry, index, arr) => (
                             <DescriptionParser
-                                key={entry.text}
+                                key={entry.text || entry}
                                 entry={entry}
                                 last={index === arr.length - 1}
                             />
