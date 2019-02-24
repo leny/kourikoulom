@@ -40,10 +40,10 @@ const styles = {
         ...margin(0, "auto"),
         paddingTop: rem(2.4),
         ...mq(MQ_TABLET, {
-            ...padding(rem(8.1), 0, rem(18), rem(28.5)),
+            ...padding(rem(7.3), 0, rem(18), rem(28.5)),
         }),
         ...mq(MQ_SMALL_DESKTOP, {
-            paddingTop: rem(15.6),
+            paddingTop: rem(14.8),
         }),
         ...mq(MQ_LARGE_DESKTOP, {
             width: rem(140),
