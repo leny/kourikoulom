@@ -2,6 +2,7 @@ workflow "Build and deploy on push" {
   on = "push"
   resolves = [
     "deploy: gh-pages",
+    "actions/bin/sh@master",
   ]
 }
 
@@ -33,4 +34,10 @@ action "deploy: gh-pages" {
   uses = "actions/bin/sh@master"
   needs = ["npm: build"]
   args = ["ls -ltr"]
+}
+
+action "actions/bin/sh@master" {
+  uses = "actions/bin/sh@master"
+  needs = ["create .npmrc"]
+  args = "[\"cat .npmrc\"]"
 }
