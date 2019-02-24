@@ -19,6 +19,7 @@ import Header from "../components/header/header";
 
 import IdentitySection from "../components/identity/section";
 import SkillsSection from "../components/skills/section";
+import ExperienceSection from "../components/experience/section";
 
 const styles = {
     main: css({
@@ -60,5 +61,6 @@ export default () => (
         <Header />
         <IdentitySection />
         <SkillsSection />
+        <ExperienceSection />
     </main>
 );
