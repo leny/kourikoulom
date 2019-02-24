@@ -25,11 +25,12 @@ const styles = {
             background: BORDER_COLOR,
         },
     }),
+    hideTitle: css({display: "none"}),
 };
 
-export default ({title, children}) => (
+export default ({title, hideTitle = false, children}) => (
     <>
-        <h3 css={styles.title}>
+        <h3 css={[styles.title, hideTitle && styles.hideTitle]}>
             <span css={styles.titleContent}>{title}</span>
         </h3>
         {children}
