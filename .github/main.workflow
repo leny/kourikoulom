@@ -15,7 +15,7 @@ action "create .npmrc" {
   uses = "actions/bin/sh@master"
   needs = ["filter: gatsby branch"]
   secrets = ["FONTAWESOME_TOKEN"]
-  args = ["echo '' > .npmrc", "echo '@fortawesome:registry=https://npm.fontawesome.com/' >> .npmrc", "echo '//npm.fontawesome.com/:_authToken=${FONTAWESOME_TOKEN}' >> .npmrc"]
+  args = ["echo '' > .npmrc", "echo '@fortawesome:registry=https://npm.fontawesome.com/' >> .npmrc", "echo '//npm.fontawesome.com/:_authToken=$FONTAWESOME_TOKEN' >> .npmrc"]
 }
 
 action "npm: install dependencies" {
@@ -39,5 +39,5 @@ action "deploy: gh-pages" {
 action "actions/bin/sh@master" {
   uses = "actions/bin/sh@master"
   needs = ["create .npmrc"]
-  args = "[\"cat .npmrc\"]"
+  args = ["cat .npmrc"]
 }
