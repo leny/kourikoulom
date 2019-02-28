@@ -32,6 +32,7 @@ export default ({className}) => (
                             title
                             sections {
                                 title
+                                hideTitle
                                 fields {
                                     text
                                     focus

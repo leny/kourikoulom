@@ -124,7 +124,7 @@
         ]
     },
     {
-        "title": "Outils & Méthodologies",
+        "title": "Outils",
         "sections": [
             {
                 "title": "Adobe Creative Suite CC",
@@ -205,9 +205,15 @@
                     {"text": "SVN", "abbr": "Subversion"},
                     {"text": "hg", "abbr": "Mercurial"}
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "title": "Méthodologies",
+        "sections": [
             {
                 "title": "Méthodologies",
+                "hideTitle": true,
                 "fields": [
                     {"text": "Scrum"},
                     {"text": "GTD", "abbr": "Get Things Done"},

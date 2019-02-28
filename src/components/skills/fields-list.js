@@ -19,15 +19,16 @@ const styles = {
         fontWeight: "bold",
         fontSize: rem(1.8),
     }),
+    hideTitle: css({display: "none"}),
     value: css({
         ...margin(0, "auto", rem(1.6)),
         color: FADE_COLOR,
     }),
 };
 
-export default ({title, fields}) => (
+export default ({title, hideTitle = false, fields}) => (
     <>
-        <dt css={styles.title}>{title}</dt>
+        <dt css={[styles.title, hideTitle && styles.hideTitle]}>{title}</dt>
         <dd css={styles.value}>
             {fields.map((entry, index, arr) => (
                 <DescriptionParser
