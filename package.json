@@ -6,10 +6,9 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop",
+    "work": "gatsby develop",
     "lint": "npx eslint --fix --cache src",
-    "start": "npm run develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby build && gatsby serve"
   },
   "lint-staged": {
     "*.js": [
