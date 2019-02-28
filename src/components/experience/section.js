@@ -9,7 +9,7 @@
 import React from "react";
 import {StaticQuery, graphql} from "gatsby";
 import {css} from "@emotion/core";
-import {rem, margin} from "koutla-swiss";
+import {rem, margin, padding} from "koutla-swiss";
 
 import Section from "../commons/section";
 import Entry from "./entry";
@@ -18,7 +18,7 @@ const styles = {
     list: css({
         listStyle: "none",
         margin: 0,
-        padding: 0,
+        ...padding(rem(0.3), 0, 0),
     }),
     element: css({
         ...margin(0, "auto", rem(3.6)),
