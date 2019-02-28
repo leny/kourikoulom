@@ -9,9 +9,8 @@
 import React from "react";
 import {css, Global} from "@emotion/core";
 import {percent, absolute, size, borderBottom, rem} from "koutla-swiss";
-import {Helmet} from "react-helmet";
 
-import normalize from "normalize-jss";
+import normalize from "emotion-normalize";
 import {
     boxSizingReset,
     BCG_COLOR,
@@ -23,15 +22,7 @@ import {
 
 export default () => (
     <>
-        <Helmet>
-            <link
-                href={
-                    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"
-                }
-                rel={"stylesheet"}
-            />
-        </Helmet>
-        <Global styles={css(normalize)} />
+        <Global styles={normalize} />
         <Global styles={css(boxSizingReset)} />
         <Global
             styles={css({
