@@ -10,7 +10,7 @@ export const NBSP = "\u00a0";
 
 export const BCG_COLOR = "#fff";
 export const MAIN_COLOR = "#000";
-export const FADE_COLOR = "#444";
+export const FADE_COLOR = "#666";
 export const ALT_COLOR = "#6666bf";
 export const ALT_HOVER_COLOR = "#b2b2df";
 export const BORDER_COLOR = "#7f7f7f";
