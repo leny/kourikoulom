@@ -1,5 +1,11 @@
 [
     {
+        "name": "Koutla Swiss",
+        "url": "https://github.com/leny/koutla-swiss",
+        "tooltip": "Visiter le repository de Koutla Swiss",
+        "description": "Framework Open-Source pour JSS/Glamor/Emotion"
+    },
+    {
         "name": "Kouto Swiss",
         "url": "http://kouto-swiss.io",
         "tooltip": "Visiter le site de Kouto Swiss",
@@ -10,11 +16,5 @@
         "url": "http://teseve.github.io",
         "tooltip": "Visiter le site de Tèsèvè",
         "description": "Utilitaire Open-Source multiplateforme (Electron)"
-    },
-    {
-        "name": "egzagò",
-        "url": "http://egzago.com",
-        "tooltip": "Visiter le site d'egzagò",
-        "description": "Jeux Mobile (iOS / Swift)"
     }
 ]
