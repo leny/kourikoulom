@@ -11,8 +11,8 @@ export const NBSP = "\u00a0";
 export const BCG_COLOR = "#fff";
 export const MAIN_COLOR = "#000";
 export const FADE_COLOR = "#666";
-export const ALT_COLOR = "#6666bf";
-export const ALT_HOVER_COLOR = "#b2b2df";
+export const ALT_COLOR = "dodgerblue";
+export const ALT_HOVER_COLOR = "mediumblue";
 export const BORDER_COLOR = "#7f7f7f";
 
 export const SOURCE_SANS_PRO_STACK = `"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif`;
