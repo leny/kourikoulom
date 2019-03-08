@@ -23,6 +23,7 @@ import {DateTime} from "luxon";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {NBSP, MAIN_COLOR, BCG_COLOR, ALT_COLOR} from "../../core/constants";
 import color from "color";
+import Link from "../commons/link";
 
 const formatDate = date =>
     DateTime.fromFormat(date, "yyyy-MM-dd", {locale: "fr"}).toFormat(
@@ -31,8 +32,9 @@ const formatDate = date =>
 
 const TIME_COLOR = color(MAIN_COLOR)
     .mix(color(ALT_COLOR))
-    .lighten(0.75)
-    .whiten(0.5)
+    .desaturate(0.33)
+    .lighten(0.85)
+    .whiten(0.75)
     .hex();
 
 const LOCATION_COLOR = color(MAIN_COLOR)
@@ -132,9 +134,7 @@ export default ({
     return (
         <li className={className} css={styles.container}>
             <h3 css={styles.company}>
-                <a href={url} rel={"external"}>
-                    {company}
-                </a>
+                <Link url={url}>{company}</Link>
             </h3>
             <div css={styles.details}>
                 <strong>

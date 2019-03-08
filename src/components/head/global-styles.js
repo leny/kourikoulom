@@ -15,8 +15,6 @@ import boxSizingReset from "emotion-box-sizing-reset";
 import {
     BCG_COLOR,
     MAIN_COLOR,
-    ALT_COLOR,
-    ALT_HOVER_COLOR,
     SOURCE_SANS_PRO_STACK,
 } from "../../core/constants";
 
@@ -43,12 +41,6 @@ export default () => (
                 body: {
                     position: "relative",
                     color: MAIN_COLOR,
-                },
-                a: {
-                    color: ALT_COLOR,
-                    textDecoration: "none",
-                    transition: ["color", ".25s", "ease-in-out"].join(" "),
-                    "&:hover": {color: ALT_HOVER_COLOR},
                 },
             })}
         />

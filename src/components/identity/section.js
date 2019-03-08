@@ -34,7 +34,6 @@ export default () => (
                             prefix
                             link
                             tooltip
-                            external
                             kbd
                         }
                     }

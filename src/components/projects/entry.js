@@ -10,6 +10,8 @@ import React from "react";
 import {css} from "@emotion/core";
 import {rem, margin} from "koutla-swiss";
 
+import Link from "../commons/link";
+
 const styles = {
     title: css({
         ...margin(0, "auto", rem(0.66)),
@@ -25,9 +27,9 @@ export default ({name, url, tooltip, description}) => {
     return (
         <>
             <dt css={styles.title}>
-                <a href={url} rel={"external"} title={tooltip}>
+                <Link url={url} tooltip={tooltip}>
                     {name}
-                </a>
+                </Link>
             </dt>
             <dd css={styles.description}>{description}</dd>
         </>

@@ -12,6 +12,7 @@ import {css} from "@emotion/core";
 import {MAIN_COLOR} from "../../core/constants";
 
 import Abbr from "./abbr";
+import Link from "./link";
 
 const styles = {
     strong: css({
@@ -36,11 +37,7 @@ export default ({entry, last}) => {
     }
 
     if (url) {
-        $text = (
-            <a href={url} rel={"external"}>
-                {$text}
-            </a>
-        );
+        $text = <Link url={url}>{$text}</Link>;
     }
 
     if (focus) {

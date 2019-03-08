@@ -13,6 +13,7 @@ import {rem, percent, size, margin, important} from "koutla-swiss";
 import {ALT_COLOR} from "../../core/constants";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Link from "../commons/link";
 
 const styles = {
     term: css({
@@ -40,18 +41,8 @@ const styles = {
     }),
 };
 
-export default ({
-    label,
-    prefix,
-    value,
-    link,
-    external = false,
-    tooltip,
-    icon,
-    kbd = false,
-}) => {
+export default ({label, prefix, value, link, tooltip, icon, kbd = false}) => {
     const prefixAttr = {};
-    const linkAttr = {};
 
     let $icon,
         $content = value,
@@ -70,14 +61,11 @@ export default ({
 
     kbd && ($content = <kbd>{value}</kbd>);
 
-    external && (linkAttr.rel = "external");
-    tooltip && (linkAttr.title = tooltip);
-
     link &&
         ($value = (
-            <a href={link} {...linkAttr}>
+            <Link url={link} tooltip={tooltip}>
                 {$content}
-            </a>
+            </Link>
         ));
 
     return (
