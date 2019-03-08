@@ -13,6 +13,25 @@ import {rem, margin} from "koutla-swiss";
 
 import Section from "../commons/section";
 import Entry from "./entry";
+import Link from "../commons/link";
+
+const OTHERS = [
+    {
+        url: "https://github.com/leny?tab=repositories",
+        title: "Mes repositories sur GitHub",
+        text: "sur GitHub",
+    },
+    {
+        url: "https://www.npmjs.com/~leny",
+        title: "Mes packages sur npm",
+        text: "sur npm",
+    },
+    {
+        href: "https://atom.io/users/leny/packages",
+        title: "Mes packages pour Atom",
+        text: "sur Atom",
+    },
+];
 
 const styles = {
     list: css({
@@ -58,32 +77,13 @@ export default ({className}) => (
                     <dt css={styles.elementTitle}>{"et plein d'autres :"}</dt>
                     <dd>
                         <ul css={styles.sublist}>
-                            <li>
-                                <a
-                                    href={
-                                        "https://github.com/leny?tab=repositories"
-                                    }
-                                    rel={"external"}
-                                    title={"Mes repositories sur GitHub"}>
-                                    {"sur GitHub"}
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href={"https://www.npmjs.com/~leny"}
-                                    rel={"external"}
-                                    title={"Mes packages sur npm"}>
-                                    {"sur npm"}
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href={"https://atom.io/users/leny/packages"}
-                                    rel={"external"}
-                                    title={"Mes packages pour Atom"}>
-                                    {"sur Atom"}
-                                </a>
-                            </li>
+                            {OTHERS.map(({url, title, text}) => (
+                                <li key={url}>
+                                    <Link url={url} tooltip={title}>
+                                        {text}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </dd>
                 </dl>
