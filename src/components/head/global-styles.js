@@ -8,11 +8,11 @@
 
 import React from "react";
 import {css, Global} from "@emotion/core";
-import {percent, absolute, size, borderBottom, rem} from "koutla-swiss";
+import {percent} from "koutla-swiss";
 
 import normalize from "emotion-normalize";
+import boxSizingReset from "emotion-box-sizing-reset";
 import {
-    boxSizingReset,
     BCG_COLOR,
     MAIN_COLOR,
     ALT_COLOR,
@@ -23,7 +23,7 @@ import {
 export default () => (
     <>
         <Global styles={normalize} />
-        <Global styles={css(boxSizingReset)} />
+        <Global styles={boxSizingReset} />
         <Global
             styles={css({
                 "*": {
@@ -51,17 +51,7 @@ export default () => (
                     "&:hover": {color: ALT_HOVER_COLOR},
                 },
                 "abbr[title]": {
-                    position: "relative",
-                    borderBottom: 0,
-                    cursor: "help",
                     textDecoration: "none",
-                    "&::after": {
-                        content: `""`,
-                        display: "block",
-                        ...absolute("auto", 0, rem(0.2)),
-                        ...size("auto", 0),
-                        ...borderBottom(rem(0.1), "dotted", ALT_COLOR),
-                    },
                 },
             })}
         />
