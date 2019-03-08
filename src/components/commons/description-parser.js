@@ -11,6 +11,8 @@ import {css} from "@emotion/core";
 
 import {MAIN_COLOR} from "../../core/constants";
 
+import Abbr from "./abbr";
+
 const styles = {
     strong: css({
         fontWeight: "normal",
@@ -30,7 +32,7 @@ export default ({entry, last}) => {
         $details;
 
     if (abbr) {
-        $text = <abbr title={abbr}>{text}</abbr>;
+        $text = <Abbr description={abbr} text={text} />;
     }
 
     if (url) {

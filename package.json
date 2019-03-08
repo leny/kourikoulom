@@ -30,7 +30,7 @@
     "gatsby-plugin-prefetch-google-fonts": "^1.4.0",
     "gatsby-source-filesystem": "^2.0.22",
     "gatsby-transformer-json": "^2.1.8",
-    "koutla-swiss": "^0.7.0",
+    "koutla-swiss": "^0.8.4",
     "luxon": "^1.11.3",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
