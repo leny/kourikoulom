@@ -80,7 +80,7 @@ export default ({text, description}) => {
     return (
         <abbr
             css={styles.container}
-            title={isHovered || description}
+            title={isHovered ? "" : description}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             data-tooltip={description}>

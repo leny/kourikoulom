@@ -50,9 +50,6 @@ export default () => (
                     transition: ["color", ".25s", "ease-in-out"].join(" "),
                     "&:hover": {color: ALT_HOVER_COLOR},
                 },
-                "abbr[title]": {
-                    textDecoration: "none",
-                },
             })}
         />
     </>
