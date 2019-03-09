@@ -22,7 +22,7 @@
         "link": "https://leny.me",
         "external": true,
         "tooltip": "Allez voir mon site perso",
-        "icon": "link"
+        "icon": "globe-europe"
     },
     {
         "label": "GitHub",
@@ -39,6 +39,22 @@
         "external": true,
         "tooltip": "Mon profil LinkedIn",
         "icon": "fab_linkedin"
+    },
+    {
+        "label": "Medium",
+        "value": "@leny_be",
+        "link": "https://medium.com/@leny_be",
+        "external": true,
+        "tooltip": "Mon blog Medium",
+        "icon": "fab_medium-m"
+    },
+    {
+        "label": "Twitter",
+        "value": "@leny_be",
+        "link": "https://twitter.com/leny_be",
+        "external": true,
+        "tooltip": "Mon profil Twitter",
+        "icon": "fab_twitter"
     },
     {
         "label": "npm",
