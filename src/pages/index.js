@@ -76,7 +76,12 @@ const styles = {
             columnGap: percent(2.5),
         }),
     }),
-    forceBreak: css({
+    mediumBreak: css({
+        ...mq(MQ_MEDIUM_DESKTOP, {
+            marginBottom: vw(100),
+        }),
+    }),
+    largeBreak: css({
         ...mq(MQ_LARGE_DESKTOP, {
             marginBottom: vw(100),
         }),
@@ -122,8 +127,8 @@ export default ({data}) => (
         </div>
         <main css={styles.content}>
             <SkillsSection />
-            <ExperienceSection />
-            <FormationsSection css={styles.forceBreak} />
+            <ExperienceSection css={styles.mediumBreak} />
+            <FormationsSection css={styles.largeBreak} />
             <ProjectsSection />
             <LanguagesSection />
             <MiscSection />
