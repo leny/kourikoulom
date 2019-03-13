@@ -7,23 +7,16 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {
-    rem,
-    margin,
-    flexrow,
-    borderBottom,
-    size,
-    important,
-    mq,
-} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem} from "@pwops/core";
+import {mq} from "../../core/utils";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {BORDER_COLOR, MQ_TABLET, MQ_SMALL_DESKTOP} from "../../core/constants";
 
 const styles = {
     container: css({
-        ...margin(0, "auto", rem(3.6)),
+        margin: [0, "auto", rem(3.6)],
         ...mq(MQ_TABLET, {
             marginBottom: rem(19.2),
         }),
@@ -33,17 +26,17 @@ const styles = {
         }),
     }),
     title: css({
-        ...flexrow("space-between", "center"),
-        ...margin(0, "auto", rem(3.2)),
+        flexRow: ["space-between", "center"],
+        margin: [0, "auto", rem(3.2)],
         paddingBottom: rem(0.25),
-        ...borderBottom(rem(0.1), "solid", BORDER_COLOR),
+        borderBottom: [rem(0.1), "solid", BORDER_COLOR],
         fontSize: rem(2.4),
         textAlign: "right",
     }),
     titleContent: {flex: 1},
     hideTitle: css({display: "none"}),
     icon: css({
-        ...important(size(rem(2.4))),
+        size: [`${rem(2.4)} !important`],
     }),
 };
 

@@ -7,8 +7,8 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {rem, margin} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem} from "@pwops/core";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import DescriptionParser from "./description-parser";
@@ -16,16 +16,16 @@ import {NBSP} from "../../core/constants";
 
 const styles = {
     list: css({
-        ...margin(0, "auto", rem(3.2)),
+        margin: [0, "auto", rem(3.2)],
         fontSize: rem(1.6),
     }),
     title: css({
-        ...margin(0, "auto", rem(0.66)),
+        margin: [0, "auto", rem(0.66)],
         fontWeight: "bold",
         fontSize: rem(1.8),
     }),
     description: css({
-        ...margin(0, "auto", rem(1.6)),
+        margin: [0, "auto", rem(1.6)],
     }),
 };
 

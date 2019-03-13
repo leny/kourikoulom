@@ -7,21 +7,21 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {rem, margin, flexrow, size} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem} from "@pwops/core";
 
 import {BORDER_COLOR} from "../../core/constants";
 
 const styles = {
     title: css({
-        ...flexrow("center", "center"),
-        ...margin(0, "auto", rem(2.4)),
+        flexRow: ["center", "center"],
+        margin: [0, "auto", rem(2.4)],
         fontSize: rem(2),
         textAlign: "center",
         "&::before, &::after": {
             content: `""`,
-            ...margin(0, rem(0.5)),
-            ...size(rem(2), rem(0.1)),
+            margin: [0, rem(0.5)],
+            size: [rem(2), rem(0.1)],
             background: BORDER_COLOR,
         },
     }),

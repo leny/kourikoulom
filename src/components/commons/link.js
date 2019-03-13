@@ -7,8 +7,7 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {transition} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
 
 import {ALT_COLOR, ALT_HOVER_COLOR} from "../../core/constants";
 import withTooltip, {styles as tooltipStyles} from "../../core/with-tooltip";
@@ -17,7 +16,7 @@ const styles = {
     container: css({
         color: ALT_COLOR,
         textDecoration: "none",
-        ...transition("color", ".25s", "ease-in-out"),
+        transition: ["color", ".25s", "ease-in-out"],
         "&:hover": {color: ALT_HOVER_COLOR},
         ...tooltipStyles,
     }),

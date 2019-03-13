@@ -7,7 +7,7 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
+import {css} from "@pwops/emotion-css";
 
 import {MAIN_COLOR} from "../../core/constants";
 
