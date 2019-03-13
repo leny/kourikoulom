@@ -7,17 +7,8 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {
-    flexrow,
-    flexcolumn,
-    percent,
-    rem,
-    margin,
-    padding,
-    size,
-    important,
-} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {percent, rem} from "@pwops/core";
 
 import {DateTime} from "luxon";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -43,16 +34,16 @@ const LOCATION_COLOR = color(MAIN_COLOR)
 
 const styles = {
     container: css({
-        ...flexcolumn(),
+        flexColumn: [],
     }),
     company: css({
         width: percent(100),
-        ...margin(0, "auto", rem(1)),
+        margin: [0, "auto", rem(1)],
         fontSize: rem(2),
     }),
     details: css({
         width: percent(100),
-        ...margin(0, "auto", rem(0.7)),
+        margin: [0, "auto", rem(0.7)],
         fontSize: rem(1.6),
     }),
     detailsContent: css({
@@ -61,17 +52,17 @@ const styles = {
         padding: 0,
     }),
     positionIcon: css({
-        ...important(size(rem(1.4))),
+        size: [`${rem(1.4)} !important`],
     }),
     timeContainer: css({
         order: -1,
-        ...flexrow("center", "center"),
+        flexRow: ["center", "center"],
         marginBottom: rem(1.2),
     }),
     timePeriod: css({
         display: "block",
         position: "relative",
-        ...padding(rem(0.2), rem(0.6)),
+        padding: [rem(0.2), rem(0.6)],
         background: TIME_COLOR,
         fontSize: rem(1.2),
         color: color(MAIN_COLOR)
@@ -85,7 +76,7 @@ const styles = {
             display: "block",
             position: "absolute",
             top: percent(50),
-            ...size(rem(2), rem(0.1)),
+            size: [rem(2), rem(0.1)],
             background: TIME_COLOR,
         },
         "&::before": {left: rem(-3)},
@@ -97,7 +88,7 @@ const styles = {
         color: LOCATION_COLOR,
     }),
     locationIcon: css({
-        ...important(size(rem(1.2))),
+        size: [`${rem(1.2)} !important`],
     }),
 };
 

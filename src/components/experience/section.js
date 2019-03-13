@@ -8,8 +8,8 @@
 
 import React from "react";
 import {StaticQuery, graphql} from "gatsby";
-import {css} from "@emotion/core";
-import {rem, margin, padding} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem} from "@pwops/core";
 
 import Section from "../commons/section";
 import Entry from "./entry";
@@ -18,10 +18,10 @@ const styles = {
     list: css({
         listStyle: "none",
         margin: 0,
-        ...padding(rem(0.3), 0, 0),
+        padding: [rem(0.3), 0, 0],
     }),
     element: css({
-        ...margin(0, "auto", rem(3.6)),
+        margin: [0, "auto", rem(3.6)],
     }),
 };
 
