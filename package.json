@@ -22,6 +22,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
     "@fortawesome/pro-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@pwops/core": "0.0.1",
+    "@pwops/mixins": "0.0.1",
     "color": "^3.1.0",
     "emotion-box-sizing-reset": "^0.1.1",
     "emotion-normalize": "^10.0.0",
