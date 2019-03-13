@@ -8,20 +8,14 @@
 
 import {useState} from "react";
 import {
-    absolute,
-    borderTop,
-    transform,
     translateX,
     translateY,
     percent,
     s,
     cubicBezier,
-    padding,
     rem,
     attr,
-    border,
-    transition,
-} from "koutla-swiss";
+} from "@pwops/core";
 
 import {MAIN_COLOR, BCG_COLOR} from "./constants";
 
@@ -31,12 +25,12 @@ export const styles = {
         visibility: "hidden",
         opacity: 0,
         pointerEvents: "none",
-        ...transition("all", s(0.15), cubicBezier(0.5, 1, 0.25, 1)),
+        transition: ["all", s(0.15), cubicBezier(0.5, 1, 0.25, 1)],
         zIndex: 1,
     },
     "&::before": {
-        ...absolute({left: percent(50), bottom: percent(100)}),
-        ...padding(rem(0.5), rem(1.5)),
+        absolute: [null, null, percent(100), percent(50)],
+        padding: [rem(0.5), rem(1.5)],
         minWidth: rem(12),
         whiteSpace: "nowrap",
         borderRadius: rem(0.3),
@@ -50,20 +44,20 @@ export const styles = {
         transform: translateX(percent(-50)),
     },
     "&::after": {
-        ...absolute({bottom: percent(100), left: percent(50)}),
-        ...border(rem(0.8), "solid", "transparent"),
+        absolute: [null, null, percent(100), percent(50)],
+        border: [rem(0.8), "solid", "transparent"],
         width: 0,
         content: `""`,
         fontSize: 0,
         lineHeight: 0,
         transform: translateX(percent(-50)),
-        ...borderTop(rem(0.8), "solid", MAIN_COLOR),
+        borderTop: [rem(0.8), "solid", MAIN_COLOR],
         borderBottom: "none",
     },
     "&[data-tooltip]:hover::before, &[data-tooltip]:hover::after": {
         visibility: "visible",
         opacity: 1,
-        ...transform(translateX(percent(-50)), translateY(rem(-0.5))),
+        transform: [translateX(percent(-50)), translateY(rem(-0.5))],
     },
 };
 

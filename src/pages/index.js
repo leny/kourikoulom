@@ -8,8 +8,8 @@
 
 import React from "react";
 import {graphql} from "gatsby";
-import {css} from "@emotion/core";
-import {pwop, rem, percent, vw} from "@pwops/core";
+import {css} from "@pwops/emotion-css";
+import {rem, percent, vw} from "@pwops/core";
 import {mq} from "../core/utils";
 
 import {
@@ -35,68 +35,58 @@ import LanguagesSection from "../components/misc/languages-section";
 import MiscSection from "../components/misc/misc-section";
 
 const styles = {
-    wrapper: css(
-        pwop({
-            position: "relative",
-            width: percent(90),
-            margin: [0, "auto"],
-            paddingTop: rem(2.4),
-            ...mq(MQ_TABLET, {
-                padding: [rem(8.1), 0, rem(18), rem(28.5)],
-            }),
-            ...mq(MQ_SMALL_DESKTOP, {
-                paddingTop: rem(15.6),
-            }),
-            ...mq(MQ_LARGE_DESKTOP, {
-                width: rem(140),
-            }),
+    wrapper: css({
+        position: "relative",
+        width: percent(90),
+        margin: [0, "auto"],
+        paddingTop: rem(2.4),
+        ...mq(MQ_TABLET, {
+            padding: [rem(8.1), 0, rem(18), rem(28.5)],
         }),
-    ),
-    head: css(
-        pwop({
-            ...mq(MQ_TABLET, {
-                fixed: [rem(2.5), null, null, percent(50)],
-                width: rem(25),
-                marginLeft: percent(-45),
-            }),
-            ...mq(MQ_SMALL_DESKTOP, {
-                top: rem(10),
-            }),
-            ...mq(MQ_LARGE_DESKTOP, {
-                marginLeft: rem(-70),
-            }),
+        ...mq(MQ_SMALL_DESKTOP, {
+            paddingTop: rem(15.6),
         }),
-    ),
-    content: css(
-        pwop({
-            ...mq(MQ_SMALL_DESKTOP, {
-                columns: 2,
-                columnGap: percent(8),
-            }),
-            ...mq(MQ_MEDIUM_DESKTOP, {
-                columns: 3,
-                columnGap: percent(4),
-            }),
-            ...mq(MQ_LARGE_DESKTOP, {
-                columns: 4,
-                columnGap: percent(2.5),
-            }),
+        ...mq(MQ_LARGE_DESKTOP, {
+            width: rem(140),
         }),
-    ),
-    mediumBreak: css(
-        pwop({
-            ...mq(MQ_LARGE_DESKTOP, {
-                marginBottom: vw(100),
-            }),
+    }),
+    head: css({
+        ...mq(MQ_TABLET, {
+            fixed: [rem(2.5), null, null, percent(50)],
+            width: rem(25),
+            marginLeft: percent(-45),
         }),
-    ),
-    largeBreak: css(
-        pwop({
-            ...mq(MQ_LARGE_DESKTOP, {
-                marginBottom: vw(100),
-            }),
+        ...mq(MQ_SMALL_DESKTOP, {
+            top: rem(10),
         }),
-    ),
+        ...mq(MQ_LARGE_DESKTOP, {
+            marginLeft: rem(-70),
+        }),
+    }),
+    content: css({
+        ...mq(MQ_SMALL_DESKTOP, {
+            columns: 2,
+            columnGap: percent(8),
+        }),
+        ...mq(MQ_MEDIUM_DESKTOP, {
+            columns: 3,
+            columnGap: percent(4),
+        }),
+        ...mq(MQ_LARGE_DESKTOP, {
+            columns: 4,
+            columnGap: percent(2.5),
+        }),
+    }),
+    mediumBreak: css({
+        ...mq(MQ_LARGE_DESKTOP, {
+            marginBottom: vw(100),
+        }),
+    }),
+    largeBreak: css({
+        ...mq(MQ_LARGE_DESKTOP, {
+            marginBottom: vw(100),
+        }),
+    }),
 };
 
 export const query = graphql`

@@ -7,8 +7,7 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {important} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
 
 import withTooltip, {styles as tooltipStyles} from "../../core/with-tooltip";
 
@@ -18,7 +17,7 @@ const styles = {
     container: css({
         position: "relative",
         cursor: "help",
-        textDecoration: important([ALT_COLOR, "dotted", "underline"].join(" ")),
+        textDecoration: [ALT_COLOR, "dotted", "underline", "!important"],
         ...tooltipStyles,
     }),
 };
