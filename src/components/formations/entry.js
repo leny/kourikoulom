@@ -7,16 +7,8 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {
-    percent,
-    rem,
-    margin,
-    padding,
-    size,
-    important,
-    absolute,
-} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {percent, rem} from "@pwops/core";
 
 import {DateTime} from "luxon";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -45,27 +37,27 @@ const box = {
 const styles = {
     container: css({
         position: "relative",
-        ...margin(0, "auto", rem(3.2)),
+        margin: [0, "auto", rem(3.2)],
         paddingLeft: rem(box.height + box.margin * 2),
     }),
     title: css({
         width: percent(100),
-        ...margin(0, "auto", rem(1)),
+        margin: [0, "auto", rem(1)],
         fontSize: rem(2),
     }),
     details: css({
         width: percent(100),
-        ...margin(0, "auto", rem(0.7)),
+        margin: [0, "auto", rem(0.7)],
         fontSize: rem(1.6),
     }),
     timeContainer: css({
-        ...absolute(0, "auto", "auto", rem(-1 * box.width)),
-        ...size(rem(box.width), rem(box.height)),
-        ...padding(0, rem(0.8)),
+        absolute: [0, "auto", "auto", rem(-1 * box.width)],
+        size: [rem(box.width), rem(box.height)],
+        padding: [0, rem(0.8)],
         fontSize: rem(1.6),
         textAlign: "right",
         transform: "rotate(-90deg)",
-        transformOrigin: ["top", "right"].join(" "),
+        transformOrigin: ["top", "right"],
         color: TIME_COLOR,
         textTransform: "uppercase",
     }),
@@ -75,7 +67,7 @@ const styles = {
         color: LOCATION_COLOR,
     }),
     locationIcon: css({
-        ...important(size(rem(1.2))),
+        size: [`${rem(1.2)} !important`],
     }),
 };
 
