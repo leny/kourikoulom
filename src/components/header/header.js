@@ -7,8 +7,8 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {rem, percent, margin, size, borderBottom} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem, percent} from "@pwops/core";
 
 import {BORDER_COLOR} from "../../core/constants";
 
@@ -18,24 +18,24 @@ import Profession from "../svg/webdeveloper";
 
 const styles = {
     container: css({
-        ...margin(0, "auto", rem(2.4)),
+        margin: [0, "auto", rem(2.4)],
     }),
     title: css({
-        ...margin(0, "auto", rem(2.4)),
+        margin: [0, "auto", rem(2.4)],
     }),
     name: css({
         display: "block",
-        ...margin(0, "auto", rem(1)),
+        margin: [0, "auto", rem(1)],
         paddingBottom: rem(1),
-        ...borderBottom(rem(0.1), "solid", BORDER_COLOR),
+        borderBottom: [rem(0.1), "solid", BORDER_COLOR],
     }),
     svg: css({
         display: "block",
-        ...margin(0, "auto"),
+        margin: [0, "auto"],
     }),
     leny: css({
-        ...size(rem(4.8)),
-        ...margin(0, "auto", rem(2)),
+        size: [rem(4.8)],
+        margin: [0, "auto", rem(2)],
     }),
     profession: css({
         width: percent(45),
