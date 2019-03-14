@@ -8,8 +8,8 @@
 
 import React from "react";
 import {StaticQuery, graphql} from "gatsby";
-import {css} from "@emotion/core";
-import {rem, margin} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem} from "@pwops/core";
 
 import Section from "../commons/section";
 import Entry from "./entry";
@@ -35,11 +35,11 @@ const OTHERS = [
 
 const styles = {
     list: css({
-        ...margin(0, "auto", rem(3.2)),
+        margin: [0, "auto", rem(3.2)],
         fontSize: rem(1.6),
     }),
     elementTitle: css({
-        ...margin(0, "auto", rem(0.66)),
+        margin: [0, "auto", rem(0.66)],
         fontWeight: "bold",
         fontSize: rem(1.8),
     }),

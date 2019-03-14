@@ -7,19 +7,19 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {rem, margin} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem} from "@pwops/core";
 
 import Link from "../commons/link";
 
 const styles = {
     title: css({
-        ...margin(0, "auto", rem(0.66)),
+        margin: [0, "auto", rem(0.66)],
         fontWeight: "bold",
         fontSize: rem(1.8),
     }),
     description: css({
-        ...margin(0, "auto", rem(1.6)),
+        margin: [0, "auto", rem(1.6)],
     }),
 };
 
