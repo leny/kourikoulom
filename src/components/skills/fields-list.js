@@ -7,21 +7,21 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {rem, margin} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem} from "@pwops/core";
 
 import {FADE_COLOR} from "../../core/constants";
 import DescriptionParser from "../commons/description-parser";
 
 const styles = {
     title: css({
-        ...margin(0, "auto", rem(0.66)),
+        margin: [0, "auto", rem(0.66)],
         fontWeight: "bold",
         fontSize: rem(1.8),
     }),
     hideTitle: css({display: "none"}),
     value: css({
-        ...margin(0, "auto", rem(1.6)),
+        margin: [0, "auto", rem(1.6)],
         color: FADE_COLOR,
     }),
 };

@@ -8,8 +8,8 @@
 
 import React from "react";
 import {StaticQuery, graphql} from "gatsby";
-import {css} from "@emotion/core";
-import {rem, margin} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem} from "@pwops/core";
 
 import Section from "../commons/section";
 import SubSection from "../commons/sub-section";
@@ -17,7 +17,7 @@ import FieldsList from "./fields-list";
 
 const styles = {
     list: css({
-        ...margin(0, "auto", rem(3.2)),
+        margin: [0, "auto", rem(3.2)],
         fontSize: rem(1.6),
     }),
 };
