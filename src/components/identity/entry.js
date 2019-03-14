@@ -7,8 +7,8 @@
  */
 
 import React from "react";
-import {css} from "@emotion/core";
-import {rem, percent, size, margin, important} from "koutla-swiss";
+import {css} from "@pwops/emotion-css";
+import {rem, percent} from "@pwops/core";
 
 import {ALT_COLOR} from "../../core/constants";
 
@@ -22,7 +22,7 @@ const styles = {
     }),
     icon: css({
         display: "inline",
-        ...important(size(rem(1.6))),
+        size: [`${rem(1.6)} !important`],
         marginRight: rem(1.2),
         verticalAlign: rem(-0.3),
     }),
@@ -35,8 +35,8 @@ const styles = {
         "&::after": {
             content: `""`,
             display: "block",
-            ...size(percent(100), rem(0.1)),
-            ...margin(0, 0, rem(1.1)),
+            size: [percent(100), rem(0.1)],
+            margin: [0, 0, rem(1.1)],
         },
     }),
 };
