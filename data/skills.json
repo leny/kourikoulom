@@ -125,52 +125,16 @@
     },
     {
         "title": "Outils",
-        "sections": [
-            {
-                "title": "Adobe Creative Suite CC",
-                "fields": [
-                    {"text": "Photoshop"},
-                    {"text": "Illustrator"},
-                    {"text": "InDesign"},
-                    {"text": "Flash"},
-                    {"text": "Edge Tools"},
-                    {"text": "Animate"},
-                    {"text": "XD"}
-                ]
-            },
-            {
-                "title": "Computer Graphics Design",
-                "fields": [
-                    {"text": "Sketch"},
-                    {"text": "Pixelmator Pro"},
-                    {"text": "Figma"}
-                ]
-            },
-            {
-                "title": "Apple Pro Apps",
-                "fields": [
-                    {"text": "Logic Pro 8"},
-                    {"text": "Final Cut Pro X"},
-                    {"text": "XCode 4+"}
-                ]
-            },
-            {
-                "title": "Text Editors & IDE",
-                "fields": [
-                    {"text": "Vim"},
-                    {"text": "neovim", "focus": true},
-                    {"text": "Atom"},
-                    {"text": "VSCode"},
-                    {"text": "Sublime Text"}
-                ]
-            },
+        "sections": [        	
             {
                 "title": "Task runners and workflow control",
                 "fields": [
                     {"text": "Webpack", "focus": true},
+                    {"text": "Rollup"},
                     {"text": "Parcel"},
                     {"text": "GruntJS"},
                     {"text": "GulpJS"},
+                    {"text": "Make"},
                     {"text": "Codekit"}
                 ]
             },
@@ -185,13 +149,23 @@
             {
                 "title": "Virtualisation, containers & provisioning",
                 "fields": [
-                    {"text": "Vagrant"},
                     {"text": "docker", "focus": true},
                     {"text": "AWS Lambda", "focus": true},
                     {"text": "Serverless"},
                     {"text": "Chef"},
+                    {"text": "Vagrant"},
                     {"text": "Puppet"},
                     {"text": "Ansible"}
+                ]
+            },
+            {
+                "title": "Text Editors & IDE",
+                "fields": [
+                    {"text": "Vim"},
+                    {"text": "neovim", "focus": true},
+                    {"text": "Atom"},
+                    {"text": "VSCode"},
+                    {"text": "Sublime Text"}
                 ]
             },
             {
@@ -204,6 +178,34 @@
                     },
                     {"text": "SVN", "abbr": "Subversion"},
                     {"text": "hg", "abbr": "Mercurial"}
+                ]
+            },
+            {
+                "title": "Computer Graphics Design",
+                "fields": [
+                    {"text": "Sketch"},
+                    {"text": "Pixelmator Pro"},
+                    {"text": "Figma"}
+                ]
+            },
+            {
+                "title": "Adobe Creative Suite CC",
+                "fields": [
+                    {"text": "Photoshop"},
+                    {"text": "Illustrator"},
+                    {"text": "InDesign"},
+                    {"text": "Flash"},
+                    {"text": "Edge Tools"},
+                    {"text": "Animate"},
+                    {"text": "XD"}
+                ]
+            },
+            {
+                "title": "Apple Pro Apps",
+                "fields": [
+                    {"text": "Logic Pro 8"},
+                    {"text": "Final Cut Pro X"},
+                    {"text": "XCode 4+"}
                 ]
             }
         ]
