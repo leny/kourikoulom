@@ -4,7 +4,7 @@
 
 Originally made with [pug](https://pugjs.org) & [stylus](https://github.com/LearnBoost/stylus), with [kouto swiss](https://github.com/leny/kouto-swiss) framework.
 
-Refactored in 2019 with [Gatsby](https://www.gatsbyjs.org), [emotion](https://emotion.sh) and [koutla-swiss](https://www.npmjs.com/package/koutla-swiss), build with [Github Actions](https://github.com/features/actions).
+Refactored in 2019 with [Gatsby](https://www.gatsbyjs.org), [emotion](https://emotion.sh) and [koutla-swiss](https://www.npmjs.com/package/koutla-swiss), built with [Github Actions](https://github.com/features/actions).
 
 * * *
 
