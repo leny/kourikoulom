@@ -17,6 +17,7 @@
                         "focus": true,
                         "details": ["Flux", "Redux", "MobX", "SSR", "…"]
                     },
+                    {"text": "SvelteJS", "focus": true},
                     {"text": "Angular"},
                     {"text": "Ember"},
                     {"text": "VueJS"},
@@ -125,7 +126,7 @@
     },
     {
         "title": "Outils",
-        "sections": [        	
+        "sections": [
             {
                 "title": "Task runners and workflow control",
                 "fields": [
