@@ -35,7 +35,7 @@
     "gatsby-transformer-json": "^2.1.8",
     "luxon": "^1.11.4",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
