@@ -1,260 +1,255 @@
 [
-    {
-        "title": "Langages",
-        "sections": [
-            {
-                "title": "Expert javascript",
-                "fields": [
-                    {"text": "ES5"},
-                    {"text": "ES2015+", "focus": true},
-                    {
-                        "text": "node.js",
-                        "focus": true,
-                        "details": ["server", "CLI", "tools", "apps"]
-                    },
-                    {
-                        "text": "React",
-                        "focus": true,
-                        "details": ["Flux", "Redux", "MobX", "SSR", "…"]
-                    },
-                    {"text": "SvelteJS", "focus": true},
-                    {"text": "Angular"},
-                    {"text": "Ember"},
-                    {"text": "VueJS"},
-                    {
-                        "text": "DOM",
-                        "focus": true,
-                        "abbr": "Document Object Model"
-                    },
-                    {
-                        "text": "APIs HTML5",
-                        "details": [
-                            "canvas",
-                            "geolocalisation",
-                            "storage",
-                            "workers",
-                            "…"
-                        ]
-                    },
-                    {"text": "jQuery"},
-                    {"text": "AJAX/AJAJ"},
-                    {"text": "lodash"},
-                    {"text": "CoffeeScript"}
-                ]
-            },
-            {
-                "title": "Spécialiste performances web",
-                "fields": [{"text": "client-side"}, {"text": "server-side"}]
-            },
-            {
-                "title": "Front-end",
-                "fields": [
-                    {
-                        "text": "HTML 5",
-                        "focus": true,
-                        "abbr": "HyperText Markup Language"
-                    },
-                    {
-                        "text": "xhtml",
-                        "abbr": "eXtended Hypertext Markup Language"
-                    },
-                    {
-                        "text": "css 3",
-                        "focus": true,
-                        "abbr": "Cascading StyleSheets"
-                    },
-                    {"text": "xml", "abbr": "eXtended Markup Language"},
-                    {"text": "xsl", "abbr": "eXtensible Stylesheet Language"},
-                    {"text": "xpath"},
-                    {"text": "svg", "abbr": "Scalable Vector Graphics"},
-                    {"text": "Stylus", "focus": true},
-                    {"text": "sass"},
-                    {"text": "javascript", "focus": true},
-                    {"text": "json"},
-                    {"text": "RegExp", "focus": true}
-                ]
-            },
-            {
-                "title": "Back-End",
-                "fields": [
-                    {
-                        "text": "node.js",
-                        "focus": true,
-                        "details": ["express", "sockets.io", "…"]
-                    },
-                    {
-                        "text": "NoSQL",
-                        "details": ["Redis", "MongoDB", "CouchDB"]
-                    },
-                    {"text": "GraphQL", "focus": true},
-                    {"text": "ArangoDB", "focus": true},
-                    {"text": "MySQL"},
-                    {"text": "PostgreSQL", "focus": true},
-                    {"text": "ElasticSearch"},
-                    {"text": "PHP"}
-                ]
-            },
-            {
-                "title": "CMS & Générateurs",
-                "fields": [
-                    {"text": "Ghost"},
-                    {"text": "Jekyll"},
-                    {"text": "Gatsby", "focus": true},
-                    {"text": "Hexo"}
-                ]
-            },
-            {
-                "title": "Mobile",
-                "fields": [{"text": "iOS natif", "details": ["Swift"]}]
-            },
-            {
-                "title": "Desktop",
-                "fields": [
-                    {"text": "macOS natif", "details": ["Swift"]},
-                    {"text": "Electron", "focus": true}
-                ]
-            },
-            {
-                "title": "Système",
-                "fields": [
-                    {"text": "bash"},
-                    {"text": "python"},
-                    {"text": "go-lang"}
-                ]
-            }
+  {
+    "title": "Langages",
+    "sections": [
+      {
+        "title": "Expert javascript",
+        "fields": [
+          {"text": "ES5"},
+          {"text": "ES2015+", "focus": true},
+          {
+            "text": "node.js",
+            "focus": true,
+            "details": ["server", "CLI", "tools", "apps"]
+          },
+          {
+            "text": "React",
+            "focus": true,
+            "details": ["Flux", "Redux", "MobX", "SSR", "…"]
+          },
+          {"text": "SvelteJS", "focus": true},
+          {"text": "Angular"},
+          {"text": "Ember"},
+          {"text": "VueJS"},
+          {
+            "text": "CSS-in-JS",
+            "focus": true,
+            "details": ["CSS Modules", "JSS", "Glamor", "Emotion"]
+          },
+          {
+            "text": "DOM",
+            "focus": true,
+            "abbr": "Document Object Model"
+          },
+          {
+            "text": "APIs HTML5",
+            "details": ["canvas", "geolocalisation", "storage", "workers", "…"]
+          },
+          {"text": "jQuery"},
+          {"text": "AJAX/AJAJ"},
+          {"text": "lodash"},
+          {"text": "CoffeeScript"}
         ]
-    },
-    {
-        "title": "Outils",
-        "sections": [
-            {
-                "title": "Task runners and workflow control",
-                "fields": [
-                    {"text": "Webpack", "focus": true},
-                    {"text": "Rollup"},
-                    {"text": "Parcel"},
-                    {"text": "GruntJS"},
-                    {"text": "GulpJS"},
-                    {"text": "Make"},
-                    {"text": "Codekit"}
-                ]
-            },
-            {
-                "title": "Continuous Integration Tools",
-                "fields": [
-                    {"text": "Travis"},
-                    {"text": "Jenkins"},
-                    {"text": "GitHub Actions", "focus": true}
-                ]
-            },
-            {
-                "title": "Virtualisation, containers & provisioning",
-                "fields": [
-                    {"text": "docker", "focus": true},
-                    {"text": "AWS Lambda", "focus": true},
-                    {"text": "Serverless"},
-                    {"text": "Chef"},
-                    {"text": "Vagrant"},
-                    {"text": "Puppet"},
-                    {"text": "Ansible"}
-                ]
-            },
-            {
-                "title": "Text Editors & IDE",
-                "fields": [
-                    {"text": "Vim"},
-                    {"text": "neovim", "focus": true},
-                    {"text": "Atom"},
-                    {"text": "VSCode"},
-                    {"text": "Sublime Text"}
-                ]
-            },
-            {
-                "title": "Version Control",
-                "fields": [
-                    {
-                        "text": "git",
-                        "focus": true,
-                        "details": ["GitHub", "git-flow", "GitHub Classroom"]
-                    },
-                    {"text": "SVN", "abbr": "Subversion"},
-                    {"text": "hg", "abbr": "Mercurial"}
-                ]
-            },
-            {
-                "title": "Computer Graphics Design",
-                "fields": [
-                    {"text": "Sketch"},
-                    {"text": "Pixelmator Pro"},
-                    {"text": "Figma"}
-                ]
-            },
-            {
-                "title": "Adobe Creative Suite CC",
-                "fields": [
-                    {"text": "Photoshop"},
-                    {"text": "Illustrator"},
-                    {"text": "InDesign"},
-                    {"text": "Flash"},
-                    {"text": "Edge Tools"},
-                    {"text": "Animate"},
-                    {"text": "XD"}
-                ]
-            },
-            {
-                "title": "Apple Pro Apps",
-                "fields": [
-                    {"text": "Logic Pro 8"},
-                    {"text": "Final Cut Pro X"},
-                    {"text": "XCode 4+"}
-                ]
-            }
+      },
+      {
+        "title": "Spécialiste performances web",
+        "fields": [{"text": "client-side"}, {"text": "server-side"}]
+      },
+      {
+        "title": "Front-end",
+        "fields": [
+          {
+            "text": "HTML 5",
+            "focus": true,
+            "abbr": "HyperText Markup Language"
+          },
+          {
+            "text": "xhtml",
+            "abbr": "eXtended Hypertext Markup Language"
+          },
+          {
+            "text": "css 3",
+            "focus": true,
+            "abbr": "Cascading StyleSheets"
+          },
+          {"text": "xml", "abbr": "eXtended Markup Language"},
+          {"text": "xsl", "abbr": "eXtensible Stylesheet Language"},
+          {"text": "xpath"},
+          {"text": "svg", "abbr": "Scalable Vector Graphics"},
+          {"text": "Stylus", "focus": true},
+          {"text": "sass"},
+          {"text": "javascript", "focus": true},
+          {"text": "json"},
+          {"text": "RegExp", "focus": true}
         ]
-    },
-    {
+      },
+      {
+        "title": "Back-End",
+        "fields": [
+          {
+            "text": "node.js",
+            "focus": true,
+            "details": ["express", "koa", "sockets.io", "…"]
+          },
+          {
+            "text": "NoSQL",
+            "details": ["Redis", "MongoDB", "CouchDB"]
+          },
+          {"text": "GraphQL", "focus": true},
+          {"text": "ArangoDB", "focus": true},
+          {"text": "MySQL"},
+          {"text": "PostgreSQL", "focus": true},
+          {"text": "ElasticSearch"},
+          {"text": "PHP"}
+        ]
+      },
+      {
+        "title": "CMS & Générateurs",
+        "fields": [
+          {"text": "Ghost"},
+          {"text": "Jekyll"},
+          {"text": "Gatsby", "focus": true},
+          {"text": "Hexo"}
+        ]
+      },
+      {
+        "title": "Mobile",
+        "fields": [{"text": "iOS natif", "details": ["Swift"]}]
+      },
+      {
+        "title": "Desktop",
+        "fields": [
+          {"text": "macOS natif", "details": ["Swift"]},
+          {"text": "Electron", "focus": true}
+        ]
+      },
+      {
+        "title": "Système",
+        "fields": [{"text": "bash"}, {"text": "python"}, {"text": "go-lang"}]
+      }
+    ]
+  },
+  {
+    "title": "Outils",
+    "sections": [
+      {
+        "title": "Task runners and workflow control",
+        "fields": [
+          {"text": "Webpack", "focus": true},
+          {"text": "Rollup"},
+          {"text": "Parcel"},
+          {"text": "GruntJS"},
+          {"text": "GulpJS"},
+          {"text": "Make"},
+          {"text": "Codekit"}
+        ]
+      },
+      {
+        "title": "Continuous Integration Tools",
+        "fields": [
+          {"text": "Travis"},
+          {"text": "Jenkins"},
+          {"text": "GitHub Actions", "focus": true}
+        ]
+      },
+      {
+        "title": "Virtualisation, containers & provisioning",
+        "fields": [
+          {"text": "docker", "focus": true},
+          {"text": "AWS Lambda", "focus": true},
+          {"text": "Serverless"},
+          {"text": "Chef"},
+          {"text": "Vagrant"},
+          {"text": "Puppet"},
+          {"text": "Ansible"}
+        ]
+      },
+      {
+        "title": "Text Editors & IDE",
+        "fields": [
+          {"text": "Vim"},
+          {"text": "neovim", "focus": true},
+          {"text": "Atom"},
+          {"text": "VSCode"},
+          {"text": "Sublime Text"}
+        ]
+      },
+      {
+        "title": "Version Control",
+        "fields": [
+          {
+            "text": "git",
+            "focus": true,
+            "details": ["GitHub", "git-flow", "GitHub Classroom"]
+          },
+          {"text": "SVN", "abbr": "Subversion"},
+          {"text": "hg", "abbr": "Mercurial"}
+        ]
+      },
+      {
+        "title": "Computer Graphics Design",
+        "fields": [
+          {"text": "Sketch"},
+          {"text": "Pixelmator Pro"},
+          {"text": "Figma"}
+        ]
+      },
+      {
+        "title": "Adobe Creative Suite CC",
+        "fields": [
+          {"text": "Photoshop"},
+          {"text": "Illustrator"},
+          {"text": "InDesign"},
+          {"text": "Flash"},
+          {"text": "Edge Tools"},
+          {"text": "Animate"},
+          {"text": "XD"}
+        ]
+      },
+      {
+        "title": "Apple Pro Apps",
+        "fields": [
+          {"text": "Logic Pro 8"},
+          {"text": "Final Cut Pro X"},
+          {"text": "XCode 4+"}
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Méthodologies",
+    "sections": [
+      {
         "title": "Méthodologies",
-        "sections": [
-            {
-                "title": "Méthodologies",
-                "hideTitle": true,
-                "fields": [
-                    {"text": "Scrum"},
-                    {"text": "GTD", "abbr": "Get Things Done"},
-                    {"text": "XP", "abbr": "eXtreme Programming"},
-                    {"text": "KanBan"}
-                ]
-            }
+        "hideTitle": true,
+        "fields": [
+          {"text": "Scrum"},
+          {"text": "GTD", "abbr": "Get Things Done"},
+          {"text": "XP", "abbr": "eXtreme Programming"},
+          {"text": "KanBan"}
         ]
-    },
-    {
-        "title": "Systèmes",
-        "sections": [
-            {
-                "title": "macOS",
-                "fields": [
-                    {"text": "10.6~10.13"},
-                    {"text": "10.14", "details": ["système principal"]}
-                ]
-            },
-            {
-                "title": "Linux",
-                "fields": [
-                    {"text": "debian-based"},
-                    {"text": "shell", "details": ["bash/zsh", "automation"]}
-                ]
-            },
-            {
-                "title": "Administration Système, DevOps",
-                "fields": [
-                    {"text": "nginx", "focus": true},
-                    {"text": "Apache2"},
-                    {
-                        "text": "AWS",
-                        "focus": true,
-                        "details": ["ECS/ECR", "lambda"]
-                    }
-                ]
-            }
+      }
+    ]
+  },
+  {
+    "title": "Systèmes",
+    "sections": [
+      {
+        "title": "macOS",
+        "fields": [
+          {"text": "10.6~10.13"},
+          {"text": "10.14", "details": ["système principal"]}
         ]
-    }
+      },
+      {
+        "title": "Linux",
+        "fields": [
+          {"text": "debian-based"},
+          {"text": "shell", "details": ["bash/zsh/fish", "automation"]}
+        ]
+      },
+      {
+        "title": "Administration Système, DevOps",
+        "fields": [
+          {"text": "nginx", "focus": true},
+          {"text": "Apache2"},
+          {
+            "text": "AWS",
+            "focus": true,
+            "details": ["ECS/ECR", "lambda", "beanstalk"]
+          }
+        ]
+      }
+    ]
+  }
 ]
