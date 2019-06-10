@@ -51,6 +51,24 @@ const styles = {
         margin: 0,
         padding: 0,
     }),
+    subs: css({
+        flexRow: ["space-between", "flex-start"],
+        marginBottom: rem(0.5),
+    }),
+    subsIcon: css({
+        size: [`${rem(1.3)} !important`],
+        flex: "none",
+        marginTop: rem(0.25),
+    }),
+    subsContent: css({
+        flex: [1, 0, "auto"],
+        listStyle: "none",
+        paddingLeft: rem(0.25),
+    }),
+    subElement: css({
+        fontSize: rem(1.4),
+        marginBottom: rem(0.25),
+    }),
     positionIcon: css({
         size: [`${rem(1.4)} !important`],
     }),
@@ -101,10 +119,27 @@ export default ({
     to,
     location,
     details,
+    subs,
 }) => {
     let $details,
+        $subs,
         $from,
         $to = "…";
+
+    if (subs.length) {
+        $subs = (
+            <div css={styles.subs}>
+                <FontAwesomeIcon css={styles.subsIcon} icon={"info"} />
+                <ul css={styles.subsContent}>
+                    {subs.map(sub => (
+                        <li key={sub} css={styles.subElement}>
+                            {sub}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        );
+    }
 
     if (details.length > 1) {
         $details = (
@@ -137,6 +172,7 @@ export default ({
                 </strong>
                 {$details}
             </div>
+            {$subs}
             <div css={styles.timeContainer}>
                 <span css={styles.timePeriod}>
                     {$from}

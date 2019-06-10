@@ -39,6 +39,7 @@ export default ({className}) => (
                             to
                             location
                             details
+                            subs
                         }
                     }
                 }
