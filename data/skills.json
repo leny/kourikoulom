@@ -15,7 +15,7 @@
           {
             "text": "React",
             "focus": true,
-            "details": ["Flux", "Redux", "MobX", "SSR", "…"]
+            "details": ["Hooks","Flux", "Redux", "MobX", "SSR", "…"]
           },
           {"text": "SvelteJS", "focus": true},
           {"text": "Angular"},
