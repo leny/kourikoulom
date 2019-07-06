@@ -15,7 +15,7 @@
           {
             "text": "React",
             "focus": true,
-            "details": ["Hooks","Flux", "Redux", "MobX", "SSR", "…"]
+            "details": ["Hooks", "Flux", "Redux", "MobX", "SSR", "…"]
           },
           {"text": "SvelteJS", "focus": true},
           {"text": "Angular"},
@@ -37,6 +37,7 @@
           },
           {"text": "jQuery"},
           {"text": "AJAX/AJAJ"},
+          {"text": "GraphQL", "focus": true, "details": ["Apollo", "…"]},
           {"text": "lodash"},
           {"text": "CoffeeScript"}
         ]
@@ -246,7 +247,7 @@
           {
             "text": "AWS",
             "focus": true,
-            "details": ["ECS/ECR", "lambda", "beanstalk"]
+            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "lambda", "beanstalk"]
           }
         ]
       }
