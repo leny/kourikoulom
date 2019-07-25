@@ -247,7 +247,7 @@
           {
             "text": "AWS",
             "focus": true,
-            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "lambda", "beanstalk"]
+            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "lambda", "elastic beanstalk", "lightsail"]
           }
         ]
       }
