@@ -1,7 +1,7 @@
 workflow "Build and deploy on push" {
   on = "push"
   resolves = [
-    "deploy: gh-pages"
+    "deploy: gh-pages",
   ]
 }
 
@@ -17,16 +17,16 @@ action "create .npmrc" {
   args = ["echo '' > .npmrc", "echo '@fortawesome:registry=https://npm.fontawesome.com/' >> .npmrc", "echo '//npm.fontawesome.com/:_authToken='$FONTAWESOME_TOKEN >> .npmrc"]
 }
 
-action "npm: install dependencies" {
+action "npm: ci (install dependencies)" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
   needs = ["create .npmrc"]
-  args = "install"
+  args = "ci"
 }
 
 action "npm: build" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  needs = ["npm: install dependencies"]
   args = "run build"
+  needs = ["npm: ci (install dependencies)"]
 }
 
 action "deploy: gh-pages" {
@@ -36,5 +36,4 @@ action "deploy: gh-pages" {
   env = {
     BUILD_DIR = "./public"
   }
-
 }
