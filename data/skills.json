@@ -236,9 +236,9 @@
         "title": "Linux",
         "fields": [
           {"text": "debian"},
-          {"text": "ubuntu", focus: true, "details": ["GNOME", "i3"]},
+          {"text": "ubuntu", "focus": true, "details": ["GNOME", "i3"]},
           {"text": "gentoo"},
-          {"text": "shell", focus: true, "details": ["bash/zsh/fish", "automation"]}
+          {"text": "shell", "focus": true, "details": ["bash/zsh/fish", "automation"]}
         ]
       },
       {
