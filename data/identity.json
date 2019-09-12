@@ -41,6 +41,13 @@
         "icon": "fab_linkedin"
     },
     {
+        "label": "Dev.to",
+        "value": "leny",
+        "link": "https://dev.to/leny",
+        "external": true,
+        "tooltip": "Mon profil dev.to",
+        "icon": "fab_dev"
+    },{
         "label": "Medium",
         "value": "@leny_be",
         "link": "https://medium.com/@leny_be",
