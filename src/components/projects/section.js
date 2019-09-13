@@ -27,7 +27,7 @@ const OTHERS = [
         text: "sur npm",
     },
     {
-        href: "https://atom.io/users/leny/packages",
+        url: "https://atom.io/users/leny/packages",
         title: "Mes packages pour Atom",
         text: "sur Atom",
     },
