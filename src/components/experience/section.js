@@ -46,7 +46,10 @@ export default ({className}) => (
             }
         `}
         render={data => (
-            <Section className={className} title={"Parcours"} icon={"route"}>
+            <Section
+                className={className}
+                title={"Parcours"}
+                icon={["fad", "route"]}>
                 <ol css={styles.list}>
                     {data.allExperiencesJson.edges.map(({node: experience}) => (
                         <Entry

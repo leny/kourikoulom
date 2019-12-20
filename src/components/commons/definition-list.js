@@ -34,10 +34,12 @@ export default ({elements}) => (
         {elements.map(({name, icon, description}) => {
             let $icon;
 
+            console.log("icon:", icon);
+
             icon &&
                 ($icon = (
                     <>
-                        <FontAwesomeIcon icon={icon} />
+                        <FontAwesomeIcon icon={["fad", icon]} />
                         {NBSP}
                     </>
                 ));

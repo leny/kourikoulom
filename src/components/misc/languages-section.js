@@ -27,7 +27,10 @@ export default ({className}) => (
             }
         `}
         render={data => (
-            <Section className={className} title={"Langues"} icon={"comments"}>
+            <Section
+                className={className}
+                title={"Langues"}
+                icon={["fad", "comment-dots"]}>
                 <DefinitionList
                     elements={data.allLanguagesJson.edges.map(({node}) => node)}
                 />

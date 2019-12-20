@@ -31,7 +31,10 @@ export default ({className}) => (
             }
         `}
         render={data => (
-            <Section className={className} title={"Divers"} icon={"user"}>
+            <Section
+                className={className}
+                title={"Divers"}
+                icon={["fad", "user"]}>
                 <DefinitionList
                     elements={data.allMiscJson.edges.map(({node}) => node)}
                 />

@@ -46,7 +46,10 @@ export default ({className}) => (
             }
         `}
         render={data => (
-            <Section className={className} title={"Compétences"} icon={"bolt"}>
+            <Section
+                className={className}
+                title={"Compétences"}
+                icon={["fad", "books"]}>
                 {data.allSkillsJson.edges.map(({node: {title, sections}}) => (
                     <SubSection key={title} title={title}>
                         <dl css={styles.list}>

@@ -50,7 +50,7 @@ export default ({className}) => (
             <Section
                 className={className}
                 title={"Formations"}
-                icon={"graduation-cap"}>
+                icon={["fad", "graduation-cap"]}>
                 {data.allFormationsJson.edges.map(
                     ({node: {title, details}}, index) => (
                         <SubSection

@@ -69,7 +69,7 @@ export default ({className}) => (
             <Section
                 className={className}
                 title={"Projets personnels"}
-                icon={"flask"}>
+                icon={["fad", "flask"]}>
                 <dl css={styles.list}>
                     {data.allProjectsJson.edges.map(({node: project}) => (
                         <Entry key={project.name} {...project} />
