@@ -11,7 +11,11 @@
       "Administration système sur AWS",
       "Analyse & développement d'outils internes"
     ],
-    "subs": ["Promo Hamilton 1.7 (Octobre 2018 - Mai 2019)","Promo Hamilton 2.12 (Mai 2019 - …)"]
+    "subs": [
+      "Promo Hamilton 1.7 (Octobre 2018 - Mai 2019)",
+      "Promo Hamilton 2.12 (Mai - Décembre 2019)",
+      "Promo Hamilton 3.17 (Janvier 2020 - …)"
+    ]
   },
   {
     "company": "flatLand!",
@@ -44,7 +48,9 @@
     "to": "2017-09-01",
     "location": "Liège, Belgique",
     "details": [
-      "Préparation de cours", "Cours théoriques et pratiques (travaux dirigés)","Supervisions de stages"
+      "Préparation de cours",
+      "Cours théoriques et pratiques (travaux dirigés)",
+      "Supervisions de stages"
     ],
     "subs": [
       "RIA (Application Internet Riches) - 3ème année",
@@ -72,10 +78,7 @@
     "to": "2013-03-01",
     "location": "Tournai, Belgique",
     "details": ["Sites clients, CMS maison & outils internes"],
-    "subs": [
-      "posib (CMS statique in-page)",
-      "syemes (Solution CMS complète)"
-    ]
+    "subs": ["posib (CMS statique in-page)", "syemes (Solution CMS complète)"]
   },
   {
     "company": "Ankama Studio",
@@ -84,8 +87,14 @@
     "from": "2010-09-01",
     "to": "2011-10-01",
     "location": "Roubaix, France",
-    "details": ["Intégration d'interfaces graphiques Flash","Ergonomie des interfaces"],
-    "subs": ["Jeu de stratégie en ligne Boufbowl", "TCG Online Wakfu (projet annulé)"]
+    "details": [
+      "Intégration d'interfaces graphiques Flash",
+      "Ergonomie des interfaces"
+    ],
+    "subs": [
+      "Jeu de stratégie en ligne Boufbowl",
+      "TCG Online Wakfu (projet annulé)"
+    ]
   },
   {
     "company": "Ankama Games",
