@@ -90,6 +90,7 @@
           {"text": "ArangoDB", "focus": true},
           {"text": "MySQL"},
           {"text": "PostgreSQL", "focus": true},
+          {"text": "gun db"},
           {"text": "ElasticSearch"},
           {"text": "PHP"}
         ]
