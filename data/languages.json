@@ -2,14 +2,14 @@
     {
         "name": "Français",
         "description": [
-            "Langue maternelle",
+            "Niveau C2 - langue maternelle",
             "maîtrise de l'orthographe et de la grammaire"
         ]
     },
     {
         "name": "Anglais",
         "description": [
-            "Connaissances avancées",
+            "Niveau B2 - connaissances avancées",
             "maîtrise du langage technique"
         ]
     }
