@@ -33,6 +33,14 @@
         "icon": "fab_github-alt"
     },
     {
+        "label": "YouTube",
+        "value": "LenyMcCormick",
+        "link": "https://youtube.com/user/LenyMcCormick",
+        "external": true,
+        "tooltip": "Ma chaîne YouTube",
+        "icon": "fab_youtube"
+    },
+    {
         "label": "LinkedIn",
         "value": "padelnatte",
         "link": "https://www.linkedin.com/in/padelnatte",
