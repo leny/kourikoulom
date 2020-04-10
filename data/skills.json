@@ -80,7 +80,7 @@
           {
             "text": "node.js",
             "focus": true,
-            "details": ["express", "koa", "sockets.io", "…"]
+            "details": ["express", "koa", "socket.io", "…"]
           },
           {
             "text": "NoSQL",
