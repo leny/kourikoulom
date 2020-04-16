@@ -6,10 +6,10 @@
         "description": "Framework Open-Source pour JSS/Glamor/Emotion"
     },
     {
-        "name": "Kouto Swiss",
-        "url": "http://kouto-swiss.io",
-        "tooltip": "Visiter le site de Kouto Swiss",
-        "description": "Framework Open-Source pour Stylus"
+        "name": "Zoondo",
+        "url": "https://github.com/leny/zoondo",
+        "tooltip": "Visiter le repository de Zoondo",
+        "description": "Implémentation web d'un jeu de plateau dans le cadre d'une série de vidéos pédagogiques sur YouTube"
     },
     {
         "name": "Tèsèvè",
