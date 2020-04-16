@@ -39,6 +39,13 @@
         "external": true,
         "tooltip": "Ma chaîne YouTube",
         "icon": "fab_youtube"
+    },{
+        "label": "Twitch",
+        "value": "lenymccormick",
+        "link": "https://twitch.tv/lenymccormick",
+        "external": true,
+        "tooltip": "Ma chaîne Twitch",
+        "icon": "fab_twitch"
     },
     {
         "label": "LinkedIn",
