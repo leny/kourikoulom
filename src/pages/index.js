@@ -118,6 +118,7 @@ export default ({data}) => (
     <div css={styles.wrapper}>
         <Helmet>
             <title>{data.dataJson.title}</title>
+            <meta httpEquiv={"X-Clacks-Overhead"} content={"GNU Terry Pratchett"} />
         </Helmet>
         <GlobalStyles />
         <ShareCard type={"twitter"} values={data.dataJson.cards.twitter} />
