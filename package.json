@@ -2,7 +2,7 @@
   "name": "@leny/kourikoulom",
   "private": true,
   "description": "Just my resume",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
