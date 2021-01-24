@@ -21,7 +21,7 @@ const styles = {
         padding: [rem(0.3), 0, 0],
     }),
     element: css({
-        margin: [0, "auto", rem(3.6)],
+        margin: [0, "auto", rem(4.8)],
     }),
 };
 
@@ -45,7 +45,7 @@ export default ({className}) => (
                 }
             }
         `}
-        render={data => (
+        render={(data) => (
             <Section
                 className={className}
                 title={"Parcours"}

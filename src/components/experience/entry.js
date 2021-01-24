@@ -16,7 +16,7 @@ import {NBSP, MAIN_COLOR, BCG_COLOR, ALT_COLOR} from "../../core/constants";
 import color from "color";
 import Link from "../commons/link";
 
-const formatDate = date =>
+const formatDate = (date) =>
     DateTime.fromFormat(date, "yyyy-MM-dd", {locale: "fr"}).toFormat(
         "LLLL yyyy",
     );
@@ -28,9 +28,7 @@ const TIME_COLOR = color(MAIN_COLOR)
     .whiten(0.75)
     .hex();
 
-const LOCATION_COLOR = color(MAIN_COLOR)
-    .mix(color(BCG_COLOR))
-    .hex();
+const LOCATION_COLOR = color(MAIN_COLOR).mix(color(BCG_COLOR)).hex();
 
 const styles = {
     container: css({
@@ -52,18 +50,17 @@ const styles = {
         padding: 0,
     }),
     subs: css({
-        flexRow: ["space-between", "flex-start"],
+        relative: true,
         marginBottom: rem(0.5),
     }),
     subsIcon: css({
+        absolute: true,
+        top: rem(0.25),
         size: [`${rem(1.3)} !important`],
-        flex: "none",
-        marginTop: rem(0.25),
     }),
     subsContent: css({
-        flex: [1, 0, "auto"],
         listStyle: "none",
-        paddingLeft: rem(0.25),
+        paddingLeft: rem(1.75),
     }),
     subElement: css({
         fontSize: rem(1.4),
@@ -83,9 +80,7 @@ const styles = {
         padding: [rem(0.2), rem(0.6)],
         background: TIME_COLOR,
         fontSize: rem(1.2),
-        color: color(MAIN_COLOR)
-            .negate()
-            .hex(),
+        color: color(MAIN_COLOR).negate().hex(),
         textAlign: "center",
         textTransform: "uppercase",
         whiteSpace: "nowrap",
@@ -131,7 +126,7 @@ export default ({
             <div css={styles.subs}>
                 <FontAwesomeIcon css={styles.subsIcon} icon={"info"} />
                 <ul css={styles.subsContent}>
-                    {subs.map(sub => (
+                    {subs.map((sub) => (
                         <li key={sub} css={styles.subElement}>
                             {sub}
                         </li>
@@ -144,7 +139,7 @@ export default ({
     if (details.length > 1) {
         $details = (
             <ul css={styles.detailsContent}>
-                {details.map(detail => (
+                {details.map((detail) => (
                     <li key={detail}>{detail}</li>
                 ))}
             </ul>
