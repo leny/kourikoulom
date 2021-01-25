@@ -116,8 +116,8 @@
         ]
       },
       {
-        "title": "Système",
-        "fields": [{"text": "bash"}, {"text": "python"}, {"text": "go-lang"}]
+        "title": "Système & Scripting",
+        "fields": [{"text": "bash"}, {"text": "python"}, {"text": "go-lang"}, {"text": "Lua"}]
       }
     ]
   },
@@ -205,6 +205,14 @@
           {"text": "Final Cut Pro X"},
           {"text": "XCode 4+"}
         ]
+      },
+      {
+        "title": "Divers",
+        "fields": [
+          {"text": "ChucK"},
+          {"text": "Nodebox"},
+          {"text": "Logo"}
+        ]
       }
     ]
   },
@@ -252,6 +260,13 @@
             "focus": true,
             "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "lambda", "elastic beanstalk", "lightsail"]
           }
+        ]
+      },
+      {
+        "title": "Divers",
+        "fields": [
+          {"text": "Pico-8"},
+          {"text": "TIC-80"}
         ]
       }
     ]
