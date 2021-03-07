@@ -39,6 +39,7 @@
           {"text": "AJAX/AJAJ"},
           {"text": "GraphQL", "focus": true, "details": ["Apollo", "…"]},
           {"text": "lodash"},
+          {"text": "TypeScript"},
           {"text": "CoffeeScript"}
         ]
       },
@@ -69,7 +70,9 @@
           {"text": "svg", "abbr": "Scalable Vector Graphics"},
           {"text": "Stylus", "focus": true},
           {"text": "sass"},
-          {"text": "javascript", "focus": true},
+          {"text": "Bootstrap"},
+          {"text": "TailwindCSS"},
+          {"text": "javascript", "focus": true},          
           {"text": "json"},
           {"text": "RegExp", "focus": true}
         ]
@@ -80,19 +83,26 @@
           {
             "text": "node.js",
             "focus": true,
-            "details": ["express", "koa", "socket.io", "…"]
-          },
-          {
-            "text": "NoSQL",
-            "details": ["Redis", "MongoDB", "CouchDB"]
+            "details": ["express", "koa", "socket.io", "serverless", "…"]
           },
           {"text": "GraphQL", "focus": true},
+          {"text": "PHP"}
+        ]
+      },
+      {
+        "title": "Bases de données & connexes",
+        "fields": [
           {"text": "ArangoDB", "focus": true},
+          {"text": "Apache Tinkerpop"},
+          {"text": "Gremlin"},
           {"text": "MySQL"},
           {"text": "PostgreSQL", "focus": true},
-          {"text": "gun db"},
+          {"text": "Redis"},
+          {"text": "MongoDB"},
+          {"text": "CouchDB"},
           {"text": "ElasticSearch"},
-          {"text": "PHP"}
+          {"text": "Keen"},
+          {"text": "gun db"}
         ]
       },
       {
@@ -117,7 +127,7 @@
       },
       {
         "title": "Système & Scripting",
-        "fields": [{"text": "bash"}, {"text": "python"}, {"text": "go-lang"}, {"text": "Lua"}]
+        "fields": [{"text": "bash"}, {"text": "node.js", "focus": true}, {"text": "python"}, {"text": "go-lang"}, {"text": "Lua"}]
       }
     ]
   },
@@ -125,11 +135,11 @@
     "title": "Outils",
     "sections": [
       {
-        "title": "Task runners and workflow control",
+        "title": "Task runners & workflow",
         "fields": [
           {"text": "Webpack", "focus": true},
           {"text": "Rollup"},
-          {"text": "Parcel"},
+          {"text": "Parcel", "focus": true},
           {"text": "GruntJS"},
           {"text": "GulpJS"},
           {"text": "Make"},
@@ -258,7 +268,7 @@
           {
             "text": "AWS",
             "focus": true,
-            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "lambda", "elastic beanstalk", "lightsail"]
+            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "Elastic Beanstalk", "Lightsail"]
           }
         ]
       },
