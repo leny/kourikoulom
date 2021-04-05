@@ -72,7 +72,7 @@
           {"text": "sass"},
           {"text": "Bootstrap"},
           {"text": "TailwindCSS"},
-          {"text": "javascript", "focus": true},          
+          {"text": "javascript", "focus": true},
           {"text": "json"},
           {"text": "RegExp", "focus": true}
         ]
@@ -93,8 +93,7 @@
         "title": "Bases de données & connexes",
         "fields": [
           {"text": "ArangoDB", "focus": true},
-          {"text": "Apache Tinkerpop"},
-          {"text": "Gremlin"},
+          {"text": "Apache Tinkerpop Gremlin", "focus": true},
           {"text": "MySQL"},
           {"text": "PostgreSQL", "focus": true},
           {"text": "Redis"},
@@ -160,6 +159,7 @@
           {"text": "docker", "focus": true},
           {"text": "AWS Lambda", "focus": true},
           {"text": "Serverless"},
+          {"text": "AWS CloudFormation", "focus": true},
           {"text": "Chef"},
           {"text": "Vagrant"},
           {"text": "Puppet"},
@@ -247,8 +247,8 @@
       {
         "title": "macOS",
         "fields": [
-          {"text": "10.6~10.13"},
-          {"text": "10.14", "details": ["système principal"]}
+          {"text": "10.6~10.15"},
+          {"text": "11", "details": ["système principal"]}
         ]
       },
       {
@@ -268,7 +268,7 @@
           {
             "text": "AWS",
             "focus": true,
-            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "Elastic Beanstalk", "Lightsail"]
+            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "CloudFormation", "Elastic Beanstalk", "Lightsail"]
           }
         ]
       },

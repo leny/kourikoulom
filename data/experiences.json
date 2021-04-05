@@ -1,9 +1,23 @@
 [
   {
+    "company": "Mango3D",
+    "url": "https://mango3d.io",
+    "position": "Lead Web Developer & Sysadmin",
+    "from": "2021-04-12",
+    "location": "Liège, Belgique",
+    "details": [
+      "Analyse & développement d'applications web",
+      "Supervision de l'équipe web",
+      "Administration système sur AWS"
+    ],
+    "subs":[]
+  },
+  {
     "company": "BeCode",
     "url": "https://becode.org",
     "position": "Code Guardian",
     "from": "2018-09-15",
+    "to": "2021-04-09",
     "location": "Liège, Belgique",
     "details": [
       "Coaching, formation, co-gestion du campus BeCode de Liège",
