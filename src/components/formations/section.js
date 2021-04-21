@@ -40,25 +40,23 @@ export default ({className}) => (
                                 details
                                 to
                                 location
+                                certification
                             }
                         }
                     }
                 }
             }
         `}
-        render={data => (
+        render={(data) => (
             <Section
                 className={className}
                 title={"Formations"}
                 icon={["fad", "graduation-cap"]}>
                 {data.allFormationsJson.edges.map(
-                    ({node: {title, details}}, index) => (
-                        <SubSection
-                            key={title}
-                            title={title}
-                            hideTitle={index === 0}>
+                    ({node: {title, details}}) => (
+                        <SubSection key={title} title={title}>
                             <ol css={styles.list}>
-                                {details.map(formation => (
+                                {details.map((formation) => (
                                     <Entry
                                         key={formation.title}
                                         css={styles.element}

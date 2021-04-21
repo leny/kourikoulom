@@ -24,9 +24,7 @@ const TIME_COLOR = color(MAIN_COLOR)
     .whiten(0.5)
     .hex();
 
-const LOCATION_COLOR = color(MAIN_COLOR)
-    .mix(color(BCG_COLOR))
-    .hex();
+const LOCATION_COLOR = color(MAIN_COLOR).mix(color(BCG_COLOR)).hex();
 
 const box = {
     width: 15,
@@ -43,7 +41,7 @@ const styles = {
     title: css({
         width: percent(100),
         margin: [0, "auto", rem(1)],
-        fontSize: rem(2),
+        fontSize: rem(1.8),
     }),
     details: css({
         width: percent(100),
@@ -69,10 +67,19 @@ const styles = {
     locationIcon: css({
         size: [`${rem(1.2)} !important`],
     }),
+    certificationLink: css({textDecoration: "none", color: LOCATION_COLOR}),
 };
 
-export default ({className, title, from, to, location, details}) => {
-    let $from, $to;
+export default ({
+    className,
+    title,
+    from,
+    to,
+    location,
+    certification,
+    details,
+}) => {
+    let $from, $to, $location, $certification;
 
     $from = (
         <time dateTime={from}>
@@ -81,6 +88,37 @@ export default ({className, title, from, to, location, details}) => {
     );
 
     to && ($to = <time dateTime={to}>{formatDate(to, "yyyy", "yyyy")}</time>);
+
+    if (location) {
+        $location = (
+            <p css={styles.location}>
+                <FontAwesomeIcon
+                    css={styles.locationIcon}
+                    color={LOCATION_COLOR}
+                    icon={"map-marker-alt"}
+                />
+                {NBSP} {location}
+            </p>
+        );
+    }
+
+    if (certification) {
+        $certification = (
+            <p css={styles.location}>
+                <a
+                    css={styles.certificationLink}
+                    href={certification}
+                    target={"_new"}>
+                    <FontAwesomeIcon
+                        css={styles.locationIcon}
+                        color={LOCATION_COLOR}
+                        icon={"award"}
+                    />
+                    {NBSP} {"Voir certificat"}
+                </a>
+            </p>
+        );
+    }
 
     return (
         <li className={className} css={styles.container}>
@@ -93,14 +131,8 @@ export default ({className, title, from, to, location, details}) => {
                 {to ? NBSP : ""}
                 {$to}
             </div>
-            <p css={styles.location}>
-                <FontAwesomeIcon
-                    css={styles.locationIcon}
-                    color={LOCATION_COLOR}
-                    icon={"map-marker-alt"}
-                />
-                {NBSP} {location}
-            </p>
+            {$location}
+            {$certification}
         </li>
     );
 };
