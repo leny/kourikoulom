@@ -20,7 +20,7 @@ const styles = {
         textAlign: "center",
         "&::before, &::after": {
             content: `""`,
-            margin: [0, rem(0.5)],
+            margin: [rem(0.2), rem(0.5), 0],
             size: [rem(2), rem(0.1)],
             background: BORDER_COLOR,
         },
