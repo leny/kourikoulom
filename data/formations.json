@@ -1,13 +1,23 @@
 [
     {
-        "title": "Diplômes",
+        "title": "Certifications",
         "details": [
+            {
+                "title": "Udemy AWS Cloudformation Master Class",
+                "from": "2021-04",
+                "details": "Formation AWS Cloudformation sur Udemy par Stéphane Maarek",
+                "certification": "https://ude.my/UC-798575b0-d3a9-40fb-8e5e-d454054af31d/"
+            },
             {
                 "title": "Simplon - Formation de Formateurs",
                 "from": "2018-09",
                 "details": "Formation pédagogie active - Méthodologie Simplon",
                 "location": "Simplon, Montreuil, France"
-            },
+            }
+        ]
+    },{
+        "title": "Parcours Académique",
+        "details": [
             {
                 "title": "Bachelor en Techniques Infographiques",
                 "from": "2004",
