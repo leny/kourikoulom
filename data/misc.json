@@ -1,7 +1,7 @@
 [
     {
-        "name": "Motorisation",
-        "icon": "car",
+        "name": "Mobilité",
+        "icon": "boot",
         "description": [
             {"text": "Maîtrise de la marche à pied et des transports en commun"}
         ]
@@ -11,7 +11,7 @@
         "icon": "mug-marshmallows",
         "description": [
             {"text": "Nouvelles technologies"},
-            {"text": "éducation & vulgarisation"},
+            {"text": "pédagogie & vulgarisation"},
             {
                 "text": "développement open-source",
                 "url": "https://github.com/leny"
