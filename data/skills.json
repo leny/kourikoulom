@@ -156,10 +156,10 @@
       {
         "title": "Virtualisation, containers & provisioning",
         "fields": [
-          {"text": "docker", "focus": true},
+          {"text": "AWS CloudFormation", "focus": true},
+          {"text": "docker"},
           {"text": "AWS Lambda", "focus": true},
           {"text": "Serverless"},
-          {"text": "AWS CloudFormation", "focus": true},
           {"text": "Chef"},
           {"text": "Vagrant"},
           {"text": "Puppet"},
@@ -268,7 +268,7 @@
           {
             "text": "AWS",
             "focus": true,
-            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "CloudFormation", "Elastic Beanstalk", "Lightsail"]
+            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "CloudFormation", "Elastic Beanstalk", "Lightsail", "SQS"]
           }
         ]
       },
