@@ -97,6 +97,7 @@
           {"text": "MySQL"},
           {"text": "PostgreSQL", "focus": true},
           {"text": "Redis"},
+          {"text": "MemCached"},
           {"text": "MongoDB"},
           {"text": "CouchDB"},
           {"text": "ElasticSearch"},
@@ -268,7 +269,7 @@
           {
             "text": "AWS",
             "focus": true,
-            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "CloudFormation", "Elastic Beanstalk", "Lightsail", "SQS"]
+            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "OpenSearch", "Elasticache", "CloudFormation", "Elastic Beanstalk", "Lightsail", "SQS"]
           }
         ]
       },
