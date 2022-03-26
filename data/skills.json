@@ -16,8 +16,9 @@
             "text": "React",
             "focus": true,
             "details": ["Hooks", "Flux", "Redux", "MobX", "SSR", "…"]
-          },
-          {"text": "SvelteJS", "focus": true},
+          },          
+          {"text": "TypeScript", "focus": true},
+          {"text": "SvelteJS"},
           {"text": "Angular"},
           {"text": "Ember"},
           {"text": "VueJS"},
@@ -37,9 +38,14 @@
           },
           {"text": "jQuery"},
           {"text": "AJAX/AJAJ"},
+          {"text": "Websockets"},
           {"text": "GraphQL", "focus": true, "details": ["Apollo", "…"]},
           {"text": "lodash"},
-          {"text": "TypeScript"},
+          {
+            "text": "Toolchain/Buildchain",
+            "focus": true,
+            "details": ["webpack", "Parcel", "swc", "snowpack", "rome", "rollup", "…"]
+          }, 
           {"text": "CoffeeScript"}
         ]
       },
@@ -100,7 +106,8 @@
           {"text": "MemCached"},
           {"text": "MongoDB"},
           {"text": "CouchDB"},
-          {"text": "ElasticSearch"},
+          {"text": "ElasticSearch"},       
+          {"text": "DynamoDB"},
           {"text": "Keen"},
           {"text": "gun db"}
         ]
@@ -157,6 +164,7 @@
       {
         "title": "Virtualisation, containers & provisioning",
         "fields": [
+          {"text": "AWS CDK", "focus": true},
           {"text": "AWS CloudFormation", "focus": true},
           {"text": "docker"},
           {"text": "AWS Lambda", "focus": true},
@@ -234,7 +242,7 @@
         "title": "Méthodologies",
         "hideTitle": true,
         "fields": [
-          {"text": "Scrum"},
+          {"text": "Scrum", "focus": true},
           {"text": "GTD", "abbr": "Get Things Done"},
           {"text": "XP", "abbr": "eXtreme Programming"},
           {"text": "KanBan"}
@@ -248,8 +256,8 @@
       {
         "title": "macOS",
         "fields": [
-          {"text": "10.6~10.15"},
-          {"text": "11", "details": ["système principal"]}
+          {"text": "10.6~11"},
+          {"text": "12", "details": ["système principal"]}
         ]
       },
       {
@@ -269,7 +277,7 @@
           {
             "text": "AWS",
             "focus": true,
-            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "OpenSearch", "Elasticache", "CloudFormation", "Elastic Beanstalk", "Lightsail", "SQS"]
+            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "DynamoDB", "OpenSearch", "Elasticache", "CloudFormation", "CDK", "Elastic Beanstalk", "Lightsail", "SQS", "Comprehend"]
           }
         ]
       },
