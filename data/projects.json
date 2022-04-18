@@ -16,11 +16,5 @@
         "url": "https://koutla-swiss.js.org",
         "tooltip": "Visiter le repository de Koutla Swiss",
         "description": "Framework Open-Source pour JSS/Glamor/Emotion"
-    },
-    {
-        "name": "Tèsèvè",
-        "url": "http://teseve.github.io",
-        "tooltip": "Visiter le site de Tèsèvè",
-        "description": "Utilitaire Open-Source multiplateforme (Electron)"
     }
 ]
