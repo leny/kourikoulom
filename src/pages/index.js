@@ -10,14 +10,12 @@ import React from "react";
 import {graphql} from "gatsby";
 import {css} from "@pwops/emotion-css";
 import {rem, percent, vw} from "@pwops/core";
-import {mq} from "../core/utils";
-
 import {
-    MQ_TABLET,
-    MQ_SMALL_DESKTOP,
-    MQ_MEDIUM_DESKTOP,
-    MQ_LARGE_DESKTOP,
-} from "../core/constants";
+    mqTablet,
+    mqSmallDesktop,
+    mqMediumDesktop,
+    mqLargeDesktop,
+} from "../core/utils";
 
 import {Helmet} from "react-helmet";
 import "../core/font-awesome";
@@ -40,50 +38,50 @@ const styles = {
         width: percent(90),
         margin: [0, "auto"],
         paddingTop: rem(2.4),
-        ...mq(MQ_TABLET, {
+        ...mqTablet({
             padding: [rem(8.1), 0, rem(18), rem(28.5)],
         }),
-        ...mq(MQ_SMALL_DESKTOP, {
+        ...mqSmallDesktop({
             paddingTop: rem(15.6),
         }),
-        ...mq(MQ_LARGE_DESKTOP, {
+        ...mqLargeDesktop({
             width: rem(140),
         }),
     }),
     head: css({
-        ...mq(MQ_TABLET, {
+        ...mqTablet({
             fixed: [rem(2.5), null, null, percent(50)],
             width: rem(25),
             marginLeft: percent(-45),
         }),
-        ...mq(MQ_SMALL_DESKTOP, {
+        ...mqSmallDesktop({
             top: rem(10),
         }),
-        ...mq(MQ_LARGE_DESKTOP, {
+        ...mqLargeDesktop({
             marginLeft: rem(-70),
         }),
     }),
     content: css({
-        ...mq(MQ_SMALL_DESKTOP, {
+        ...mqSmallDesktop({
             columns: 2,
             columnGap: percent(8),
         }),
-        ...mq(MQ_MEDIUM_DESKTOP, {
+        ...mqMediumDesktop({
             columns: 3,
             columnGap: percent(4),
         }),
-        ...mq(MQ_LARGE_DESKTOP, {
+        ...mqLargeDesktop({
             columns: 4,
             columnGap: percent(2.5),
         }),
     }),
     mediumBreak: css({
-        ...mq(MQ_LARGE_DESKTOP, {
+        ...mqLargeDesktop({
             marginBottom: vw(100),
         }),
     }),
     largeBreak: css({
-        ...mq(MQ_LARGE_DESKTOP, {
+        ...mqLargeDesktop({
             marginBottom: vw(100),
         }),
     }),
@@ -118,7 +116,10 @@ export default ({data}) => (
     <div css={styles.wrapper}>
         <Helmet>
             <title>{data.dataJson.title}</title>
-            <meta httpEquiv={"X-Clacks-Overhead"} content={"GNU Terry Pratchett"} />
+            <meta
+                httpEquiv={"X-Clacks-Overhead"}
+                content={"GNU Terry Pratchett"}
+            />
         </Helmet>
         <GlobalStyles />
         <ShareCard type={"twitter"} values={data.dataJson.cards.twitter} />
