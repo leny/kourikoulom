@@ -17,8 +17,7 @@ import {
     attr,
 } from "@pwops/core";
 
-import {LIGHT, DARK} from "./constants";
-import {mqPreferDark} from "./utils";
+import {varValue} from "./utils";
 
 export const styles = {
     position: "relative",
@@ -35,8 +34,8 @@ export const styles = {
         minWidth: rem(12),
         whiteSpace: "nowrap",
         borderRadius: rem(0.3),
-        background: LIGHT.MAIN_COLOR,
-        color: LIGHT.BCG_COLOR,
+        background: varValue("mainColor"),
+        color: varValue("bcgColor"),
         content: attr("data-tooltip"),
         textAlign: "center",
         fontSize: rem(1.4),
@@ -52,7 +51,7 @@ export const styles = {
         fontSize: 0,
         lineHeight: 0,
         transform: translateX(percent(-50)),
-        borderTop: [rem(0.8), "solid", LIGHT.MAIN_COLOR],
+        borderTop: [rem(0.8), "solid", varValue("mainColor")],
         borderBottom: "none",
     },
     "&[data-tooltip]:hover::before, &[data-tooltip]:hover::after": {
@@ -60,15 +59,6 @@ export const styles = {
         opacity: 1,
         transform: [translateX(percent(-50)), translateY(rem(-0.5))],
     },
-    ...mqPreferDark({
-        "&::before": {
-            background: DARK.MAIN_COLOR,
-            color: DARK.BCG_COLOR,
-        },
-        "&::after": {
-            borderTop: [rem(0.8), "solid", DARK.MAIN_COLOR],
-        },
-    }),
 };
 
 export default (tooltip) => {

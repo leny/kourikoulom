@@ -34,8 +34,6 @@ export default ({elements}) => (
         {elements.map(({name, icon, description}) => {
             let $icon;
 
-            console.log("icon:", icon);
-
             icon &&
                 ($icon = (
                     <>

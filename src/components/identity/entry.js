@@ -10,8 +10,7 @@ import React from "react";
 import {css} from "@pwops/emotion-css";
 import {rem, percent} from "@pwops/core";
 
-import {LIGHT, DARK} from "../../core/constants";
-import {mqPreferDark} from "../../core/utils";
+import {varValue} from "../../core/utils";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Link from "../commons/link";
@@ -26,10 +25,7 @@ const styles = {
         size: [`${rem(1.6)} !important`],
         marginRight: rem(1.2),
         verticalAlign: rem(-0.3),
-        color: LIGHT.ALT_COLOR,
-        ...mqPreferDark({
-            color: DARK.ALT_COLOR,
-        }),
+        color: varValue("altColor"),
     }),
     value: css({
         display: "inline",

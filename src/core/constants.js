@@ -23,6 +23,7 @@ export const LIGHT = {
         .lighten(0.85)
         .whiten(0.75)
         .hex(),
+    TIME_TEXT_COLOR: color("#000").negate().hex(),
     LOCATION_COLOR: color("#000").mix(color("#fff")).hex(),
 };
 
@@ -34,6 +35,7 @@ export const DARK = {
     ALT_HOVER_COLOR: "dodgerblue",
     BORDER_COLOR: "#373e47",
     TIME_COLOR: color("#adbac7").mix(color("#539bf5")).desaturate(0.66).hex(),
+    TIME_TEXT_COLOR: color("#adbac7").negate().hex(),
     LOCATION_COLOR: color("#adbac7").mix(color("#22272e")).hex(),
 };
 

@@ -10,8 +10,7 @@ import React from "react";
 import {css} from "@pwops/emotion-css";
 import {rem} from "@pwops/core";
 
-import {LIGHT, DARK} from "../../core/constants";
-import {mqPreferDark} from "../../core/utils";
+import {varValue} from "../../core/utils";
 import DescriptionParser from "../commons/description-parser";
 
 const styles = {
@@ -23,8 +22,7 @@ const styles = {
     hideTitle: css({display: "none"}),
     value: css({
         margin: [0, "auto", rem(1.6)],
-        color: LIGHT.FADE_COLOR,
-        ...mqPreferDark({color: DARK.FADE_COLOR}),
+        color: varValue("fadeColor"),
     }),
 };
 

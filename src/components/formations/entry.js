@@ -12,8 +12,8 @@ import {percent, rem} from "@pwops/core";
 
 import {DateTime} from "luxon";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {NBSP, LIGHT, DARK} from "../../core/constants";
-import {mqPreferDark} from "../../core/utils";
+import {NBSP} from "../../core/constants";
+import {varValue} from "../../core/utils";
 
 const formatDate = (date, format = "yyyy-MM", out = "LLL yyyy") =>
     DateTime.fromFormat(date, format, {locale: "fr"}).toFormat(out);
@@ -48,25 +48,21 @@ const styles = {
         textAlign: "right",
         transform: "rotate(-90deg)",
         transformOrigin: ["top", "right"],
-        color: LIGHT.TIME_COLOR,
+        color: varValue("timeColor"),
         textTransform: "uppercase",
-        ...mqPreferDark({color: DARK.TIME_COLOR}),
     }),
     location: css({
         margin: 0,
         fontSize: rem(1.4),
-        color: LIGHT.LOCATION_COLOR,
-        ...mqPreferDark({color: DARK.LOCATION_COLOR}),
+        color: varValue("locationColor"),
     }),
     locationIcon: css({
         size: [`${rem(1.2)} !important`],
-        color: LIGHT.LOCATION_COLOR,
-        ...mqPreferDark({color: DARK.LOCATION_COLOR}),
+        color: varValue("locationColor"),
     }),
     certificationLink: css({
         textDecoration: "none",
-        color: LIGHT.LOCATION_COLOR,
-        ...mqPreferDark({color: DARK.LOCATION_COLOR}),
+        color: varValue("locationColor"),
     }),
 };
 

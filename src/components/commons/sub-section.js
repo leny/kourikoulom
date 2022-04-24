@@ -10,8 +10,7 @@ import React from "react";
 import {css} from "@pwops/emotion-css";
 import {rem} from "@pwops/core";
 
-import {LIGHT, DARK} from "../../core/constants";
-import {mqPreferDark} from "../../core/utils";
+import {varValue} from "../../core/utils";
 
 const styles = {
     title: css({
@@ -23,13 +22,8 @@ const styles = {
             content: `""`,
             margin: [rem(0.2), rem(0.5), 0],
             size: [rem(2), rem(0.1)],
-            background: LIGHT.BORDER_COLOR,
+            background: varValue("borderColor"),
         },
-        ...mqPreferDark({
-            "&::before, &::after": {
-                background: DARK.BORDER_COLOR,
-            },
-        }),
     }),
     hideTitle: css({display: "none"}),
 };

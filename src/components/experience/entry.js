@@ -12,9 +12,8 @@ import {percent, rem} from "@pwops/core";
 
 import {DateTime} from "luxon";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {NBSP, LIGHT, DARK} from "../../core/constants";
-import {mqPreferDark} from "../../core/utils";
-import color from "color";
+import {NBSP} from "../../core/constants";
+import {varValue} from "../../core/utils";
 import Link from "../commons/link";
 
 const formatDate = (date) =>
@@ -70,9 +69,9 @@ const styles = {
         display: "block",
         position: "relative",
         padding: [rem(0.2), rem(0.6)],
-        background: LIGHT.TIME_COLOR,
+        background: varValue("timeColor"),
         fontSize: rem(1.2),
-        color: color(LIGHT.MAIN_COLOR).negate().hex(),
+        color: varValue("timeTextColor"),
         textAlign: "center",
         textTransform: "uppercase",
         whiteSpace: "nowrap",
@@ -82,32 +81,19 @@ const styles = {
             position: "absolute",
             top: percent(50),
             size: [rem(2), rem(0.1)],
-            background: LIGHT.TIME_COLOR,
+            background: varValue("timeColor"),
         },
         "&::before": {left: rem(-3)},
         "&::after": {right: rem(-3)},
-        ...mqPreferDark({
-            background: DARK.TIME_COLOR,
-            color: color(DARK.MAIN_COLOR).negate().hex(),
-            "&::before, &::after": {
-                background: DARK.TIME_COLOR,
-            },
-        }),
     }),
     location: css({
         margin: 0,
         fontSize: rem(1.4),
-        color: LIGHT.LOCATION_COLOR,
-        ...mqPreferDark({
-            color: DARK.LOCATION_COLOR,
-        }),
+        color: varValue("locationColor"),
     }),
     locationIcon: css({
         size: [`${rem(1.2)} !important`],
-        color: LIGHT.LOCATION_COLOR,
-        ...mqPreferDark({
-            color: DARK.LOCATION_COLOR,
-        }),
+        color: varValue("locationColor"),
     }),
 };
 

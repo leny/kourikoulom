@@ -9,20 +9,12 @@
 import React from "react";
 
 import {css} from "@pwops/emotion-css";
-import {LIGHT, DARK} from "../../core/constants";
-import {mqPreferDark} from "../../core/utils";
+import {varValue} from "../../core/utils";
 
-export default ({
-    className,
-    lightColor = LIGHT.MAIN_COLOR,
-    darkColor = DARK.MAIN_COLOR,
-}) => {
+export default ({className}) => {
     const styles = {
         container: css({
-            fill: lightColor,
-            ...mqPreferDark({
-                fill: darkColor,
-            }),
+            fill: varValue("mainColor"),
         }),
     };
 

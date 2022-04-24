@@ -10,8 +10,7 @@ import React from "react";
 import {css} from "@pwops/emotion-css";
 import {rem, percent} from "@pwops/core";
 
-import {LIGHT, DARK} from "../../core/constants";
-import {mqPreferDark} from "../../core/utils";
+import {varValue} from "../../core/utils";
 
 import Leny from "../svg/leny";
 import Name from "../svg/delnatte-pierre-antoine";
@@ -28,8 +27,7 @@ const styles = {
         display: "block",
         margin: [0, "auto", rem(1)],
         paddingBottom: rem(1),
-        borderBottom: [rem(0.1), "solid", LIGHT.BORDER_COLOR],
-        ...mqPreferDark({borderBottomColor: DARK.BORDER_COLOR}),
+        borderBottom: [rem(0.1), "solid", varValue("borderColor")],
     }),
     svg: css({
         display: "block",
@@ -48,18 +46,13 @@ const styles = {
 export default ({className}) => (
     <header css={styles.container} className={className}>
         <h1 css={styles.title}>
-            <Leny css={[styles.svg, styles.leny]} fill={LIGHT.MAIN_COLOR} />
+            <Leny css={[styles.svg, styles.leny]} />
             <strong css={styles.name}>
-                <Name
-                    css={styles.svg}
-                    title={"Delnatte Pierre-Antoine"}
-                    fill={LIGHT.MAIN_COLOR}
-                />
+                <Name css={styles.svg} title={"Delnatte Pierre-Antoine"} />
             </strong>
             <Profession
                 css={[styles.svg, styles.profession]}
                 title={"Webdeveloper"}
-                fill={LIGHT.MAIN_COLOR}
             />
         </h1>
     </header>

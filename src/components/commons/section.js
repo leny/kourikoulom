@@ -11,9 +11,7 @@ import {css} from "@pwops/emotion-css";
 import {rem} from "@pwops/core";
 import {mqTablet, mqSmallDesktop} from "../../core/utils";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {mqPreferDark} from "../../core/utils";
-
-import {LIGHT, DARK} from "../../core/constants";
+import {varValue} from "../../core/utils";
 
 const styles = {
     container: css({
@@ -30,12 +28,9 @@ const styles = {
         flexRow: ["space-between", "center"],
         margin: [0, "auto", rem(3.2)],
         paddingBottom: rem(0.25),
-        borderBottom: [rem(0.1), "solid", LIGHT.BORDER_COLOR],
+        borderBottom: [rem(0.1), "solid", varValue("borderColor")],
         fontSize: rem(2.4),
         textAlign: "right",
-        ...mqPreferDark({
-            borderBottom: [rem(0.1), "solid", DARK.BORDER_COLOR],
-        }),
     }),
     titleContent: {flex: 1},
     hideTitle: css({display: "none"}),

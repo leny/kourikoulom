@@ -26,3 +26,9 @@ export const mqLargeDesktop = (props) => mq(MQ_LARGE_DESKTOP, props);
 
 export const mqPreferDark = (props) => mq(MQ_PREFER_DARK, props);
 export const mqPreferLight = (props) => mq(MQ_PREFER_LIGHT, props);
+
+export const varValue = (name) => `var(--${name})`;
+export const varsDeclaration = (props) =>
+    Object.fromEntries(
+        Object.entries(props).map(([key, value]) => [`--${key}`, value]),
+    );
