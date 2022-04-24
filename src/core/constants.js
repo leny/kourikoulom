@@ -6,31 +6,35 @@
  * started at 23/02/2019
  */
 
+import color from "color";
+
 export const NBSP = "\u00a0";
 
-export const BCG_COLOR = "#fff";
-export const MAIN_COLOR = "#000";
-export const FADE_COLOR = "#666";
-export const ALT_COLOR = "mediumblue";
-export const ALT_HOVER_COLOR = "dodgerblue";
-export const BORDER_COLOR = "#7f7f7f";
-
 export const LIGHT = {
-    BCG_COLOR,
-    MAIN_COLOR,
-    FADE_COLOR,
-    ALT_COLOR,
-    ALT_HOVER_COLOR,
-    BORDER_COLOR,
+    BCG_COLOR: "#fff",
+    MAIN_COLOR: "#000",
+    FADE_COLOR: "#666",
+    ALT_COLOR: "mediumblue",
+    ALT_HOVER_COLOR: "dodgerblue",
+    BORDER_COLOR: "#7f7f7f",
+    TIME_COLOR: color("#000")
+        .mix(color("mediumblue"))
+        .desaturate(0.33)
+        .lighten(0.85)
+        .whiten(0.75)
+        .hex(),
+    LOCATION_COLOR: color("#000").mix(color("#fff")).hex(),
 };
 
 export const DARK = {
-    BCG_COLOR,
-    MAIN_COLOR,
-    FADE_COLOR,
-    ALT_COLOR,
-    ALT_HOVER_COLOR,
-    BORDER_COLOR,
+    BCG_COLOR: "#22272e",
+    MAIN_COLOR: "#adbac7",
+    FADE_COLOR: "#768390",
+    ALT_COLOR: "#539bf5",
+    ALT_HOVER_COLOR: "dodgerblue",
+    BORDER_COLOR: "#373e47",
+    TIME_COLOR: color("#adbac7").mix(color("#539bf5")).desaturate(0.66).hex(),
+    LOCATION_COLOR: color("#adbac7").mix(color("#22272e")).hex(),
 };
 
 export const SOURCE_SANS_PRO_STACK = `"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif`;
