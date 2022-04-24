@@ -5,10 +5,10 @@
   "version": "0.2.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "work": "gatsby develop",
+    "build": "npx gatsby build",
+    "work": "npx gatsby develop",
     "lint": "npx eslint --fix --cache src",
-    "serve": "gatsby build && gatsby serve"
+    "serve": "npx gatsby build && gatsby serve"
   },
   "lint-staged": {
     "*.js": [
