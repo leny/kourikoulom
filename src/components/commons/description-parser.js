@@ -9,7 +9,8 @@
 import React from "react";
 import {css} from "@pwops/emotion-css";
 
-import {MAIN_COLOR} from "../../core/constants";
+import {LIGHT, DARK} from "../../core/constants";
+import {mqPreferDark} from "../../core/utils";
 
 import Abbr from "./abbr";
 import Link from "./link";
@@ -17,7 +18,8 @@ import Link from "./link";
 const styles = {
     strong: css({
         fontWeight: "normal",
-        color: MAIN_COLOR,
+        color: LIGHT.MAIN_COLOR,
+        ...mqPreferDark({color: DARK.MAIN_COLOR}),
     }),
 };
 

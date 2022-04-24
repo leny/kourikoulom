@@ -9,18 +9,19 @@
 import React from "react";
 import {css} from "@pwops/emotion-css";
 import {rem} from "@pwops/core";
-import {mq} from "../../core/utils";
+import {mqTablet, mqSmallDesktop} from "../../core/utils";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {mqPreferDark} from "../../core/utils";
 
-import {BORDER_COLOR, MQ_TABLET, MQ_SMALL_DESKTOP} from "../../core/constants";
+import {LIGHT, DARK} from "../../core/constants";
 
 const styles = {
     container: css({
         margin: [0, "auto", rem(3.6)],
-        ...mq(MQ_TABLET, {
+        ...mqTablet({
             marginBottom: rem(19.2),
         }),
-        ...mq(MQ_SMALL_DESKTOP, {
+        ...mqSmallDesktop({
             breakInside: "avoid",
             marginBottom: rem(9.6),
         }),
@@ -29,9 +30,12 @@ const styles = {
         flexRow: ["space-between", "center"],
         margin: [0, "auto", rem(3.2)],
         paddingBottom: rem(0.25),
-        borderBottom: [rem(0.1), "solid", BORDER_COLOR],
+        borderBottom: [rem(0.1), "solid", LIGHT.BORDER_COLOR],
         fontSize: rem(2.4),
         textAlign: "right",
+        ...mqPreferDark({
+            borderBottom: [rem(0.1), "solid", DARK.BORDER_COLOR],
+        }),
     }),
     titleContent: {flex: 1},
     hideTitle: css({display: "none"}),

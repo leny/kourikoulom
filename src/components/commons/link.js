@@ -9,16 +9,21 @@
 import React from "react";
 import {css} from "@pwops/emotion-css";
 
-import {ALT_COLOR, ALT_HOVER_COLOR} from "../../core/constants";
+import {LIGHT, DARK} from "../../core/constants";
+import {mqPreferDark} from "../../core/utils";
 import withTooltip, {styles as tooltipStyles} from "../../core/with-tooltip";
 
 const styles = {
     container: css({
-        color: ALT_COLOR,
+        color: LIGHT.ALT_COLOR,
         textDecoration: "none",
         transition: ["color", ".25s", "ease-in-out"],
-        "&:hover": {color: ALT_HOVER_COLOR},
+        "&:hover": {color: LIGHT.ALT_HOVER_COLOR},
         ...tooltipStyles,
+        ...mqPreferDark({
+            color: DARK.ALT_COLOR,
+            "&:hover": {color: DARK.ALT_HOVER_COLOR},
+        }),
     }),
 };
 

@@ -10,15 +10,24 @@ import React from "react";
 import {css} from "@pwops/emotion-css";
 
 import withTooltip, {styles as tooltipStyles} from "../../core/with-tooltip";
+import {mqPreferDark} from "../../core/utils";
 
-import {ALT_COLOR} from "../../core/constants";
+import {DARK, LIGHT} from "../../core/constants";
 
 const styles = {
     container: css({
         position: "relative",
         cursor: "help",
-        textDecoration: [ALT_COLOR, "dotted", "underline", "!important"],
+        textDecoration: [LIGHT.ALT_COLOR, "dotted", "underline", "!important"],
         ...tooltipStyles,
+        ...mqPreferDark({
+            textDecoration: [
+                DARK.ALT_COLOR,
+                "dotted",
+                "underline",
+                "!important",
+            ],
+        }),
     }),
 };
 
