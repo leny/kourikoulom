@@ -10,7 +10,8 @@ import React from "react";
 import {css} from "@pwops/emotion-css";
 import {rem, percent} from "@pwops/core";
 
-import {ALT_COLOR} from "../../core/constants";
+import {LIGHT, DARK} from "../../core/constants";
+import {mqPreferDark} from "../../core/utils";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Link from "../commons/link";
@@ -25,6 +26,10 @@ const styles = {
         size: [`${rem(1.6)} !important`],
         marginRight: rem(1.2),
         verticalAlign: rem(-0.3),
+        color: LIGHT.ALT_COLOR,
+        ...mqPreferDark({
+            color: DARK.ALT_COLOR,
+        }),
     }),
     value: css({
         display: "inline",
@@ -53,7 +58,6 @@ export default ({label, prefix, value, link, tooltip, icon, kbd = false}) => {
     icon &&
         ($icon = (
             <FontAwesomeIcon
-                color={ALT_COLOR}
                 css={styles.icon}
                 icon={icon.includes("_") ? icon.split("_") : icon}
             />

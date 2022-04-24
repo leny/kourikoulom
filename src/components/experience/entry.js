@@ -12,7 +12,8 @@ import {percent, rem} from "@pwops/core";
 
 import {DateTime} from "luxon";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {NBSP, MAIN_COLOR, BCG_COLOR, ALT_COLOR} from "../../core/constants";
+import {NBSP, LIGHT, DARK} from "../../core/constants";
+import {mqPreferDark} from "../../core/utils";
 import color from "color";
 import Link from "../commons/link";
 
@@ -20,15 +21,6 @@ const formatDate = (date) =>
     DateTime.fromFormat(date, "yyyy-MM-dd", {locale: "fr"}).toFormat(
         "LLLL yyyy",
     );
-
-const TIME_COLOR = color(MAIN_COLOR)
-    .mix(color(ALT_COLOR))
-    .desaturate(0.33)
-    .lighten(0.85)
-    .whiten(0.75)
-    .hex();
-
-const LOCATION_COLOR = color(MAIN_COLOR).mix(color(BCG_COLOR)).hex();
 
 const styles = {
     container: css({
@@ -78,9 +70,9 @@ const styles = {
         display: "block",
         position: "relative",
         padding: [rem(0.2), rem(0.6)],
-        background: TIME_COLOR,
+        background: LIGHT.TIME_COLOR,
         fontSize: rem(1.2),
-        color: color(MAIN_COLOR).negate().hex(),
+        color: color(LIGHT.MAIN_COLOR).negate().hex(),
         textAlign: "center",
         textTransform: "uppercase",
         whiteSpace: "nowrap",
@@ -90,18 +82,32 @@ const styles = {
             position: "absolute",
             top: percent(50),
             size: [rem(2), rem(0.1)],
-            background: TIME_COLOR,
+            background: LIGHT.TIME_COLOR,
         },
         "&::before": {left: rem(-3)},
         "&::after": {right: rem(-3)},
+        ...mqPreferDark({
+            background: DARK.TIME_COLOR,
+            color: color(DARK.MAIN_COLOR).negate().hex(),
+            "&::before, &::after": {
+                background: DARK.TIME_COLOR,
+            },
+        }),
     }),
     location: css({
         margin: 0,
         fontSize: rem(1.4),
-        color: LOCATION_COLOR,
+        color: LIGHT.LOCATION_COLOR,
+        ...mqPreferDark({
+            color: DARK.LOCATION_COLOR,
+        }),
     }),
     locationIcon: css({
         size: [`${rem(1.2)} !important`],
+        color: LIGHT.LOCATION_COLOR,
+        ...mqPreferDark({
+            color: DARK.LOCATION_COLOR,
+        }),
     }),
 };
 
@@ -180,7 +186,6 @@ export default ({
             <p css={styles.location}>
                 <FontAwesomeIcon
                     css={styles.locationIcon}
-                    color={LOCATION_COLOR}
                     icon={"map-marker-alt"}
                 />
                 {NBSP} {location}

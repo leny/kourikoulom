@@ -14,11 +14,8 @@ import "@pwops/mixins";
 
 import normalize from "emotion-normalize";
 import boxSizingReset from "emotion-box-sizing-reset";
-import {
-    BCG_COLOR,
-    MAIN_COLOR,
-    SOURCE_SANS_PRO_STACK,
-} from "../../core/constants";
+import {LIGHT, DARK, SOURCE_SANS_PRO_STACK} from "../../core/constants";
+import {mqPreferDark} from "../../core/utils";
 
 export default () => (
     <>
@@ -33,16 +30,20 @@ export default () => (
                     outline: 0,
                 },
                 html: {
-                    background: BCG_COLOR,
+                    background: LIGHT.BCG_COLOR,
                     font: [
                         "normal",
                         `${percent(62.5)}/1.5`,
                         SOURCE_SANS_PRO_STACK,
                     ],
+                    ...mqPreferDark({
+                        background: DARK.BCG_COLOR,
+                    }),
                 },
                 body: {
                     position: "relative",
-                    color: MAIN_COLOR,
+                    color: LIGHT.MAIN_COLOR,
+                    ...mqPreferDark({color: DARK.MAIN_COLOR}),
                 },
             })}
         />

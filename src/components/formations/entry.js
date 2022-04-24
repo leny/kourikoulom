@@ -12,19 +12,11 @@ import {percent, rem} from "@pwops/core";
 
 import {DateTime} from "luxon";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {NBSP, MAIN_COLOR, BCG_COLOR, ALT_COLOR} from "../../core/constants";
-import color from "color";
+import {NBSP, LIGHT, DARK} from "../../core/constants";
+import {mqPreferDark} from "../../core/utils";
 
 const formatDate = (date, format = "yyyy-MM", out = "LLL yyyy") =>
     DateTime.fromFormat(date, format, {locale: "fr"}).toFormat(out);
-
-const TIME_COLOR = color(MAIN_COLOR)
-    .mix(color(ALT_COLOR))
-    .lighten(0.75)
-    .whiten(0.5)
-    .hex();
-
-const LOCATION_COLOR = color(MAIN_COLOR).mix(color(BCG_COLOR)).hex();
 
 const box = {
     width: 15,
@@ -56,18 +48,26 @@ const styles = {
         textAlign: "right",
         transform: "rotate(-90deg)",
         transformOrigin: ["top", "right"],
-        color: TIME_COLOR,
+        color: LIGHT.TIME_COLOR,
         textTransform: "uppercase",
+        ...mqPreferDark({color: DARK.TIME_COLOR}),
     }),
     location: css({
         margin: 0,
         fontSize: rem(1.4),
-        color: LOCATION_COLOR,
+        color: LIGHT.LOCATION_COLOR,
+        ...mqPreferDark({color: DARK.LOCATION_COLOR}),
     }),
     locationIcon: css({
         size: [`${rem(1.2)} !important`],
+        color: LIGHT.LOCATION_COLOR,
+        ...mqPreferDark({color: DARK.LOCATION_COLOR}),
     }),
-    certificationLink: css({textDecoration: "none", color: LOCATION_COLOR}),
+    certificationLink: css({
+        textDecoration: "none",
+        color: LIGHT.LOCATION_COLOR,
+        ...mqPreferDark({color: DARK.LOCATION_COLOR}),
+    }),
 };
 
 export default ({
@@ -94,7 +94,6 @@ export default ({
             <p css={styles.location}>
                 <FontAwesomeIcon
                     css={styles.locationIcon}
-                    color={LOCATION_COLOR}
                     icon={"map-marker-alt"}
                 />
                 {NBSP} {location}
@@ -109,11 +108,7 @@ export default ({
                     css={styles.certificationLink}
                     href={certification}
                     target={"_new"}>
-                    <FontAwesomeIcon
-                        css={styles.locationIcon}
-                        color={LOCATION_COLOR}
-                        icon={"award"}
-                    />
+                    <FontAwesomeIcon css={styles.locationIcon} icon={"award"} />
                     {NBSP} {"Voir certificat"}
                 </a>
             </p>
