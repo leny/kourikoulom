@@ -16,7 +16,7 @@ const styles = {
     container: css({
         color: varValue("altColor"),
         textDecoration: "none",
-        transition: ["color", ".25s", "ease-in-out"],
+        transition: ["color", ".25s", "ease"],
         "&:hover": {color: varValue("altHoverColor")},
         ...tooltipStyles,
     }),

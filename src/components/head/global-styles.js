@@ -77,6 +77,7 @@ export default () => (
                 },
                 html: {
                     background: varValue("bcgColor"),
+                    transition: ["background", ".25s", "ease"],
                     font: [
                         "normal",
                         `${percent(62.5)}/1.5`,
@@ -86,6 +87,7 @@ export default () => (
                 body: {
                     position: "relative",
                     color: varValue("mainColor"),
+                    // transition: ["color", ".25s", "ease-in-out"],
                 },
             })}
         />
