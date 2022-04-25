@@ -53,16 +53,22 @@ export default () => (
         <Global
             styles={css({
                 ":root": {
+                    colorScheme: "light dark",
                     ...mqPreferDark(varsDeclaration(darkThemeVars)),
                     ...mqPreferLight(varsDeclaration(lightThemeVars)),
+                },
+                ":root.light": {
+                    colorScheme: "light",
+                    ...varsDeclaration(lightThemeVars),
+                },
+                ":root.dark": {
+                    colorScheme: "dark",
+                    ...varsDeclaration(darkThemeVars),
                 },
             })}
         />
         <Global
             styles={css({
-                ":root": {
-                    colorScheme: "light dark",
-                },
                 "*": {
                     textSizeAdjust: percent(100),
                 },
