@@ -23,6 +23,7 @@ import GlobalStyles from "../components/head/global-styles";
 import ShareCard from "../components/head/share-card";
 
 import Header from "../components/header/header";
+import ColorSchemeSwitcher from "../components/header/color-scheme-switcher";
 
 import IdentitySection from "../components/identity/section";
 import SkillsSection from "../components/skills/section";
@@ -127,6 +128,7 @@ export default ({data}) => (
         <div css={styles.head}>
             <Header />
             <IdentitySection />
+            <ColorSchemeSwitcher />
         </div>
         <main css={styles.content}>
             <SkillsSection />
