@@ -8,6 +8,8 @@
 
 import color from "color";
 
+export const IS_BROWSER = typeof window !== "undefined";
+
 export const NBSP = "\u00a0";
 
 export const LIGHT = {

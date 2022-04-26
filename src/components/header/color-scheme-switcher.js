@@ -13,6 +13,7 @@ import {mqTablet} from "../../core/utils";
 import {varValue} from "../../core/utils";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import withTooltip, {styles as tooltipStyles} from "../../core/with-tooltip";
+import {IS_BROWSER} from "../../core/constants";
 
 const styles = {
     container: css({
@@ -48,7 +49,10 @@ const styles = {
 
 export default () => {
     const colorSchemeQuery = useMemo(
-        () => window.matchMedia("(prefers-color-scheme: dark)"),
+        () =>
+            IS_BROWSER
+                ? window.matchMedia("(prefers-color-scheme: dark)")
+                : null,
         [],
     );
 
