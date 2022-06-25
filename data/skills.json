@@ -277,7 +277,7 @@
           {
             "text": "AWS",
             "focus": true,
-            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "DynamoDB", "OpenSearch", "Elasticache", "CloudFormation", "CDK", "Elastic Beanstalk", "Lightsail", "SQS", "Comprehend"]
+            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "DynamoDB", "OpenSearch", "Elasticache", "CloudFormation", "CDK", "Elastic Beanstalk", "Lightsail", "SQS", "Comprehend", "Step Functions"]
           }
         ]
       },
