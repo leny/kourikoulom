@@ -134,7 +134,7 @@
       },
       {
         "title": "Système & Scripting",
-        "fields": [{"text": "bash"}, {"text": "node.js", "focus": true}, {"text": "python"}, {"text": "go-lang"}, {"text": "Lua"}]
+        "fields": [{"text": "bash"}, {"text": "node.js", "focus": true, "details": ["zx", "…"]}, {"text": "python"}, {"text": "go-lang"}, {"text": "Lua"}]
       }
     ]
   },
