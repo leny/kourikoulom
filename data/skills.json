@@ -134,7 +134,7 @@
       },
       {
         "title": "Système & Scripting",
-        "fields": [{"text": "bash"}, {"text": "node.js", "focus": true, "details": ["zx", "…"]}, {"text": "python"}, {"text": "go-lang"}, {"text": "Lua"}]
+        "fields": [{"text": "Rust", "focus": true},{"text": "bash"}, {"text": "node.js", "focus": true, "details": ["zx", "…"]}, {"text": "python"}, {"text": "go-lang"}, {"text": "Lua"}]
       }
     ]
   },
@@ -167,7 +167,7 @@
           {"text": "AWS CDK", "focus": true},
           {"text": "AWS CloudFormation", "focus": true},
           {"text": "docker"},
-          {"text": "AWS Lambda", "focus": true},
+          {"text": "AWS Lambda", "focus": true, "details": ["node.js", "Rust"]},
           {"text": "Serverless"},
           {"text": "Chef"},
           {"text": "Vagrant"},
@@ -270,15 +270,37 @@
         ]
       },
       {
+        "title": "AWS",
+        "fields": [
+          {"text": "ECS/ECR"},
+          {"text": "EC2"},
+          {"text": "S3"},
+          {"text": "CloudFront", "details": ["lamda@EDGE"]},
+          {"text": "RDS/Aurora"},
+          {"text": "Neptune", "focus": true},
+          {"text": "DynamoDB", "focus": true},
+          {"text": "OpenSearch"},
+          {"text": "ElastiCache"},
+          {"text": "Lambda", "focus": true, "details": ["node.js", "Rust"]},
+          {"text": "CloudFormation", "focus": true},
+          {"text": "CDK", "focus": true},
+          {"text": "Elastic Beanstalk"},
+          {"text": "Lightsail"},
+          {"text": "SQS", "focus": true},
+          {"text": "Comprehend"},
+          {"text": "Step Functions"},        
+          {"text": "SNS"},        
+          {"text": "SES"},        
+          {"text": "WAF"},        
+          {"text": "API Gateway"},        
+          {"text": "Event Bridge"}
+        ]
+      },
+      {
         "title": "Administration Système, DevOps",
         "fields": [
           {"text": "nginx", "focus": true},
-          {"text": "Apache2"},
-          {
-            "text": "AWS",
-            "focus": true,
-            "details": ["ECS/ECR", "EC2", "S3", "CloudFront", "RDS", "Neptune", "Lambda", "DynamoDB", "OpenSearch", "Elasticache", "CloudFormation", "CDK", "Elastic Beanstalk", "Lightsail", "SQS", "Comprehend", "Step Functions"]
-          }
+          {"text": "Apache2"}
         ]
       },
       {
