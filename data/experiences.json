@@ -2,13 +2,14 @@
   {
     "company": "Mango3D",
     "url": "https://mango3d.io",
-    "position": "Lead Webdeveloper & Sysadmin",
+    "position": "Technical System Officer",
     "from": "2021-04-12",
     "location": "Liège, Belgique",
     "details": [
-      "Analyse & développement d'applications web",
-      "Supervision de l'équipe web",
-      "Administration système sur AWS"
+      "Analyse & développement d'applications web & outils",
+      "Supervision technique de l'équipe web",
+      "R&D infrastructure & outils",
+      "Lead Sysops/devops sur AWS"
     ],
     "subs":[]
   },
