@@ -33,7 +33,7 @@
     "gatsby-plugin-emotion": "^4.5.0",
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-transformer-json": "^2.11.0",
-    "luxon": "^1.26.0",
+    "luxon": "^2.5.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0"
