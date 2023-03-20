@@ -1,20 +1,26 @@
 [
-    {
-        "name": "Enigjewo",
-        "url": "https://github.com/leny/enigjewo",
-        "tooltip": "Visiter le repository de Enigjewo",
-        "description": "Clone Open-Source du jeu Geoguessr avec React/Firebase"
-     },
-     {
-        "name": "Zoondo",
-        "url": "https://github.com/leny/zoondo",
-        "tooltip": "Visiter le repository de Zoondo",
-        "description": "Implémentation web d'un jeu de plateau dans le cadre d'une série de vidéos pédagogiques sur YouTube"
-    },
-    {
-        "name": "Koutla Swiss",
-        "url": "https://koutla-swiss.js.org",
-        "tooltip": "Visiter le repository de Koutla Swiss",
-        "description": "Framework Open-Source pour JSS/Glamor/Emotion"
-    }
+  {
+    "name": "Enigjewo",
+    "url": "https://github.com/leny/enigjewo",
+    "tooltip": "Visiter le repository de Enigjewo",
+    "description": "Clone Open-Source du jeu Geoguessr avec React/Firebase"
+  },
+  {
+    "name": "Bowlstats",
+    "url": "https://github.com/leny/bowlstats",
+    "tooltip": "Visiter le repository de Bowlstats",
+    "description": "Petit projet de tracking de scores & statistiques au bowling"
+  },
+  {
+    "name": "Zoondo",
+    "url": "https://github.com/leny/zoondo",
+    "tooltip": "Visiter le repository de Zoondo",
+    "description": "Implémentation web d'un jeu de plateau dans le cadre d'une série de vidéos pédagogiques sur YouTube"
+  },
+  {
+    "name": "Koutla Swiss",
+    "url": "https://koutla-swiss.js.org",
+    "tooltip": "Visiter le repository de Koutla Swiss",
+    "description": "Framework Open-Source pour JSS/Glamor/Emotion"
+  }
 ]
