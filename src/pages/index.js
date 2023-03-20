@@ -78,12 +78,12 @@ const styles = {
     }),
     mediumBreak: css({
         ...mqLargeDesktop({
-            marginBottom: vw(100),
+            marginBottom: vw(125),
         }),
     }),
     largeBreak: css({
         ...mqLargeDesktop({
-            marginBottom: vw(100),
+            marginBottom: vw(125),
         }),
     }),
 };
