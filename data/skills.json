@@ -16,7 +16,7 @@
             "text": "React",
             "focus": true,
             "details": ["Hooks", "Flux", "Redux", "MobX", "SSR", "…"]
-          },          
+          },
           {"text": "TypeScript", "focus": true},
           {"text": "SvelteJS"},
           {"text": "Angular"},
@@ -45,7 +45,7 @@
             "text": "Toolchain/Buildchain",
             "focus": true,
             "details": ["webpack", "Parcel", "swc", "snowpack", "rome", "rollup", "…"]
-          }, 
+          },
           {"text": "CoffeeScript"}
         ]
       },
@@ -106,7 +106,7 @@
           {"text": "MemCached"},
           {"text": "MongoDB"},
           {"text": "CouchDB"},
-          {"text": "ElasticSearch"},       
+          {"text": "ElasticSearch"},
           {"text": "DynamoDB"},
           {"text": "Keen"},
           {"text": "gun db"}
@@ -119,6 +119,17 @@
           {"text": "Jekyll"},
           {"text": "Gatsby", "focus": true},
           {"text": "Hexo"}
+        ]
+      },
+      {
+        "title": "AI & Machine Learning",
+        "fields": [
+          {"text": "TensorFlow"},
+          {"text": "OpenAI", "focus": true, "details": ["GPT APIs", "ChatGPT prompts"]},
+          {"text": "Image Generative APIs", "details": ["Dall-E", "Midjourney"]},
+          {"text": "Amazon Rekognition"},
+          {"text": "Amazon Lex"},
+          {"text": "Amazon Comprehend"}
         ]
       },
       {
@@ -145,6 +156,7 @@
         "title": "Task runners & workflow",
         "fields": [
           {"text": "Webpack", "focus": true},
+          {"text": "ESBuild"},
           {"text": "Rollup"},
           {"text": "Parcel", "focus": true},
           {"text": "GruntJS"},
@@ -288,12 +300,14 @@
           {"text": "Lightsail"},
           {"text": "SQS", "focus": true},
           {"text": "Comprehend"},
-          {"text": "Step Functions"},        
-          {"text": "SNS"},        
-          {"text": "SES"},        
-          {"text": "WAF"},        
-          {"text": "API Gateway"},        
-          {"text": "Event Bridge"}
+          {"text": "Step Functions"},
+          {"text": "SNS"},
+          {"text": "SES"},
+          {"text": "WAF"},
+          {"text": "API Gateway"},
+          {"text": "EventBridge Pipes"},
+          {"text": "EventBridge Scheduler"},
+          {"text": "Pinpoint"}
         ]
       },
       {
