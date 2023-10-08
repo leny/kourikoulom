@@ -6,6 +6,8 @@ Originally made with [pug](https://pugjs.org) & [stylus](https://github.com/Lear
 
 Refactored in 2019 with [Gatsby](https://www.gatsbyjs.org), [emotion](https://emotion.sh) and [koutla-swiss](https://www.npmjs.com/package/koutla-swiss), built with [Github Actions](https://github.com/features/actions).
 
+To be refactored with another framework/tooling in 2023…
+
 * * *
 
 ## Licenses for resources
