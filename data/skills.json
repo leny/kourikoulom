@@ -321,7 +321,8 @@
         "title": "Divers",
         "fields": [
           {"text": "Pico-8"},
-          {"text": "TIC-80"}
+          {"text": "TIC-80"},
+          {"text": "Löve2D/Lua"}
         ]
       }
     ]
