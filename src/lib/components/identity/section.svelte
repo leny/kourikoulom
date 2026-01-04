@@ -30,7 +30,7 @@
 
     @media (min-width: 640px) {
         :global(.container) {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.2rem !important;
         }
     }
 </style>
