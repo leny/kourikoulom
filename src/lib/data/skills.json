@@ -98,9 +98,10 @@
       {
         "title": "Bases de données & connexes",
         "fields": [
-          {"text": "ArangoDB", "focus": true},
+          {"text": "ArangoDB"},
           {"text": "Apache Tinkerpop Gremlin", "focus": true},
           {"text": "MySQL"},
+          {"text": "AWS DynamoDB", "focus": true},
           {"text": "PostgreSQL", "focus": true},
           {"text": "Redis"},
           {"text": "MemCached"},
@@ -117,7 +118,9 @@
         "fields": [
           {"text": "Ghost"},
           {"text": "Jekyll"},
-          {"text": "Gatsby", "focus": true},
+          {"text": "SvelteKit"},
+          {"text": "Gatsby"},
+          {"text": "Astro"},
           {"text": "Hexo"}
         ]
       },
@@ -125,11 +128,13 @@
         "title": "AI & Machine Learning",
         "fields": [
           {"text": "TensorFlow"},
-          {"text": "OpenAI", "focus": true, "details": ["GPT APIs", "ChatGPT prompts"]},
-          {"text": "Image Generative APIs", "details": ["Dall-E", "Midjourney"]},
+          {"text": "OpenAI", "focus": true, "details": ["GPT APIs", "ChatGPT prompts", "Codex"]},
+          {"text": "Anthropic", "focus": true, "details": ["Claude APIs", "Claude prompts", "Claude Code", "Agents, Skills & Agentic workflows"]},
+          {"text": "Image Generative APIs", "details": ["Dall-E", "Midjourney", "NanoBanana"]},
           {"text": "Amazon Rekognition"},
           {"text": "Amazon Lex"},
-          {"text": "Amazon Comprehend"}
+          {"text": "Amazon Comprehend"},
+          {"text": "AWS Bedrock"}
         ]
       },
       {
@@ -153,11 +158,23 @@
     "title": "Outils",
     "sections": [
       {
+        "title": "AI/LLM-assisted Tools",
+        "fields": [
+          {"text": "Anthropic Claude", "focus": true, "details": ["APIs", "Prompt Engineering", "Skills", "Commands", "Agents & Agentic workflows"]},
+          {"text": "OpenAI Codex", "details": ["APIs", "Prompt Engineering", "Agents & Agentic workflows"]},
+          {"text": "Google Gemeni", "details": ["APIs", "Prompt Engineering"]},
+          {"text": "GitHub Copilot", "details": ["LSP", "APIs"]},
+          {"text": "Opencode"}
+        ]
+      },
+      {
         "title": "Task runners & workflow",
         "fields": [
-          {"text": "Webpack", "focus": true},
-          {"text": "ESBuild"},
+          {"text": "Webpack"},
+          {"text": "ESBuild", "focus": true},
           {"text": "Rollup"},
+          {"text": "Vite"},
+          {"text": "Oxc"},
           {"text": "Parcel", "focus": true},
           {"text": "GruntJS"},
           {"text": "GulpJS"},
@@ -212,7 +229,7 @@
       {
         "title": "Computer Graphics Design",
         "fields": [
-          {"text": "Sketch"},
+          {"text": "Sketch", "focus": true},
           {"text": "Pixelmator Pro"},
           {"text": "Figma"}
         ]
@@ -268,8 +285,8 @@
       {
         "title": "macOS",
         "fields": [
-          {"text": "10.6~11"},
-          {"text": "12", "details": ["système principal"]}
+          {"text": "10.6~15"},
+          {"text": "26", "details": ["système principal"]}
         ]
       },
       {
@@ -294,13 +311,13 @@
           {"text": "OpenSearch"},
           {"text": "ElastiCache"},
           {"text": "Lambda", "focus": true, "details": ["node.js", "Rust"]},
-          {"text": "CloudFormation", "focus": true},
+          {"text": "CloudFormation"},
           {"text": "CDK", "focus": true},
           {"text": "Elastic Beanstalk"},
           {"text": "Lightsail"},
           {"text": "SQS", "focus": true},
           {"text": "Comprehend"},
-          {"text": "Step Functions"},
+          {"text": "Step Functions", "focus": true},
           {"text": "SNS"},
           {"text": "SES"},
           {"text": "WAF"},
@@ -313,13 +330,14 @@
       {
         "title": "Administration Système, DevOps",
         "fields": [
-          {"text": "nginx", "focus": true},
+          {"text": "nginx"},
           {"text": "Apache2"}
         ]
       },
       {
         "title": "Divers",
         "fields": [
+          {"text": "Godot", "focus": true},
           {"text": "Pico-8"},
           {"text": "TIC-80"},
           {"text": "Löve2D/Lua"}
