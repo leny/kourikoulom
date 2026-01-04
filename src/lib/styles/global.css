@@ -1,0 +1,12 @@
+/* Global styles - will be populated during migration */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}

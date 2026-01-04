@@ -1,62 +1,45 @@
 {
-  "name": "@leny/kourikoulom",
-  "private": true,
-  "description": "Just my resume",
-  "version": "0.2.0",
-  "license": "MIT",
-  "scripts": {
-    "build": "npx gatsby build",
-    "work": "npx gatsby develop",
-    "lint": "npx eslint --fix --cache src",
-    "serve": "npx gatsby build && gatsby serve"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npx eslint --fix --cache"
-    ]
-  },
-  "dependencies": {
-    "@el7cosmos/gatsby-plugin-prefetch-google-fonts": "^2.0.3",
-    "@emotion/core": "^10.1.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/pro-duotone-svg-icons": "^5.15.2",
-    "@fortawesome/pro-solid-svg-icons": "^5.15.2",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@pwops/core": "0.1.5",
-    "@pwops/emotion-css": "0.2.0",
-    "@pwops/mixins": "0.2.0",
-    "color": "^3.1.3",
-    "emotion-box-sizing-reset": "^0.2.0",
-    "emotion-normalize": "^10.1.0",
-    "gatsby": "^2.32.11",
-    "gatsby-plugin-emotion": "^4.5.0",
-    "gatsby-source-filesystem": "^2.11.1",
-    "gatsby-transformer-json": "^2.11.0",
-    "luxon": "^1.26.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-helmet": "^6.1.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/leny/kourikoulom"
-  },
-  "bugs": {
-    "url": "https://github.com/leny/kourikoulom"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npx lint-staged"
+    "name": "@leny/kourikoulom",
+    "private": true,
+    "description": "Just my resume",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+        "lint": "prettier --check . && eslint .",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.5.1",
+        "@fortawesome/free-brands-svg-icons": "^6.5.1",
+        "@fortawesome/pro-duotone-svg-icons": "^6.5.1",
+        "@fortawesome/pro-solid-svg-icons": "^6.5.1",
+        "luxon": "^3.4.4"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-static": "^3.0.1",
+        "@sveltejs/kit": "^2.0.6",
+        "@sveltejs/vite-plugin-svelte": "^3.0.1",
+        "eslint": "^9.0.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-svelte": "^2.35.1",
+        "globals": "^15.0.0",
+        "prettier": "^3.2.4",
+        "prettier-plugin-svelte": "^3.1.2",
+        "svelte": "^4.2.9",
+        "svelte-check": "^3.6.3",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.12"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/leny/kourikoulom"
+    },
+    "bugs": {
+        "url": "https://github.com/leny/kourikoulom"
     }
-  }
 }
