@@ -1,12 +1,185 @@
-/* Global styles - will be populated during migration */
+/**
+ * Global styles - Normalize, reset, and theme variables
+ */
 
+/* --- Normalize (minimal) --- */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
 body {
     margin: 0;
-    font-family: "Source Sans Pro", sans-serif;
+}
+
+main {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+img {
+    border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+/* --- Theme variables --- */
+:root {
+    color-scheme: light dark;
+
+    /* Light theme (default) */
+    --bcgColor: #fff;
+    --mainColor: #000;
+    --fadeColor: #666;
+    --altColor: mediumblue;
+    --altHoverColor: dodgerblue;
+    --borderColor: #7f7f7f;
+    --timeColor: #c5c5d5;
+    --timeTextColor: #ffffff;
+    --locationColor: #808080;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bcgColor: #22272e;
+        --mainColor: #adbac7;
+        --fadeColor: #768390;
+        --altColor: #539bf5;
+        --altHoverColor: dodgerblue;
+        --borderColor: #373e47;
+        --timeColor: #8da7b8;
+        --timeTextColor: #524538;
+        --locationColor: #6891a9;
+    }
+}
+
+/* Manual theme override via class on :root */
+:root.light {
+    color-scheme: light;
+    --bcgColor: #fff;
+    --mainColor: #000;
+    --fadeColor: #666;
+    --altColor: mediumblue;
+    --altHoverColor: dodgerblue;
+    --borderColor: #7f7f7f;
+    --timeColor: #c5c5d5;
+    --timeTextColor: #ffffff;
+    --locationColor: #808080;
+}
+
+:root.dark {
+    color-scheme: dark;
+    --bcgColor: #22272e;
+    --mainColor: #adbac7;
+    --fadeColor: #768390;
+    --altColor: #539bf5;
+    --altHoverColor: dodgerblue;
+    --borderColor: #373e47;
+    --timeColor: #8da7b8;
+    --timeTextColor: #524538;
+    --locationColor: #6891a9;
+}
+
+/* --- Base styles --- */
+:focus {
+    outline: 0;
+}
+
+html {
+    background: var(--bcgColor);
+    transition: background 0.25s ease;
+    font: normal 62.5%/1.5 "Source Sans Pro", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+}
+
+body {
+    position: relative;
+    color: var(--mainColor);
+}
+
+/* --- Tooltip styles --- */
+.has-tooltip {
+    position: relative;
+}
+
+.has-tooltip::before,
+.has-tooltip::after {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.15s cubic-bezier(0.5, 1, 0.25, 1);
+    z-index: 1;
+}
+
+.has-tooltip::before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    padding: 0.5rem 1.5rem;
+    min-width: 12rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    background: var(--mainColor);
+    color: var(--bcgColor);
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    transform: translateX(-50%);
+}
+
+.has-tooltip::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border: 0.8rem solid transparent;
+    border-top: 0.8rem solid var(--mainColor);
+    border-bottom: none;
+    width: 0;
+    content: "";
+    font-size: 0;
+    line-height: 0;
+    transform: translateX(-50%);
+}
+
+.has-tooltip:hover::before,
+.has-tooltip:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-0.5rem);
 }
