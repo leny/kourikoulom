@@ -1,3 +1,5 @@
+<!-- @leny/kourikoulom - /src/routes/+layout.svelte -->
+
 <script>
     import "@fortawesome/fontawesome-svg-core/styles.css";
     import "../lib/core/fontawesome.js";

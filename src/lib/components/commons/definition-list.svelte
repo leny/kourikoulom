@@ -1,3 +1,5 @@
+<!-- @leny/kourikoulom - /src/lib/components/commons/definition-list.svelte -->
+
 <script>
     import Icon from "../icon.svelte";
     import DescriptionParser from "./description-parser.svelte";

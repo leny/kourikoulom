@@ -1,3 +1,5 @@
+<!-- @leny/kourikoulom - /src/lib/components/commons/description-parser.svelte -->
+
 <script>
     import Abbr from "./abbr.svelte";
     import Link from "./link.svelte";

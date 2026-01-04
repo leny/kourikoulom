@@ -1,3 +1,5 @@
+<!-- @leny/kourikoulom - /src/lib/components/commons/link.svelte -->
+
 <script>
     import { tooltip } from "$lib/core/tooltip.js";
 

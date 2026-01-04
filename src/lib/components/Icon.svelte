@@ -1,3 +1,5 @@
+<!-- @leny/kourikoulom - /src/lib/components/icon.svelte -->
+
 <script>
     import {icon as faIcon} from "@fortawesome/fontawesome-svg-core";
 

@@ -1,3 +1,5 @@
+<!-- @leny/kourikoulom - /src/lib/components/commons/sub-section.svelte -->
+
 <script>
     /** @type {string} */
     export let title;

@@ -1,3 +1,5 @@
+<!-- @leny/kourikoulom - /src/lib/components/commons/section.svelte -->
+
 <script>
     import Icon from "../icon.svelte";
 
