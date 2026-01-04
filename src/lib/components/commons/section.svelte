@@ -66,7 +66,6 @@
     }
 
     .section :global(.section__icon) {
-        width: 2.4rem !important;
-        height: 2.4rem !important;
+        font-size: 2.4rem;
     }
 </style>

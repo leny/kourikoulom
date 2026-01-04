@@ -62,35 +62,11 @@
     }
 
     .link {
-        position: relative;
         text-decoration: none;
     }
 
-    .link::after {
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        z-index: 1;
-        padding: 0.3rem 0.8rem;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        background: var(--mainColor);
-        color: var(--bcgColor);
-        font-size: 1.2rem;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-        content: attr(data-tooltip);
-        pointer-events: none;
-    }
-
-    .link:hover::after {
-        opacity: 1;
-    }
-
     .link :global(.icon) {
-        display: inline;
-        width: 1.6rem !important;
-        height: 1.6rem !important;
+        font-size: 1.6rem;
         margin-right: 0.8rem;
         vertical-align: -0.3rem;
     }

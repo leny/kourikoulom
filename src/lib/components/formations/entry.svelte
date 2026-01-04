@@ -97,8 +97,7 @@
     }
 
     .location :global(.location-icon) {
-        width: 1.2rem !important;
-        height: 1.2rem !important;
+        font-size: 1.2rem;
         color: var(--locationColor);
     }
 

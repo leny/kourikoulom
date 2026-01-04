@@ -93,8 +93,7 @@
     }
 
     .details :global(.position-icon) {
-        width: 1.4rem !important;
-        height: 1.4rem !important;
+        font-size: 1.4rem;
     }
 
     .details-content {
@@ -111,8 +110,7 @@
     .subs :global(.subs-icon) {
         position: absolute;
         top: 0.25rem;
-        width: 1.3rem !important;
-        height: 1.3rem !important;
+        font-size: 1.3rem;
     }
 
     .subs-content {
@@ -172,8 +170,7 @@
     }
 
     .location :global(.location-icon) {
-        width: 1.2rem !important;
-        height: 1.2rem !important;
+        font-size: 1.2rem;
         color: var(--locationColor);
     }
 </style>

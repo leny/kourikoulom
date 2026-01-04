@@ -18,13 +18,11 @@
     export let icon = undefined;
     /** @type {boolean} */
     export let kbd = false;
-
-    $: iconParts = icon?.includes("_") ? icon.split("_") : icon;
 </script>
 
 <dt class="term">
     {#if icon}
-        <Icon icon={iconParts} class="icon" />
+        <Icon {icon} class="icon" />
     {/if}
     {label}
 </dt>
@@ -51,9 +49,7 @@
     }
 
     .term :global(.icon) {
-        display: inline;
-        width: 1.6rem !important;
-        height: 1.6rem !important;
+        font-size: 1.6rem;
         margin-right: 1.2rem;
         vertical-align: -0.3rem;
         color: var(--altColor);

@@ -25,39 +25,7 @@
     $: details = entryObj.details ? ` (${entryObj.details.join(", ")})` : "";
 </script>
 
-{#if isString}
-    {entry}{separator}
-{:else}
-    {#if entryObj.focus}
-        <strong class="focus">
-            {#if entryObj.url}
-                <Link url={entryObj.url}>
-                    {#if entryObj.abbr}
-                        <Abbr text={entryObj.text} description={entryObj.abbr} />
-                    {:else}
-                        {entryObj.text}
-                    {/if}
-                </Link>
-            {:else if entryObj.abbr}
-                <Abbr text={entryObj.text} description={entryObj.abbr} />
-            {:else}
-                {entryObj.text}
-            {/if}
-        </strong>
-    {:else if entryObj.url}
-        <Link url={entryObj.url}>
-            {#if entryObj.abbr}
-                <Abbr text={entryObj.text} description={entryObj.abbr} />
-            {:else}
-                {entryObj.text}
-            {/if}
-        </Link>
-    {:else if entryObj.abbr}
-        <Abbr text={entryObj.text} description={entryObj.abbr} />
-    {:else}
-        {entryObj.text}
-    {/if}{details}{separator}
-{/if}
+{#if isString}{entry}{separator}{:else}{#if entryObj.focus}<strong class="focus">{#if entryObj.url}<Link url={entryObj.url}>{#if entryObj.abbr}<Abbr text={entryObj.text} description={entryObj.abbr} />{:else}{entryObj.text}{/if}</Link>{:else if entryObj.abbr}<Abbr text={entryObj.text} description={entryObj.abbr} />{:else}{entryObj.text}{/if}</strong>{:else if entryObj.url}<Link url={entryObj.url}>{#if entryObj.abbr}<Abbr text={entryObj.text} description={entryObj.abbr} />{:else}{entryObj.text}{/if}</Link>{:else if entryObj.abbr}<Abbr text={entryObj.text} description={entryObj.abbr} />{:else}{entryObj.text}{/if}{details}{separator}{/if}
 
 <style>
     .focus {

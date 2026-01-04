@@ -1,64 +1,52 @@
 <!-- @leny/kourikoulom - /src/lib/components/icon.svelte -->
 
 <script>
-    import {icon as faIcon} from "@fortawesome/fontawesome-svg-core";
+    import { icon as faIcon } from "@fortawesome/fontawesome-svg-core";
 
     /**
-     * @type {import('@fortawesome/fontawesome-svg-core').IconName}
+     * Icon can be:
+     * - a string: "books" (uses default prefix)
+     * - an array: ["fad", "books"]
+     * - a string with underscore: "fab_github-alt"
+     * @type {string | [string, string]}
      */
     export let icon;
-
-    /**
-     * @type {import('@fortawesome/fontawesome-svg-core').IconPrefix}
-     */
-    export let prefix = "fad";
-
-    /**
-     * @type {string | undefined}
-     */
-    export let size = undefined;
 
     /**
      * @type {string}
      */
     let className = "";
-    export {className as class};
+    export { className as class };
 
-    $: iconDef = faIcon({prefix, iconName: icon});
+    $: resolvedIcon = (() => {
+        if (Array.isArray(icon)) {
+            return { prefix: icon[0], iconName: icon[1] };
+        }
+        if (typeof icon === "string" && icon.includes("_")) {
+            const [prefix, iconName] = icon.split("_");
+            return { prefix, iconName };
+        }
+        return { prefix: "fas", iconName: icon };
+    })();
+
+    $: iconDef = faIcon(resolvedIcon);
     $: svgHtml = iconDef?.html?.[0] ?? "";
 </script>
 
-<span
-    class="icon {className}"
-    class:icon--sm={size === "sm"}
-    class:icon--lg={size === "lg"}
-    class:icon--xl={size === "xl"}
->
+<span class="icon {className}">
     {@html svgHtml}
 </span>
 
 <style>
     .icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-block;
+        line-height: 1;
     }
 
     .icon :global(svg) {
+        display: block;
         height: 1em;
-        width: auto;
-        vertical-align: -0.125em;
-    }
-
-    .icon--sm :global(svg) {
-        height: 0.875em;
-    }
-
-    .icon--lg :global(svg) {
-        height: 1.33em;
-    }
-
-    .icon--xl :global(svg) {
-        height: 2em;
+        width: 1em;
+        fill: currentColor;
     }
 </style>
