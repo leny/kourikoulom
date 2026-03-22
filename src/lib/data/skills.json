@@ -129,12 +129,13 @@
         "fields": [
           {"text": "TensorFlow"},
           {"text": "OpenAI", "focus": true, "details": ["GPT APIs", "ChatGPT prompts", "Codex"]},
-          {"text": "Anthropic", "focus": true, "details": ["Claude APIs", "Claude prompts", "Claude Code", "Agents, Skills & Agentic workflows"]},
+          {"text": "Anthropic", "focus": true, "details": ["Claude APIs", "Claude prompts", "Claude Code", "Claude Cowork", "Agents, Skills & Agentic workflows"]},
           {"text": "Image Generative APIs", "details": ["Dall-E", "Midjourney", "NanoBanana"]},
           {"text": "Amazon Rekognition"},
           {"text": "Amazon Lex"},
           {"text": "Amazon Comprehend"},
-          {"text": "AWS Bedrock"}
+          {"text": "AWS Bedrock"},
+          {"text": "AWS AgentCore"}
         ]
       },
       {
